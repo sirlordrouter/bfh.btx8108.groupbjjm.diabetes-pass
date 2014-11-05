@@ -24,6 +24,7 @@
 		8F8483AA19CB313800DF1E16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F8483A819CB313800DF1E16 /* InfoPlist.strings */; };
 		8F8483AC19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */; };
 		8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8483B519CB315E00DF1E16 /* MapKit.framework */; };
+		DE70BBA71A0ACD6700F7E0F9 /* StoryboardNotfallpass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE70BBA61A0ACD6700F7E0F9 /* StoryboardNotfallpass.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		8F8483A919CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
 		8F8483B519CB315E00DF1E16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DE70BBA61A0ACD6700F7E0F9 /* StoryboardNotfallpass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardNotfallpass.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				8F84838919CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.h */,
 				8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */,
 				8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */,
+				DE70BBA61A0ACD6700F7E0F9 /* StoryboardNotfallpass.storyboard */,
 				8F84838F19CB313800DF1E16 /* Main_iPad.storyboard */,
 				8F84839219CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.h */,
 				8F84839319CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m */,
@@ -251,6 +254,7 @@
 				8F84839119CB313800DF1E16 /* Main_iPad.storyboard in Resources */,
 				8F84839919CB313800DF1E16 /* Images.xcassets in Resources */,
 				8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */,
+				DE70BBA71A0ACD6700F7E0F9 /* StoryboardNotfallpass.storyboard in Resources */,
 				8F84838519CB313800DF1E16 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
