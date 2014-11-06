@@ -24,6 +24,14 @@
 		8F8483AA19CB313800DF1E16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F8483A819CB313800DF1E16 /* InfoPlist.strings */; };
 		8F8483AC19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */; };
 		8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8483B519CB315E00DF1E16 /* MapKit.framework */; };
+		8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */; };
+		8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */; };
+		8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */; };
+		8FC065431A0C1BDE00D853E6 /* BlutzuckerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */; };
+		8FC065461A0C1C0A00D853E6 /* BlutdruckPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */; };
+		8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */; };
+		8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */; };
+		8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,22 @@
 		8F8483A919CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
 		8F8483B519CB315E00DF1E16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8FC065381A0BC56100D853E6 /* CheckupPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckupPageViewController.h; sourceTree = "<group>"; };
+		8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckupPageViewController.m; sourceTree = "<group>"; };
+		8FC0653B1A0BC82300D853E6 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		8FC0653E1A0C07AE00D853E6 /* CheckupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckupViewController.h; sourceTree = "<group>"; };
+		8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckupViewController.m; sourceTree = "<group>"; };
+		8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutzuckerPageViewController.h; sourceTree = "<group>"; };
+		8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutzuckerPageViewController.m; sourceTree = "<group>"; };
+		8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutdruckPageViewController.h; sourceTree = "<group>"; };
+		8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutdruckPageViewController.m; sourceTree = "<group>"; };
+		8FC065481A0C1C3E00D853E6 /* PulsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsPageViewController.h; sourceTree = "<group>"; };
+		8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsPageViewController.m; sourceTree = "<group>"; };
+		8FC0654B1A0C1C6300D853E6 /* GewichtPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GewichtPageViewController.h; sourceTree = "<group>"; };
+		8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewichtPageViewController.m; sourceTree = "<group>"; };
+		8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
+		8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +145,7 @@
 		8F84838019CB313800DF1E16 /* bti8108.groupbjjm.diabetespass */ = {
 			isa = PBXGroup;
 			children = (
+				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F84838919CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.h */,
 				8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */,
 				8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */,
@@ -131,6 +156,16 @@
 				8F84839619CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m */,
 				8F84839819CB313800DF1E16 /* Images.xcassets */,
 				8F84838119CB313800DF1E16 /* Supporting Files */,
+				8FC065381A0BC56100D853E6 /* CheckupPageViewController.h */,
+				8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */,
+				8FC0653B1A0BC82300D853E6 /* MainTabViewController.h */,
+				8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */,
+				8FC0653E1A0C07AE00D853E6 /* CheckupViewController.h */,
+				8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */,
+				8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */,
+				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
+				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
+				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
 			);
 			path = bti8108.groupbjjm.diabetespass;
 			sourceTree = "<group>";
@@ -162,6 +197,19 @@
 				8F8483A819CB313800DF1E16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FC065471A0C1C1B00D853E6 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				8FC065481A0C1C3E00D853E6 /* PulsPageViewController.h */,
+				8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */,
+				8FC0654B1A0C1C6300D853E6 /* GewichtPageViewController.h */,
+				8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */,
+				8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */,
+				8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */,
+			);
+			name = Overview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC065461A0C1C0A00D853E6 /* BlutdruckPageViewController.m in Sources */,
+				8FC065431A0C1BDE00D853E6 /* BlutzuckerPageViewController.m in Sources */,
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
+				8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */,
 				8F84839419CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m in Sources */,
 				8F84838719CB313800DF1E16 /* main.m in Sources */,
+				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
+				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
+				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
+				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
+				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
 				8F84839719CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
