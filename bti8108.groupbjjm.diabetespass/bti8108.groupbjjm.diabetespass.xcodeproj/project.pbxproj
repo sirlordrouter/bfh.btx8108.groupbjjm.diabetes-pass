@@ -14,9 +14,6 @@
 		8F84838719CB313800DF1E16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84838619CB313800DF1E16 /* main.m */; };
 		8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */; };
 		8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */; };
-		8F84839119CB313800DF1E16 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F84838F19CB313800DF1E16 /* Main_iPad.storyboard */; };
-		8F84839419CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84839319CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m */; };
-		8F84839719CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84839619CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m */; };
 		8F84839919CB313800DF1E16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F84839819CB313800DF1E16 /* Images.xcassets */; };
 		8F8483A019CB313800DF1E16 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84839F19CB313800DF1E16 /* XCTest.framework */; };
 		8F8483A119CB313800DF1E16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837A19CB313800DF1E16 /* Foundation.framework */; };
@@ -32,6 +29,14 @@
 		8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */; };
 		8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */; };
 		8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */; };
+		8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */; };
+		8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */; };
+		8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AF1A0CFA9D005DD780 /* blutdruck.png */; };
+		8FC857B61A0CFA9D005DD780 /* gewicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B01A0CFA9D005DD780 /* gewicht.png */; };
+		8FC857B71A0CFA9D005DD780 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B11A0CFA9D005DD780 /* male.png */; };
+		8FC857B81A0CFA9D005DD780 /* puls.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B21A0CFA9D005DD780 /* puls.png */; };
+		8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BA1A0CFD35005DD780 /* glucose.png */; };
+		8FC857BD1A0D0052005DD780 /* PageControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BC1A0D0052005DD780 /* PageControllerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +61,6 @@
 		8F84838919CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ch_bfh_bti8108_groupbjjmAppDelegate.h; sourceTree = "<group>"; };
 		8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch_bfh_bti8108_groupbjjmAppDelegate.m; sourceTree = "<group>"; };
 		8F84838D19CB313800DF1E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		8F84839019CB313800DF1E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		8F84839219CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ch_bfh_bti8108_groupbjjmMasterViewController.h; sourceTree = "<group>"; };
-		8F84839319CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch_bfh_bti8108_groupbjjmMasterViewController.m; sourceTree = "<group>"; };
-		8F84839519CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ch_bfh_bti8108_groupbjjmDetailViewController.h; sourceTree = "<group>"; };
-		8F84839619CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch_bfh_bti8108_groupbjjmDetailViewController.m; sourceTree = "<group>"; };
 		8F84839819CB313800DF1E16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8F84839E19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bti8108.groupbjjm.diabetespassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F84839F19CB313800DF1E16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -84,6 +84,14 @@
 		8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewichtPageViewController.m; sourceTree = "<group>"; };
 		8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
 		8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
+		8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_biss.png; sourceTree = "<group>"; };
+		8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_ganz.png; sourceTree = "<group>"; };
+		8FC857AF1A0CFA9D005DD780 /* blutdruck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blutdruck.png; sourceTree = "<group>"; };
+		8FC857B01A0CFA9D005DD780 /* gewicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gewicht.png; sourceTree = "<group>"; };
+		8FC857B11A0CFA9D005DD780 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
+		8FC857B21A0CFA9D005DD780 /* puls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puls.png; sourceTree = "<group>"; };
+		8FC857BA1A0CFD35005DD780 /* glucose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glucose.png; sourceTree = "<group>"; };
+		8FC857BC1A0D0052005DD780 /* PageControllerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControllerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,15 +153,11 @@
 		8F84838019CB313800DF1E16 /* bti8108.groupbjjm.diabetespass */ = {
 			isa = PBXGroup;
 			children = (
+				8FC857B91A0CFAA6005DD780 /* images */,
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F84838919CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.h */,
 				8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */,
 				8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */,
-				8F84838F19CB313800DF1E16 /* Main_iPad.storyboard */,
-				8F84839219CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.h */,
-				8F84839319CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m */,
-				8F84839519CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.h */,
-				8F84839619CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m */,
 				8F84839819CB313800DF1E16 /* Images.xcassets */,
 				8F84838119CB313800DF1E16 /* Supporting Files */,
 				8FC065381A0BC56100D853E6 /* CheckupPageViewController.h */,
@@ -166,6 +170,7 @@
 				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
 				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
 				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
+				8FC857BC1A0D0052005DD780 /* PageControllerView.xib */,
 			);
 			path = bti8108.groupbjjm.diabetespass;
 			sourceTree = "<group>";
@@ -210,6 +215,20 @@
 				8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */,
 			);
 			name = Overview;
+			sourceTree = "<group>";
+		};
+		8FC857B91A0CFAA6005DD780 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8FC857BA1A0CFD35005DD780 /* glucose.png */,
+				8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */,
+				8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */,
+				8FC857AF1A0CFA9D005DD780 /* blutdruck.png */,
+				8FC857B01A0CFA9D005DD780 /* gewicht.png */,
+				8FC857B11A0CFA9D005DD780 /* male.png */,
+				8FC857B21A0CFA9D005DD780 /* puls.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +315,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F84839119CB313800DF1E16 /* Main_iPad.storyboard in Resources */,
+				8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */,
+				8FC857B61A0CFA9D005DD780 /* gewicht.png in Resources */,
 				8F84839919CB313800DF1E16 /* Images.xcassets in Resources */,
+				8FC857B81A0CFA9D005DD780 /* puls.png in Resources */,
+				8FC857B71A0CFA9D005DD780 /* male.png in Resources */,
+				8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */,
 				8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */,
+				8FC857BD1A0D0052005DD780 /* PageControllerView.xib in Resources */,
 				8F84838519CB313800DF1E16 /* InfoPlist.strings in Resources */,
+				8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */,
+				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,14 +348,12 @@
 				8FC065431A0C1BDE00D853E6 /* BlutzuckerPageViewController.m in Sources */,
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
 				8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */,
-				8F84839419CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmMasterViewController.m in Sources */,
 				8F84838719CB313800DF1E16 /* main.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
-				8F84839719CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +390,6 @@
 				8F84838D19CB313800DF1E16 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		8F84838F19CB313800DF1E16 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F84839019CB313800DF1E16 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		8F8483A819CB313800DF1E16 /* InfoPlist.strings */ = {

@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.autoresizesSubviews = YES;
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+    
+    
+    
     
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
@@ -34,14 +40,17 @@
     GewichtPageViewController *gewichtViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GewichtPageContentViewController"];
     gewichtViewController.pageIndex = 4;
 
+
     //collection with controllers
     _controllers = @[checkupViewController,blutzuckerViewController, blutdruckViewController, pulsViewController, gewichtViewController];
+    //Definieren des ersten Controllers der die View Präsentiert.
     BasePageViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     // Change the size of page view controller
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+   
     
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
@@ -64,7 +73,11 @@
 {
     NSUInteger index = ((CheckupPageViewController*) viewController).pageIndex;
     
-    if ((index == 0) || (index == NSNotFound)) {
+    if (index == 0) {
+        index = [_controllers count];
+        index--;
+        return [self viewControllerAtIndex:index];
+    } else if (index == NSNotFound) {
         return nil;
     }
     
@@ -82,7 +95,7 @@
     
     index++;
     if (index == [_controllers count]) {
-        return nil;
+        return [self viewControllerAtIndex:0];
     }
     return [self viewControllerAtIndex:index];
 }
