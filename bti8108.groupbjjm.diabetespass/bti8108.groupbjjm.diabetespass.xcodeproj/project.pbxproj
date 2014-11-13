@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F45CD871A14F19900DF5ED0 /* diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F45CD861A14F19900DF5ED0 /* diary.storyboard */; };
+		8F45CD891A14F23A00DF5ED0 /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F45CD881A14F23A00DF5ED0 /* settings.storyboard */; };
+		8F45CD8B1A14F26100DF5ED0 /* schema.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F45CD8A1A14F26100DF5ED0 /* schema.storyboard */; };
 		8F84837B19CB313800DF1E16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837A19CB313800DF1E16 /* Foundation.framework */; };
 		8F84837D19CB313800DF1E16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837C19CB313800DF1E16 /* CoreGraphics.framework */; };
 		8F84837F19CB313800DF1E16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837E19CB313800DF1E16 /* UIKit.framework */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F45CD861A14F19900DF5ED0 /* diary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = diary.storyboard; sourceTree = "<group>"; };
+		8F45CD881A14F23A00DF5ED0 /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
+		8F45CD8A1A14F26100DF5ED0 /* schema.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = schema.storyboard; sourceTree = "<group>"; };
 		8F84837719CB313800DF1E16 /* bti8108.groupbjjm.diabetespass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bti8108.groupbjjm.diabetespass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F84837A19CB313800DF1E16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F84837C19CB313800DF1E16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,11 +172,10 @@
 				8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */,
 				8FC0653E1A0C07AE00D853E6 /* CheckupViewController.h */,
 				8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */,
-				8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */,
-				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
-				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
-				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
 				8FC857BC1A0D0052005DD780 /* PageControllerView.xib */,
+				8F45CD861A14F19900DF5ED0 /* diary.storyboard */,
+				8F45CD881A14F23A00DF5ED0 /* settings.storyboard */,
+				8F45CD8A1A14F26100DF5ED0 /* schema.storyboard */,
 			);
 			path = bti8108.groupbjjm.diabetespass;
 			sourceTree = "<group>";
@@ -207,6 +212,10 @@
 		8FC065471A0C1C1B00D853E6 /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */,
+				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
+				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
+				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
 				8FC065481A0C1C3E00D853E6 /* PulsPageViewController.h */,
 				8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */,
 				8FC0654B1A0C1C6300D853E6 /* GewichtPageViewController.h */,
@@ -322,7 +331,10 @@
 				8FC857B71A0CFA9D005DD780 /* male.png in Resources */,
 				8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */,
 				8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */,
+				8F45CD8B1A14F26100DF5ED0 /* schema.storyboard in Resources */,
 				8FC857BD1A0D0052005DD780 /* PageControllerView.xib in Resources */,
+				8F45CD891A14F23A00DF5ED0 /* settings.storyboard in Resources */,
+				8F45CD871A14F19900DF5ED0 /* diary.storyboard in Resources */,
 				8F84838519CB313800DF1E16 /* InfoPlist.strings in Resources */,
 				8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */,
 				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,

@@ -15,6 +15,6 @@
 
 @interface CheckupViewController : UIViewController<UIPageViewControllerDataSource>
 @property (strong, nonatomic) UIPageViewController *pageViewController;
-
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSArray *controllers;
 @end
