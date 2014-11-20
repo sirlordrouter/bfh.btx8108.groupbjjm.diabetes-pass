@@ -51,8 +51,9 @@
     // Change the size of page view controller
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
    
-    
+    //Add to this controller the Page View Controller (with no segue on the storyboard)
     [self addChildViewController:_pageViewController];
+    //View des Controllers laden
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
      
