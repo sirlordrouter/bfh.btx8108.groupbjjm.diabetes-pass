@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -700,7 +700,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Notfallpass" id="NMg-Sn-suX">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="VVe-2R-hcv" style="IBUITableViewCellStyleDefault" id="CE7-zN-Qhf">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="VVe-2R-hcv" style="IBUITableViewCellStyleDefault" id="CE7-zN-Qhf">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CE7-zN-Qhf" id="5L3-Lu-HuR">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -713,6 +713,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="r83-u2-1lf" kind="push" id="5om-2j-i6I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -831,6 +834,62 @@
                 <exit id="01A-Gm-cCL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2366" y="1641"/>
+        </scene>
+        <!--Notfall Pass-->
+        <scene sceneID="yLN-0g-y44">
+            <objects>
+                <viewController id="r83-u2-1lf" customClass="NotfallViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lxf-kU-9qk"/>
+                        <viewControllerLayoutGuide type="bottom" id="g58-vB-Qs3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mO2-Ej-S4R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
+                                <rect key="frame" x="100" y="115" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="tJD-sp-Qxi" secondAttribute="centerY" id="TZ5-en-xXp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notfall Pass" id="fab-Sq-dF0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="idB-0C-VDo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cWw-eJ-mel">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Kopieren">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyTextFromTextField:" destination="r83-u2-1lf" eventType="touchUpInside" id="GdQ-jG-j7F"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="titleView" destination="mO2-Ej-S4R" id="LXE-nm-nBL"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NotFallView" destination="mO2-Ej-S4R" id="uEV-bQ-5o2"/>
+                        <outlet property="myTextField" destination="tJD-sp-Qxi" id="vSv-0U-cBA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xD9-Ih-UnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="2374"/>
         </scene>
         <!--Settings Therapy Page View Controller-->
         <scene sceneID="FNQ-A7-jHI">

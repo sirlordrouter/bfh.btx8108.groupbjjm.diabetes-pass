@@ -54,6 +54,7 @@
 		8FC857B71A0CFA9D005DD780 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B11A0CFA9D005DD780 /* male.png */; };
 		8FC857B81A0CFA9D005DD780 /* puls.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B21A0CFA9D005DD780 /* puls.png */; };
 		8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BA1A0CFD35005DD780 /* glucose.png */; };
+		DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		8FC857B11A0CFA9D005DD780 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		8FC857B21A0CFA9D005DD780 /* puls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puls.png; sourceTree = "<group>"; };
 		8FC857BA1A0CFD35005DD780 /* glucose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glucose.png; sourceTree = "<group>"; };
+		DE9319131A1F6DEA00A694C0 /* NotfallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotfallViewController.h; sourceTree = "<group>"; };
+		DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotfallViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				8F5FAB6B1A1E12E30027A02A /* SettingsPageViewController.h */,
 				8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */,
+				DE9319131A1F6DEA00A694C0 /* NotfallViewController.h */,
+				DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */,
 				8F5FAB6D1A1E12E30027A02A /* SettingsTypPageViewController.h */,
 				8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */,
 				8F5FAB6F1A1E12E30027A02A /* SettingsTherapyPageViewController.h */,
@@ -540,6 +545,7 @@
 				8F84838719CB313800DF1E16 /* main.m in Sources */,
 				8F5FAB871A1E163C0027A02A /* JBChartTooltipView.m in Sources */,
 				8F5FAB851A1E163C0027A02A /* JBChartInformationView.m in Sources */,
+				DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */,
 				8F5FAB771A1E149E0027A02A /* JBLineChartViewController.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */,
