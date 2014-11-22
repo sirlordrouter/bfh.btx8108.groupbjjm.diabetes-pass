@@ -9,6 +9,7 @@
 #import "SettingsPageViewController.h"
 #import "SettingsTypPageViewController.h"
 #import "SettingsTherapyPageViewController.h"
+#import "NotfallViewController.h"
 
 
 @interface SettingsPageViewController ()
