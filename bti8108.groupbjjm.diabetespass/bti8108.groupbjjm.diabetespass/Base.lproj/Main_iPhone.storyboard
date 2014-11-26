@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -847,13 +847,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
                                 <rect key="frame" x="100" y="115" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
                                 <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -862,7 +862,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="centerX" secondItem="sFk-YP-imv" secondAttribute="centerX" id="7ug-3w-I54"/>
                             <constraint firstAttribute="centerY" secondItem="tJD-sp-Qxi" secondAttribute="centerY" id="TZ5-en-xXp"/>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="top" secondItem="sFk-YP-imv" secondAttribute="bottom" constant="84" id="mfl-e1-qzU"/>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="leading" secondItem="mO2-Ej-S4R" secondAttribute="leadingMargin" constant="24" id="qXK-jT-wgn"/>
+                            <constraint firstItem="g58-vB-Qs3" firstAttribute="top" secondItem="tJD-sp-Qxi" secondAttribute="bottom" constant="171" id="qzv-cX-jed"/>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="centerX" secondItem="mO2-Ej-S4R" secondAttribute="centerX" id="u4Z-fm-XpI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notfall Pass" id="fab-Sq-dF0">
