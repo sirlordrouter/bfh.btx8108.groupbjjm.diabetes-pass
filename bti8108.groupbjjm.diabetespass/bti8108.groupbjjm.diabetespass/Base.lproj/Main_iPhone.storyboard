@@ -285,14 +285,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blutzucker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-WY-itp">
-                                <rect key="frame" x="139" y="28" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-oL-4Rv">
-                                <rect key="frame" x="0.0" y="57" width="320" height="511"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
                                 <connections>
                                     <segue destination="jJT-cu-NHC" kind="embed" id="A0d-LC-aTT"/>
                                 </connections>
@@ -300,12 +294,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wq9-oL-4Rv" secondAttribute="trailing" id="2gk-jH-hpV"/>
-                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="leading" secondItem="VX2-d0-vDC" secondAttribute="leading" id="3YY-XC-i0T"/>
-                            <constraint firstItem="LNv-WY-itp" firstAttribute="top" secondItem="83F-uD-uZk" secondAttribute="bottom" constant="8" symbolic="YES" id="91m-NR-RvN"/>
-                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="top" secondItem="LNv-WY-itp" secondAttribute="bottom" constant="8" symbolic="YES" id="DaB-hN-jDh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LNv-WY-itp" secondAttribute="trailing" constant="83" id="RaR-Rs-01o"/>
-                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="bottom" secondItem="yyu-sB-kvO" secondAttribute="top" id="XFs-sG-nkc"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="bottom" secondItem="yyu-sB-kvO" secondAttribute="top" id="HjW-31-akr"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="top" secondItem="83F-uD-uZk" secondAttribute="bottom" constant="8" symbolic="YES" id="atS-aU-6wv"/>
+                            <constraint firstAttribute="trailing" secondItem="Wq9-oL-4Rv" secondAttribute="trailing" id="mrK-Uj-e6g"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="leading" secondItem="VX2-d0-vDC" secondAttribute="leading" id="ofv-Yo-T7m"/>
                         </constraints>
                     </view>
                     <connections>
@@ -714,7 +706,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         <viewControllerLayoutGuide type="bottom" id="h18-vI-kPb"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Aeb-kL-y3s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

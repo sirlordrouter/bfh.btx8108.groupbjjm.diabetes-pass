@@ -22,12 +22,12 @@
 
 #pragma mark - Labels (Line Chart)
 
-#define kJBStringLabel2013 localize(@"label.2013", @"2013")
-#define kJBStringLabelSanFrancisco2013 localize(@"label.san.francisco.2013", @"San Francisco - 2013")
-#define kJBStringLabelAverageDailyRainfall localize(@"label.average.daily.rainfall", @"Average Daily Rainfall")
-#define kJBStringLabelMm localize(@"label.mm", @"mm")
-#define kJBStringLabelMetropolitanAverage localize(@"label.metropolitan.average", @"Metropolitan Average")
-#define kJBStringLabelNationalAverage localize(@"label.national.average", @"National Average")
+#define kJBStringLabel2013 localize(@"label.2013", @"Blutzucker")
+#define kJBStringLabelSanFrancisco2013 localize(@"label.san.francisco.2013", @"aktuelle Woche")
+#define kJBStringLabelAverageDailyRainfall localize(@"label.average.daily.rainfall", @"Blutzuckerwerte")
+#define kJBStringLabelMm localize(@"label.mmmol/L", @"mmol/L")
+#define kJBStringLabelMetropolitanAverage localize(@"label.metropolitan.average", @"gemessener Wert")
+#define kJBStringLabelNationalAverage localize(@"label.national.average", @"Grenzwert")
 
 #pragma mark - Labels (Area Chart)
 

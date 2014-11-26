@@ -1,9 +1,9 @@
 //
-//  JBLineChartViewController.m
-//  JBChartViewDemo
+//  CheckupPageViewController.m
+//  bti8108.groupbjjm.diabetespass
 //
-//  Created by Terry Worona on 11/5/13.
-//  Copyright (c) 2013 Jawbone. All rights reserved.
+//  Created by Johannes Gnägi on 06.11.14.
+//  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
 
 #import "JBLineChartViewController.h"
@@ -90,14 +90,32 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 - (void)initFakeData
 {
     NSMutableArray *mutableLineCharts = [NSMutableArray array];
-    for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
+    for (int lineIndex=0; lineIndex<3; lineIndex++)
     {
-        NSMutableArray *mutableChartData = [NSMutableArray array];
-        for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
-        {
-            [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)]]; // random number between 0 and 1
+        if (lineIndex == 0) {
+            NSMutableArray *mutableChartData = [NSMutableArray array];
+            for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+            {
+                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*6 + 2]]; // random number between 2 and 8
+            }
+            [mutableLineCharts addObject:mutableChartData];
+        } else if(lineIndex == 1){
+            NSMutableArray *mutableChartData = [NSMutableArray array];
+            for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+            {
+                [mutableChartData addObject:[NSNumber numberWithFloat:(4.0)]]; // min line
+            }
+            [mutableLineCharts addObject:mutableChartData];
+        } else {
+            NSMutableArray *mutableChartData = [NSMutableArray array];
+            for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+            {
+                [mutableChartData addObject:[NSNumber numberWithFloat:(7.0)]]; // max line
+            }
+            [mutableLineCharts addObject:mutableChartData];
         }
-        [mutableLineCharts addObject:mutableChartData];
+        
+        
     }
     _chartData = [NSArray arrayWithArray:mutableLineCharts];
     _daysOfWeek = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];
@@ -133,11 +151,11 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
-    headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];
+    headerView.titleLabel.text = @"Blutzucker";
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
-    headerView.subtitleLabel.text = kJBStringLabel2013;
+    headerView.subtitleLabel.text = @"aktuelle Woche";
     headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
     headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
@@ -161,6 +179,14 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     [self.informationView setTextShadowColor:nil];
     [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
     [self.view addSubview:self.informationView];
+    
+    
+    NSNumber *valueNumber = [NSNumber numberWithInt:4];
+    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
+    [self.informationView setTitleText:0 == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
+    [self.informationView setHidden:NO animated:YES];
+    //[self setTooltipVisible:YES animated:YES atTouchPoint:];
+    [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:4] uppercaseString]];
     
     [self.lineChartView reloadData];
 }
@@ -207,6 +233,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 #pragma mark - JBLineChartViewDelegate
 
+// y-position (y-axis) of point at horizontalIndex (x-axis)
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
     return [[[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex] floatValue];
@@ -235,6 +262,9 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
+    
+    
+    
     return (lineIndex == JBLineChartLineSolid) ? kJBColorLineChartDefaultSolidLineColor: kJBColorLineChartDefaultDashedLineColor;
 }
 
@@ -245,7 +275,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView dotRadiusForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    return (lineIndex == JBLineChartLineSolid) ? 0.0: (kJBLineChartViewControllerChartDashedLineWidth * 4);
+    return 0.0;//return (lineIndex == JBLineChartLineSolid) ? 0.0: (kJBLineChartViewControllerChartDashedLineWidth * 4);
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView verticalSelectionColorForLineAtLineIndex:(NSUInteger)lineIndex
