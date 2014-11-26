@@ -15,6 +15,7 @@
 
 @implementation NotfallViewController
 @synthesize myTextField;
+
 //Standardtekst um den UITextView zu füllen. Beim Laden des Views wird die Tekst neu gesetzt.
 NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nichts und rufen Sie sofort einen Arzt oder Notfalldienst! \n\nFalls ich mich ungewöhnlich Verhalte und den Eindruck erwecke, als wäre ich betrunken, kann dies ein Zeichen einer Unterzuckerung sein.\n\nBitte geben Sie mir 20g Zucker, z.B als 2 dl gesüsstes Getränk (nicht light Varianten) oder mind. 4 Stück Traubenzucker oder Würfelzucker. Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder Notfalldienst.";
 
@@ -22,7 +23,7 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Setzt das Textfield neu
-    myTextField.text = standardNotFallTekst;
+    //myTextField.text = standardNotFallTekst;
     //self.view.autoresizesSubviews = YES;
     //self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
@@ -35,26 +36,24 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)copyTextFromTextField:(id)sender {
+- (IBAction)copyText:(id)sender {
     //Popup View anzeigen mit Buttons
     UIAlertView *message = [[UIAlertView alloc]
-            initWithTitle:@"Infotekst wurde in der Zwischenablage kopiiert"
-            message:@"Sie können wenn Sie möchten direkt in den Notfallpass wechseln"
-            delegate:nil
-            cancelButtonTitle:@"Cancel"
-            otherButtonTitles:@"Notfallpass", nil];
+                            initWithTitle:@"Infotekst wurde in der Zwischenablage kopiiert"
+                            message:@"Sie können wenn Sie möchten direkt in den Notfallpass wechseln"
+                            delegate:nil
+                            cancelButtonTitle:@"Cancel"
+                            otherButtonTitles:@"Notfallpass", nil];
     
-        [message show];
+    [message show];
     
-       //Tekst aus Textfeld kopieren.
-        NSString *textFromTextField = myTextField.text;
-        
-        //Kontrolle ob text kopiert wurde. Ausgabe in NSLog
-   // NSLog(textFromTextField);
+    //Tekst aus Textfeld kopieren.
+    NSString *textFromTextField = myTextField.text;
+    
+    //Kontrolle ob text kopiert wurde. Ausgabe in NSLog
+    // NSLog(textFromTextField);
     _myCopiedstring = textFromTextField;
     NSLog(_myCopiedstring);
-        
-        
 }
 
 - (IBAction)openNotfallApp:(id)sender{
@@ -71,6 +70,4 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
 //        [alertView show];
 //        
     }
-
-
 @end

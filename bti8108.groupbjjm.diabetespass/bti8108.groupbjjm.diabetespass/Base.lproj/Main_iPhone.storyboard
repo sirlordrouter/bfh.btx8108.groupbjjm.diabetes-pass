@@ -560,70 +560,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DY2-x2-JX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="01A-Gm-cCL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2366" y="1641"/>
+            <point key="canvasLocation" x="2298" y="1725"/>
         </scene>
-        <!--Notfall Pass-->
-        <scene sceneID="yLN-0g-y44">
+        <!--Notfallpass Root Controller-->
+        <scene sceneID="VSg-0F-jJu">
             <objects>
-                <viewController id="r83-u2-1lf" customClass="NotfallViewController" sceneMemberID="viewController">
+                <navigationController title="Notfallpass Root Controller" id="pEP-0f-pRq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pKZ-zl-Oex"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Go7-dP-oeO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K9Q-UX-3YC" kind="relationship" relationship="rootViewController" id="ue0-1r-DPN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="607-lk-UeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="2544"/>
+        </scene>
+        <!--Notfallpass-->
+        <scene sceneID="a5l-Pj-QlQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="K9Q-UX-3YC" customClass="NotfallViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lxf-kU-9qk"/>
-                        <viewControllerLayoutGuide type="bottom" id="g58-vB-Qs3"/>
+                        <viewControllerLayoutGuide type="top" id="6jQ-zE-Z6w"/>
+                        <viewControllerLayoutGuide type="bottom" id="BFg-lK-lU9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mO2-Ej-S4R">
+                    <view key="view" contentMode="scaleToFill" id="SQ9-GF-htA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
-                                <rect key="frame" x="9" y="112" width="301" height="399"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
-                                <rect key="frame" x="98" y="83" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infotext für den Notfallpass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyZ-iY-e02">
+                                <rect key="frame" x="56" y="94" width="208" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-pm-qSo">
+                                <rect key="frame" x="26" y="137" width="268" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Falls ich bewusstlos bin, geben Sie mir nichts und rufen Sie sofort einen Arzt oder Notfalldienst! 
+
+Falls ich mich ungewöhnlich Verhalte und den Eindruck erwecke, als wäre ich betrunken, kann dies ein Zeichen einer Unterzuckerung sein. 
+
+Bitte geben Sie mir 20g Zucker, z.B als 2 dl gesüsstes Getränk (nicht light Varianten) oder mind. 4 Stück Traubenzucker oder Würfelzucker. 
+
+Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder Notfalldienst.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g58-vB-Qs3" firstAttribute="top" secondItem="sFk-YP-imv" secondAttribute="bottom" constant="415" id="15M-s2-X8Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sFk-YP-imv" secondAttribute="trailing" constant="84" id="6rN-I3-VVY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tJD-sp-Qxi" secondAttribute="trailing" constant="-6" id="9NG-dU-LPs"/>
-                            <constraint firstItem="sFk-YP-imv" firstAttribute="top" secondItem="Lxf-kU-9qk" secondAttribute="bottom" constant="19" id="Dc2-ih-IZ4"/>
-                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="leading" secondItem="mO2-Ej-S4R" secondAttribute="leadingMargin" constant="-7" id="EP6-Vf-JPw"/>
-                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="top" secondItem="Lxf-kU-9qk" secondAttribute="bottom" constant="48" id="eFw-wL-21h"/>
-                            <constraint firstItem="sFk-YP-imv" firstAttribute="leading" secondItem="mO2-Ej-S4R" secondAttribute="leadingMargin" constant="82" id="hF9-kU-4su"/>
-                            <constraint firstItem="g58-vB-Qs3" firstAttribute="top" secondItem="tJD-sp-Qxi" secondAttribute="bottom" constant="8" id="meR-LJ-0Jy"/>
+                            <constraint firstItem="2Ut-pm-qSo" firstAttribute="top" secondItem="6jQ-zE-Z6w" secondAttribute="bottom" constant="73" id="7LN-X4-M8d"/>
+                            <constraint firstItem="fyZ-iY-e02" firstAttribute="centerX" secondItem="2Ut-pm-qSo" secondAttribute="centerX" id="8CX-ua-7eQ"/>
+                            <constraint firstItem="2Ut-pm-qSo" firstAttribute="centerX" secondItem="SQ9-GF-htA" secondAttribute="centerX" id="Gkq-YE-6Mh"/>
+                            <constraint firstItem="2Ut-pm-qSo" firstAttribute="leading" secondItem="SQ9-GF-htA" secondAttribute="leadingMargin" constant="10" id="K4o-BA-Cfh"/>
+                            <constraint firstItem="fyZ-iY-e02" firstAttribute="top" secondItem="6jQ-zE-Z6w" secondAttribute="bottom" constant="30" id="V9E-ZE-2xB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ut-pm-qSo" secondAttribute="trailing" constant="10" id="zAA-Bd-s53"/>
+                            <constraint firstItem="BFg-lK-lU9" firstAttribute="top" secondItem="2Ut-pm-qSo" secondAttribute="bottom" constant="56" id="zm6-cd-0Lc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notfall Pass" id="fab-Sq-dF0">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="idB-0C-VDo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cWw-eJ-mel">
+                    <navigationItem key="navigationItem" title="Notfallpass" id="VUd-K6-36F">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ruf-v0-98f">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezp-T5-Cdj">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Kopieren">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="copyTextFromTextField:" destination="r83-u2-1lf" eventType="touchUpInside" id="GdQ-jG-j7F"/>
+                                    <action selector="copyText:" destination="K9Q-UX-3YC" eventType="touchUpInside" id="l2N-5e-skR"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="copyText:" destination="K9Q-UX-3YC" id="nDp-A6-sZU"/>
+                            </connections>
                         </barButtonItem>
-                        <connections>
-                            <outlet property="titleView" destination="mO2-Ej-S4R" id="LXE-nm-nBL"/>
-                        </connections>
                     </navigationItem>
-                    <connections>
-                        <outlet property="NotFallView" destination="mO2-Ej-S4R" id="uEV-bQ-5o2"/>
-                        <outlet property="myTextField" destination="tJD-sp-Qxi" id="vSv-0U-cBA"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xD9-Ih-UnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Woa-kn-ykK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371" y="2374"/>
+            <point key="canvasLocation" x="2022" y="2544"/>
         </scene>
         <!--Settings Therapy Page View Controller-->
         <scene sceneID="FNQ-A7-jHI">
@@ -1210,7 +1230,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Notfallpass" id="QhP-J2-646">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="r37-dw-bZq" style="IBUITableViewCellStyleDefault" id="y9Z-cw-5y3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="r37-dw-bZq" style="IBUITableViewCellStyleDefault" id="y9Z-cw-5y3">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y9Z-cw-5y3" id="gqg-A3-D9U">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1224,7 +1244,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="r83-u2-1lf" kind="push" id="wHa-2O-aDp"/>
+                                            <segue destination="K9Q-UX-3YC" kind="push" id="zUA-DL-yIv"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1296,7 +1316,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NC-He-uVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="1613"/>
+            <point key="canvasLocation" x="1640" y="1697"/>
         </scene>
     </scenes>
     <resources>
@@ -1308,4 +1328,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ue0-1r-DPN"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,10 @@
 @interface NotfallViewController : UIViewController
 @property(strong, nonatomic) IBOutlet UIView *NotFallView;
 //Text aus dem Textfeld kopieren und in der zwischenablage ablegen.
-- (IBAction)copyTextFromTextField:(id)sender;
+- (IBAction)copyText:(id)sender;
+
+
+
 //Open IOS NotfallApp ist nicht möglich bis auf weiteres...
 - (IBAction)openNotfallApp:(id)sender;
 
