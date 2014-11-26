@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hKX-Ta-wg0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,14 +36,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ziel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwL-Kl-wmo">
-                                <rect key="frame" x="239" y="71" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ziel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwL-Kl-wmo">
+                                <rect key="frame" x="249" y="71" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D11-K0-fd1">
-                                <rect key="frame" x="129" y="103" width="63" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D11-K0-fd1">
+                                <rect key="frame" x="128" y="103" width="65" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Blutzucker mmol / L">
                                         <attributes>
@@ -54,8 +55,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-x2-KTe">
-                                <rect key="frame" x="127" y="191" width="73" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-x2-KTe">
+                                <rect key="frame" x="118" y="191" width="92" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Blutdruck mmHg">
                                         <attributes>
@@ -67,8 +68,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ke-Zf-DKP">
-                                <rect key="frame" x="134" y="257" width="58" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ke-Zf-DKP">
+                                <rect key="frame" x="135" y="257" width="58" height="34"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Gewicht kg">
                                         <attributes>
@@ -80,8 +81,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-jK-ex3">
-                                <rect key="frame" x="147" y="333" width="32" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-jK-ex3">
+                                <rect key="frame" x="148" y="333" width="32" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="CtH-BZ-G3N"/>
                                 </constraints>
@@ -96,8 +97,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-M8-B8j">
-                                <rect key="frame" x="35" y="103" width="59" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-M8-B8j">
+                                <rect key="frame" x="37" y="103" width="56" height="40"/>
                                 <attributedString key="attributedText">
                                     <fragment content="9.0">
                                         <attributes>
@@ -109,8 +110,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrV-1a-l2B">
-                                <rect key="frame" x="25" y="250" width="78" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrV-1a-l2B">
+                                <rect key="frame" x="25" y="250" width="79" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="74.0">
                                         <attributes>
@@ -122,8 +123,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaK-jx-EsU">
-                                <rect key="frame" x="25" y="326" width="78" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaK-jx-EsU">
+                                <rect key="frame" x="25" y="326" width="79" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="74.0">
                                         <attributes>
@@ -135,8 +136,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7Q-FZ-TqQ">
-                                <rect key="frame" x="221" y="250" width="78" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7Q-FZ-TqQ">
+                                <rect key="frame" x="222" y="250" width="86" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="74.0">
                                         <attributes>
@@ -148,8 +149,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEm-aB-1qm">
-                                <rect key="frame" x="231" y="103" width="59" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEm-aB-1qm">
+                                <rect key="frame" x="232" y="103" width="67" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="6.0">
                                         <attributes>
@@ -161,8 +162,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-Dq-4kh">
-                                <rect key="frame" x="16" y="183" width="119" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-Dq-4kh">
+                                <rect key="frame" x="16" y="183" width="129" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="120 / 90">
                                         <attributes>
@@ -174,8 +175,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-RE-Pur">
-                                <rect key="frame" x="201" y="183" width="119" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-RE-Pur">
+                                <rect key="frame" x="211" y="183" width="109" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="120 / 70">
                                         <attributes>
@@ -187,8 +188,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jac-8u-VIR">
-                                <rect key="frame" x="221" y="326" width="78" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jac-8u-VIR">
+                                <rect key="frame" x="222" y="326" width="78" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="74.0">
                                         <attributes>
@@ -200,8 +201,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aktuell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-ZV-Lzk">
-                                <rect key="frame" x="38" y="74" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aktuell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-ZV-Lzk">
+                                <rect key="frame" x="39" y="74" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -284,20 +285,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blutzucker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-WY-itp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blutzucker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-WY-itp">
                                 <rect key="frame" x="139" y="28" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-oL-4Rv">
-                                <rect key="frame" x="16" y="57" width="288" height="484"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-oL-4Rv">
+                                <rect key="frame" x="0.0" y="57" width="320" height="511"/>
                                 <connections>
                                     <segue destination="jJT-cu-NHC" kind="embed" id="A0d-LC-aTT"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wq9-oL-4Rv" secondAttribute="trailing" id="2gk-jH-hpV"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="leading" secondItem="VX2-d0-vDC" secondAttribute="leading" id="3YY-XC-i0T"/>
+                            <constraint firstItem="LNv-WY-itp" firstAttribute="top" secondItem="83F-uD-uZk" secondAttribute="bottom" constant="8" symbolic="YES" id="91m-NR-RvN"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="top" secondItem="LNv-WY-itp" secondAttribute="bottom" constant="8" symbolic="YES" id="DaB-hN-jDh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LNv-WY-itp" secondAttribute="trailing" constant="83" id="RaR-Rs-01o"/>
+                            <constraint firstItem="Wq9-oL-4Rv" firstAttribute="bottom" secondItem="yyu-sB-kvO" secondAttribute="top" id="XFs-sG-nkc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="BlutzuckerView" destination="VX2-d0-vDC" id="7Qr-Rc-Cot"/>
@@ -406,7 +415,7 @@
             </objects>
             <point key="canvasLocation" x="1101" y="2592"/>
         </scene>
-        <!--View Controller-->
+        <!--Schema-->
         <scene sceneID="bjp-10-9RC">
             <objects>
                 <viewController id="0SY-bU-65V" sceneMemberID="viewController">
@@ -419,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="mJ8-W5-FtL"/>
+                    <tabBarItem key="tabBarItem" title="Schema" id="mJ8-W5-FtL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQB-NM-h62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -466,21 +475,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0SY-bU-65V" kind="relationship" relationship="viewControllers" id="aRR-N0-hBe"/>
                         <segue destination="u3j-IR-4NH" kind="relationship" relationship="viewControllers" id="oar-0i-eeB"/>
-                        <segue destination="T5c-f5-3vn" kind="relationship" relationship="viewControllers" id="p77-mt-YSb"/>
                         <segue destination="0ef-ea-jT9" kind="relationship" relationship="viewControllers" id="RNx-ju-DkK"/>
+                        <segue destination="0SY-bU-65V" kind="relationship" relationship="viewControllers" id="aRR-N0-hBe"/>
+                        <segue destination="T5c-f5-3vn" kind="relationship" relationship="viewControllers" id="p77-mt-YSb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y0-Vl-ja5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="1024"/>
         </scene>
-        <!--Item-->
+        <!--Einstellungen-->
         <scene sceneID="Ezp-wX-sAp">
             <objects>
                 <navigationController id="T5c-f5-3vn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="h9S-TG-yDN"/>
+                    <tabBarItem key="tabBarItem" title="Einstellungen" id="h9S-TG-yDN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9u-RP-zwS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -491,7 +500,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uc-YG-kb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="1608"/>
+            <point key="canvasLocation" x="1164" y="1852"/>
         </scene>
         <!--Settings Typ Page View Controller-->
         <scene sceneID="4af-pX-Qz7">
@@ -565,22 +574,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
-                                <rect key="frame" x="100" y="115" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-sp-Qxi">
+                                <rect key="frame" x="9" y="112" width="301" height="399"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infotekst Notfall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFk-YP-imv">
+                                <rect key="frame" x="98" y="83" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="tJD-sp-Qxi" secondAttribute="centerY" id="TZ5-en-xXp"/>
+                            <constraint firstItem="g58-vB-Qs3" firstAttribute="top" secondItem="sFk-YP-imv" secondAttribute="bottom" constant="415" id="15M-s2-X8Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sFk-YP-imv" secondAttribute="trailing" constant="84" id="6rN-I3-VVY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJD-sp-Qxi" secondAttribute="trailing" constant="-6" id="9NG-dU-LPs"/>
+                            <constraint firstItem="sFk-YP-imv" firstAttribute="top" secondItem="Lxf-kU-9qk" secondAttribute="bottom" constant="19" id="Dc2-ih-IZ4"/>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="leading" secondItem="mO2-Ej-S4R" secondAttribute="leadingMargin" constant="-7" id="EP6-Vf-JPw"/>
+                            <constraint firstItem="tJD-sp-Qxi" firstAttribute="top" secondItem="Lxf-kU-9qk" secondAttribute="bottom" constant="48" id="eFw-wL-21h"/>
+                            <constraint firstItem="sFk-YP-imv" firstAttribute="leading" secondItem="mO2-Ej-S4R" secondAttribute="leadingMargin" constant="82" id="hF9-kU-4su"/>
+                            <constraint firstItem="g58-vB-Qs3" firstAttribute="top" secondItem="tJD-sp-Qxi" secondAttribute="bottom" constant="8" id="meR-LJ-0Jy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notfall Pass" id="fab-Sq-dF0">
@@ -678,7 +694,7 @@
                         <viewControllerLayoutGuide type="bottom" id="h18-vI-kPb"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Aeb-kL-y3s">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="484"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -911,11 +927,11 @@
             </objects>
             <point key="canvasLocation" x="811" y="272"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tagebuch-->
         <scene sceneID="uS6-pH-xmv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ef-ea-jT9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="eza-uG-EM3"/>
+                    <tabBarItem key="tabBarItem" title="Tagebuch" id="eza-uG-EM3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VtM-SQ-iJI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1255,7 +1271,7 @@
                             <outlet property="delegate" destination="U80-GE-C8G" id="8m3-So-kOy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="AOc-V5-54a"/>
+                    <tabBarItem key="tabBarItem" title="Einstellungen" id="AOc-V5-54a"/>
                     <navigationItem key="navigationItem" title="Einstellungen" id="bVQ-fz-pk2"/>
                     <connections>
                         <outlet property="eveningCell" destination="SoO-eh-6FD" id="ON1-TA-cKA"/>
