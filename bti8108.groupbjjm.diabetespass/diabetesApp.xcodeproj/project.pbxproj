@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2281A276E280064DD95 /* diary@2x.png */; };
+		8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2291A276E280064DD95 /* settings@2x.png */; };
+		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
+		8F2EC22F1A276E280064DD95 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22B1A276E280064DD95 /* table.png */; };
+		8F2EC2311A276E950064DD95 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2301A276E950064DD95 /* list@2x.png */; };
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
 		8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */; };
 		8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB701A1E12E30027A02A /* SettingsTherapyPageViewController.m */; };
@@ -28,10 +33,6 @@
 		8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */; };
 		8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */; };
 		8F84839919CB313800DF1E16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F84839819CB313800DF1E16 /* Images.xcassets */; };
-		8F8483A119CB313800DF1E16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837A19CB313800DF1E16 /* Foundation.framework */; };
-		8F8483A219CB313800DF1E16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837E19CB313800DF1E16 /* UIKit.framework */; };
-		8F8483AA19CB313800DF1E16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F8483A819CB313800DF1E16 /* InfoPlist.strings */; };
-		8F8483AC19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */; };
 		8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8483B519CB315E00DF1E16 /* MapKit.framework */; };
 		8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B12281A14FF5700ABC711 /* Launch Screen.xib */; };
 		8FA1A5201A1CC77C009E1E6C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */; };
@@ -57,17 +58,12 @@
 		DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8F8483A319CB313800DF1E16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8F84836F19CB313700DF1E16 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F84837619CB313700DF1E16;
-			remoteInfo = bti8108.groupbjjm.diabetespass;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		8F2EC2281A276E280064DD95 /* diary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diary@2x.png"; sourceTree = "<group>"; };
+		8F2EC2291A276E280064DD95 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		8F2EC22B1A276E280064DD95 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
+		8F2EC2301A276E950064DD95 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		8F5FAB6B1A1E12E30027A02A /* SettingsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPageViewController.h; sourceTree = "<group>"; };
 		8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPageViewController.m; sourceTree = "<group>"; };
 		8F5FAB6D1A1E12E30027A02A /* SettingsTypPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTypPageViewController.h; sourceTree = "<group>"; };
@@ -111,7 +107,6 @@
 		8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch_bfh_bti8108_groupbjjmAppDelegate.m; sourceTree = "<group>"; };
 		8F84838D19CB313800DF1E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		8F84839819CB313800DF1E16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diabetesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8483A719CB313800DF1E16 /* diabetesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "diabetesAppTests-Info.plist"; sourceTree = "<group>"; };
 		8F8483A919CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
@@ -164,15 +159,6 @@
 				8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */,
 				8F84837B19CB313800DF1E16 /* Foundation.framework in Frameworks */,
 				8FA1A5201A1CC77C009E1E6C /* HealthKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8F84839B19CB313800DF1E16 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F8483A219CB313800DF1E16 /* UIKit.framework in Frameworks */,
-				8F8483A119CB313800DF1E16 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				8F84837719CB313800DF1E16 /* diabetesApp.app */,
-				8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +384,11 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F2EC2301A276E950064DD95 /* list@2x.png */,
+				8F2EC2281A276E280064DD95 /* diary@2x.png */,
+				8F2EC2291A276E280064DD95 /* settings@2x.png */,
+				8F2EC22A1A276E280064DD95 /* home@2x.png */,
+				8F2EC22B1A276E280064DD95 /* table.png */,
 				8FC857BA1A0CFD35005DD780 /* glucose.png */,
 				8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */,
 				8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */,
@@ -441,24 +431,6 @@
 			productReference = 8F84837719CB313800DF1E16 /* diabetesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F84839D19CB313800DF1E16 /* diabetesAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesAppTests" */;
-			buildPhases = (
-				8F84839A19CB313800DF1E16 /* Sources */,
-				8F84839B19CB313800DF1E16 /* Frameworks */,
-				8F84839C19CB313800DF1E16 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8F8483A419CB313800DF1E16 /* PBXTargetDependency */,
-			);
-			name = diabetesAppTests;
-			productName = bti8108.groupbjjm.diabetespassTests;
-			productReference = 8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -480,9 +452,6 @@
 							};
 						};
 					};
-					8F84839D19CB313800DF1E16 = {
-						TestTargetID = 8F84837619CB313700DF1E16;
-					};
 				};
 			};
 			buildConfigurationList = 8F84837219CB313700DF1E16 /* Build configuration list for PBXProject "diabetesApp" */;
@@ -499,7 +468,6 @@
 			projectRoot = "";
 			targets = (
 				8F84837619CB313700DF1E16 /* diabetesApp */,
-				8F84839D19CB313800DF1E16 /* diabetesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -509,25 +477,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */,
+				8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */,
 				8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */,
 				8FC857B61A0CFA9D005DD780 /* gewicht.png in Resources */,
 				8F84839919CB313800DF1E16 /* Images.xcassets in Resources */,
 				8FC857B81A0CFA9D005DD780 /* puls.png in Resources */,
 				8FC857B71A0CFA9D005DD780 /* male.png in Resources */,
+				8F2EC2311A276E950064DD95 /* list@2x.png in Resources */,
+				8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */,
 				8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */,
 				8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */,
 				8F84838519CB313800DF1E16 /* InfoPlist.strings in Resources */,
 				8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */,
 				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,
 				8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8F84839C19CB313800DF1E16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F8483AA19CB313800DF1E16 /* InfoPlist.strings in Resources */,
+				8F2EC22F1A276E280064DD95 /* table.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,23 +534,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F84839A19CB313800DF1E16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F8483AC19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8F8483A419CB313800DF1E16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F84837619CB313700DF1E16 /* diabetesApp */;
-			targetProxy = 8F8483A319CB313800DF1E16 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F84838319CB313800DF1E16 /* InfoPlist.strings */ = {
@@ -723,46 +672,6 @@
 			};
 			name = Release;
 		};
-		8F8483B319CB313800DF1E16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bti8108.groupbjjm.diabetespass.app/bti8108.groupbjjm.diabetespass";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/diabetesAppTests-Info.plist";
-				PRODUCT_NAME = diabetesAppTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		8F8483B419CB313800DF1E16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bti8108.groupbjjm.diabetespass.app/bti8108.groupbjjm.diabetespass";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Prefix.pch";
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/diabetesAppTests-Info.plist";
-				PRODUCT_NAME = diabetesAppTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -780,15 +689,6 @@
 			buildConfigurations = (
 				8F8483B019CB313800DF1E16 /* Debug */,
 				8F8483B119CB313800DF1E16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F8483B319CB313800DF1E16 /* Debug */,
-				8F8483B419CB313800DF1E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

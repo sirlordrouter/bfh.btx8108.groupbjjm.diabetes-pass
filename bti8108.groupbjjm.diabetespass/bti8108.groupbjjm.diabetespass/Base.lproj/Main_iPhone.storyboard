@@ -428,7 +428,7 @@ mmHg</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schema" id="mJ8-W5-FtL"/>
+                    <tabBarItem key="tabBarItem" title="Schema" image="list.png" id="mJ8-W5-FtL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQB-NM-h62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,7 +457,7 @@ mmHg</string>
                             <constraint firstItem="bfk-F6-ggj" firstAttribute="centerX" secondItem="Zgh-yA-dze" secondAttribute="centerX" id="ngk-dV-XZb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="eho-2Q-czQ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="eho-2Q-czQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekV-fj-RKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -477,8 +477,8 @@ mmHg</string>
                     <connections>
                         <segue destination="u3j-IR-4NH" kind="relationship" relationship="viewControllers" id="oar-0i-eeB"/>
                         <segue destination="0ef-ea-jT9" kind="relationship" relationship="viewControllers" id="RNx-ju-DkK"/>
-                        <segue destination="T5c-f5-3vn" kind="relationship" relationship="viewControllers" id="p77-mt-YSb"/>
                         <segue destination="0SY-bU-65V" kind="relationship" relationship="viewControllers" id="aRR-N0-hBe"/>
+                        <segue destination="T5c-f5-3vn" kind="relationship" relationship="viewControllers" id="p77-mt-YSb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y0-Vl-ja5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,7 +489,7 @@ mmHg</string>
         <scene sceneID="Ezp-wX-sAp">
             <objects>
                 <navigationController id="T5c-f5-3vn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Einstellungen" id="h9S-TG-yDN"/>
+                    <tabBarItem key="tabBarItem" title="Einstellungen" image="settings.png" id="h9S-TG-yDN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9u-RP-zwS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -951,7 +951,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
         <scene sceneID="uS6-pH-xmv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ef-ea-jT9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tagebuch" id="eza-uG-EM3"/>
+                    <tabBarItem key="tabBarItem" title="Tagebuch" image="diary.png" id="eza-uG-EM3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VtM-SQ-iJI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1320,8 +1320,12 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
         </scene>
     </scenes>
     <resources>
+        <image name="diary.png" width="27" height="25"/>
         <image name="gewicht.png" width="400" height="397"/>
+        <image name="home.png" width="25" height="25"/>
+        <image name="list.png" width="25" height="25"/>
         <image name="puls.png" width="401" height="312"/>
+        <image name="settings.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

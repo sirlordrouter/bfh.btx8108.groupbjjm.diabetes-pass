@@ -281,6 +281,17 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
 
+    if (lineIndex == 0) {
+        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
+            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
+            return [UIColor redColor];
+        } else {
+            return kJBColorLineChartDefaultSolidLineColor;
+        }
+    } else {
+        return kJBColorLineChartDefaultDashedLineColor;
+    }
+    
     return (lineIndex == JBLineChartLineSolid) ? kJBColorLineChartDefaultSolidLineColor: kJBColorLineChartDefaultDashedLineColor;
 }
 
