@@ -28,7 +28,6 @@
 		8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */; };
 		8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F84838C19CB313800DF1E16 /* Main_iPhone.storyboard */; };
 		8F84839919CB313800DF1E16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F84839819CB313800DF1E16 /* Images.xcassets */; };
-		8F8483A019CB313800DF1E16 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84839F19CB313800DF1E16 /* XCTest.framework */; };
 		8F8483A119CB313800DF1E16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837A19CB313800DF1E16 /* Foundation.framework */; };
 		8F8483A219CB313800DF1E16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837E19CB313800DF1E16 /* UIKit.framework */; };
 		8F8483AA19CB313800DF1E16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F8483A819CB313800DF1E16 /* InfoPlist.strings */; };
@@ -113,7 +112,6 @@
 		8F84838D19CB313800DF1E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		8F84839819CB313800DF1E16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diabetesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F84839F19CB313800DF1E16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8F8483A719CB313800DF1E16 /* diabetesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "diabetesAppTests-Info.plist"; sourceTree = "<group>"; };
 		8F8483A919CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8483A019CB313800DF1E16 /* XCTest.framework in Frameworks */,
 				8F8483A219CB313800DF1E16 /* UIKit.framework in Frameworks */,
 				8F8483A119CB313800DF1E16 /* Foundation.framework in Frameworks */,
 			);
@@ -273,7 +270,6 @@
 				8F84837A19CB313800DF1E16 /* Foundation.framework */,
 				8F84837C19CB313800DF1E16 /* CoreGraphics.framework */,
 				8F84837E19CB313800DF1E16 /* UIKit.framework */,
-				8F84839F19CB313800DF1E16 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
