@@ -176,6 +176,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
     [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
     [self.informationView setTitleTextColor:kJBColorLineChartHeader];
+    
     [self.informationView setTextShadowColor:nil];
     [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
     [self.view addSubview:self.informationView];
@@ -188,6 +189,12 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     //[self setTooltipVisible:YES animated:YES atTouchPoint:];
     [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:4] uppercaseString]];
     
+    for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++) {
+        
+        [self setLabel:(i)];
+    }
+    
+    
     [self.lineChartView reloadData];
 }
 
@@ -195,6 +202,15 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 {
     [super viewWillAppear:animated];
     [self.lineChartView setState:JBChartViewStateExpanded];
+}
+
+-(void) setLabel:(NSUInteger)index {
+    NSNumber *valueNumber = [[self.chartData objectAtIndex:0] objectAtIndex:index];
+    
+    [self setTooltipVisible:YES animated:YES];
+    //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+    NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
+    [self.tooltipView setText:value];
 }
 
 #pragma mark - JBChartViewDataSource
@@ -223,12 +239,12 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return lineIndex == JBLineChartViewLineStyleDashed;
+    return lineIndex == 0;
 }
 
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return lineIndex == JBLineChartViewLineStyleSolid;
+    return lineIndex == 0;
 }
 
 #pragma mark - JBLineChartViewDelegate
@@ -246,13 +262,15 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-    [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+    //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+    NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
+    [self.tooltipView setText:value];
 }
 
 - (void)didDeselectLineInLineChartView:(JBLineChartView *)lineChartView
 {
-    [self.informationView setHidden:YES animated:YES];
-    [self setTooltipVisible:NO animated:YES];
+    //[self.informationView setHidden:YES animated:YES];
+    //[self setTooltipVisible:NO animated:YES];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
@@ -262,9 +280,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    
-    
-    
+
     return (lineIndex == JBLineChartLineSolid) ? kJBColorLineChartDefaultSolidLineColor: kJBColorLineChartDefaultDashedLineColor;
 }
 
@@ -275,7 +291,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView dotRadiusForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    return 0.0;//return (lineIndex == JBLineChartLineSolid) ? 0.0: (kJBLineChartViewControllerChartDashedLineWidth * 4);
+    return (lineIndex > 0) ? 0.0: (kJBLineChartViewControllerChartDashedLineWidth * 6);
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView verticalSelectionColorForLineAtLineIndex:(NSUInteger)lineIndex
@@ -295,7 +311,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (JBLineChartViewLineStyle)lineChartView:(JBLineChartView *)lineChartView lineStyleForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return (lineIndex == JBLineChartLineSolid) ? JBLineChartViewLineStyleSolid : JBLineChartViewLineStyleDashed;
+    return (lineIndex == 0) ? JBLineChartViewLineStyleSolid : JBLineChartViewLineStyleDashed;
 }
 
 #pragma mark - Buttons

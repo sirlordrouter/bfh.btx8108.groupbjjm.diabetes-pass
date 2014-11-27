@@ -100,21 +100,21 @@
 		8F5FAB981A1E17D20027A02A /* JBUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		8F5FAB991A1E2D3A0027A02A /* BlutdruckChartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutdruckChartPageViewController.h; sourceTree = "<group>"; };
 		8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutdruckChartPageViewController.m; sourceTree = "<group>"; };
-		8F84837719CB313800DF1E16 /* bti8108.groupbjjm.diabetespass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bti8108.groupbjjm.diabetespass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F84837719CB313800DF1E16 /* diabetesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diabetesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F84837A19CB313800DF1E16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F84837C19CB313800DF1E16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8F84837E19CB313800DF1E16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8F84838219CB313800DF1E16 /* bti8108.groupbjjm.diabetespass-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bti8108.groupbjjm.diabetespass-Info.plist"; sourceTree = "<group>"; };
+		8F84838219CB313800DF1E16 /* diabetesApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "diabetesApp-Info.plist"; sourceTree = "<group>"; };
 		8F84838419CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F84838619CB313800DF1E16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8F84838819CB313800DF1E16 /* bti8108.groupbjjm.diabetespass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bti8108.groupbjjm.diabetespass-Prefix.pch"; sourceTree = "<group>"; };
+		8F84838819CB313800DF1E16 /* diabetesApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "diabetesApp-Prefix.pch"; sourceTree = "<group>"; };
 		8F84838919CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ch_bfh_bti8108_groupbjjmAppDelegate.h; sourceTree = "<group>"; };
 		8F84838A19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch_bfh_bti8108_groupbjjmAppDelegate.m; sourceTree = "<group>"; };
 		8F84838D19CB313800DF1E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		8F84839819CB313800DF1E16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8F84839E19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bti8108.groupbjjm.diabetespassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diabetesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F84839F19CB313800DF1E16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8F8483A719CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bti8108.groupbjjm.diabetespassTests-Info.plist"; sourceTree = "<group>"; };
+		8F8483A719CB313800DF1E16 /* diabetesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "diabetesAppTests-Info.plist"; sourceTree = "<group>"; };
 		8F8483A919CB313800DF1E16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
 		8F8483B519CB315E00DF1E16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -259,8 +259,8 @@
 		8F84837819CB313800DF1E16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F84837719CB313800DF1E16 /* bti8108.groupbjjm.diabetespass.app */,
-				8F84839E19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests.xctest */,
+				8F84837719CB313800DF1E16 /* diabetesApp.app */,
+				8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,10 +299,10 @@
 		8F84838119CB313800DF1E16 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F84838219CB313800DF1E16 /* bti8108.groupbjjm.diabetespass-Info.plist */,
+				8F84838219CB313800DF1E16 /* diabetesApp-Info.plist */,
 				8F84838319CB313800DF1E16 /* InfoPlist.strings */,
 				8F84838619CB313800DF1E16 /* main.m */,
-				8F84838819CB313800DF1E16 /* bti8108.groupbjjm.diabetespass-Prefix.pch */,
+				8F84838819CB313800DF1E16 /* diabetesApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 		8F8483A619CB313800DF1E16 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F8483A719CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests-Info.plist */,
+				8F8483A719CB313800DF1E16 /* diabetesAppTests-Info.plist */,
 				8F8483A819CB313800DF1E16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -428,9 +428,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F84837619CB313700DF1E16 /* bti8108.groupbjjm.diabetespass */ = {
+		8F84837619CB313700DF1E16 /* diabetesApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8483AF19CB313800DF1E16 /* Build configuration list for PBXNativeTarget "bti8108.groupbjjm.diabetespass" */;
+			buildConfigurationList = 8F8483AF19CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesApp" */;
 			buildPhases = (
 				8F84837319CB313700DF1E16 /* Sources */,
 				8F84837419CB313700DF1E16 /* Frameworks */,
@@ -440,14 +440,14 @@
 			);
 			dependencies = (
 			);
-			name = bti8108.groupbjjm.diabetespass;
+			name = diabetesApp;
 			productName = bti8108.groupbjjm.diabetespass;
-			productReference = 8F84837719CB313800DF1E16 /* bti8108.groupbjjm.diabetespass.app */;
+			productReference = 8F84837719CB313800DF1E16 /* diabetesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F84839D19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests */ = {
+		8F84839D19CB313800DF1E16 /* diabetesAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "bti8108.groupbjjm.diabetespassTests" */;
+			buildConfigurationList = 8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesAppTests" */;
 			buildPhases = (
 				8F84839A19CB313800DF1E16 /* Sources */,
 				8F84839B19CB313800DF1E16 /* Frameworks */,
@@ -458,9 +458,9 @@
 			dependencies = (
 				8F8483A419CB313800DF1E16 /* PBXTargetDependency */,
 			);
-			name = bti8108.groupbjjm.diabetespassTests;
+			name = diabetesAppTests;
 			productName = bti8108.groupbjjm.diabetespassTests;
-			productReference = 8F84839E19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests.xctest */;
+			productReference = 8F84839E19CB313800DF1E16 /* diabetesAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -489,7 +489,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8F84837219CB313700DF1E16 /* Build configuration list for PBXProject "bti8108.groupbjjm.diabetespass" */;
+			buildConfigurationList = 8F84837219CB313700DF1E16 /* Build configuration list for PBXProject "diabetesApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -502,8 +502,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F84837619CB313700DF1E16 /* bti8108.groupbjjm.diabetespass */,
-				8F84839D19CB313800DF1E16 /* bti8108.groupbjjm.diabetespassTests */,
+				8F84837619CB313700DF1E16 /* diabetesApp */,
+				8F84839D19CB313800DF1E16 /* diabetesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -586,7 +586,7 @@
 /* Begin PBXTargetDependency section */
 		8F8483A419CB313800DF1E16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F84837619CB313700DF1E16 /* bti8108.groupbjjm.diabetespass */;
+			target = 8F84837619CB313700DF1E16 /* diabetesApp */;
 			targetProxy = 8F8483A319CB313800DF1E16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -700,9 +700,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Prefix.pch";
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/diabetesApp-Prefix.pch";
+				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespass/diabetesApp-Info.plist";
+				PRODUCT_NAME = diabetesApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -718,9 +718,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Prefix.pch";
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/diabetesApp-Prefix.pch";
+				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespass/diabetesApp-Info.plist";
+				PRODUCT_NAME = diabetesApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -742,8 +742,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/bti8108.groupbjjm.diabetespassTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/diabetesAppTests-Info.plist";
+				PRODUCT_NAME = diabetesAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -760,8 +760,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass-Prefix.pch";
-				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/bti8108.groupbjjm.diabetespassTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bti8108.groupbjjm.diabetespassTests/diabetesAppTests-Info.plist";
+				PRODUCT_NAME = diabetesAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -770,7 +770,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F84837219CB313700DF1E16 /* Build configuration list for PBXProject "bti8108.groupbjjm.diabetespass" */ = {
+		8F84837219CB313700DF1E16 /* Build configuration list for PBXProject "diabetesApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F8483AD19CB313800DF1E16 /* Debug */,
@@ -779,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F8483AF19CB313800DF1E16 /* Build configuration list for PBXNativeTarget "bti8108.groupbjjm.diabetespass" */ = {
+		8F8483AF19CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F8483B019CB313800DF1E16 /* Debug */,
@@ -788,7 +788,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "bti8108.groupbjjm.diabetespassTests" */ = {
+		8F8483B219CB313800DF1E16 /* Build configuration list for PBXNativeTarget "diabetesAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F8483B319CB313800DF1E16 /* Debug */,
