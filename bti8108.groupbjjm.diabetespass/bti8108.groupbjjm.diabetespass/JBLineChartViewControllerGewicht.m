@@ -100,21 +100,21 @@ NSInteger GewichtMaxNumChartPoints = 20;
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<GewichtMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*6 + 2]]; // random number between 2 and 8
+                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*10 + 70]]; // random number between 80 and 70
             }
             [mutableLineCharts addObject:mutableChartData];
         } else if(lineIndex == 1){
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<GewichtMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:(4.0)]]; // min line
+                [mutableChartData addObject:[NSNumber numberWithFloat:(78.0)]]; // min line, make global and set according settings
             }
             [mutableLineCharts addObject:mutableChartData];
         } else {
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<GewichtMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:(7.0)]]; // max line
+                [mutableChartData addObject:[NSNumber numberWithFloat:(74.0)]]; // max line, make global and set according settings
             }
             [mutableLineCharts addObject:mutableChartData];
         }
@@ -154,8 +154,7 @@ NSInteger GewichtMaxNumChartPoints = 20;
     [super loadView];
     
     self.view.backgroundColor = kJBColorLineChartControllerBackground;
-    self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
-        
+
     self.lineChartView = [[JBLineChartView alloc] init];
     self.lineChartView.frame = CGRectMake(GewichtChartPadding, GewichtChartPadding, self.view.bounds.size.width - (GewichtChartPadding * 2), GewichtChartHeight);
     self.lineChartView.delegate = self; //Handler for Events and Configuration
@@ -204,24 +203,6 @@ NSInteger GewichtMaxNumChartPoints = 20;
     [self.informationView setTextShadowColor:nil];
     [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
     [self.view addSubview:self.informationView];
-    
-    //Add a grid behind
-//    UIView *gridView = [[UIView alloc] initWithFrame:self.lineChartView.bounds];
-//    gridView.backgroundColor = [UIColor clearColor];
-//    [self.lineChartView insertSubview:gridView atIndex:0];
-    
-    
-//    NSNumber *valueNumber = [NSNumber numberWithInt:20];
-//    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
-//    [self.informationView setTitleText:0 == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
-//    [self.informationView setHidden:NO animated:YES];
-//    //[self setTooltipVisible:YES animated:YES atTouchPoint:];
-//    [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:4] uppercaseString]];
-    
-//    for (int i=0; i<GewichtMaxNumChartPoints; i++) {
-//        
-//        [self setLabel:(i)];
-//    }
     
     [self setLabel:(GewichtMaxNumChartPoints-2)];
     [self.lineChartView reloadData];
@@ -287,7 +268,7 @@ NSInteger GewichtMaxNumChartPoints = 20;
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
 {
     NSNumber *valueNumber = [[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex];
-    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
+    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:@"Kg"];
 
     NSString *s = [self.daysOfWeek objectAtIndex:horizontalIndex];
     [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? s : kJBStringLabelNationalAverage];
@@ -312,9 +293,9 @@ NSInteger GewichtMaxNumChartPoints = 20;
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    if (lineIndex == 0) {
-        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
-            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
+    if (lineIndex == 0) { //Make global values to set bounds stored in settings
+        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 78.0 ||
+            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 74.0) {
             return [UIColor redColor];
         } else {
             return [UIColor grayColor];
@@ -327,9 +308,9 @@ NSInteger GewichtMaxNumChartPoints = 20;
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
 
-    if (lineIndex == 0) {
-        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
-            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
+    if (lineIndex == 0) {//Make global values to set bounds stored in settings
+        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 78.0 ||
+            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 74.0) {
             return [UIColor redColor];
         } else {
             return [UIColor grayColor];

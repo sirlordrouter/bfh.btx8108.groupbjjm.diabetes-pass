@@ -51,7 +51,7 @@ CGFloat const BlutdruckGraphHeaderHeight = 75.0f;
 CGFloat const BlutdruckGraphHeaderPadding = 20.0f;
 CGFloat const BlutdruckGraphFooterHeight = 20.0f;
 CGFloat const BlutdruckGraphSolidLineWidth = 6.0f;
-CGFloat const BlutdruckGraphDashedLineWidth = 2.0f;
+CGFloat const BlutdruckGraphDashedLineWidth = 1.0f;
 NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 
 #pragma mark - Alloc/Init
@@ -115,7 +115,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*150 + 60]]; // random number between 160 and 60
+                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*80 + 60]]; // random number between 140 and 60
             }
             [mutableLineCharts addObject:mutableChartData];
         } else if (lineIndex == 2) { //lower bound sys
@@ -301,7 +301,19 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:@"mmHg"];
 
     NSString *s = [self.daysOfWeek objectAtIndex:horizontalIndex];
-    [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? s : kJBStringLabelNationalAverage];
+    
+    NSString *titelText;
+    if (lineIndex == 0 || lineIndex == 2 ) {
+        titelText = @"Grenzwert systolisch";
+    } else if(lineIndex == 3 ||lineIndex == 5) {
+    titelText = @"Grenzwert diastolisch";
+    } else if (lineIndex == 1) {
+        titelText = @"systolisch";
+    }else {
+        titelText = @"diastolisch";
+    }
+    
+    [self.informationView setTitleText:titelText];
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
     //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
@@ -318,49 +330,44 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
 {
     
-    if (lineIndex == 1) {
-        return [UIColor greenColor];
-    } else if(lineIndex == 4) {
-        return [UIColor blueColor];
-    }else {
-        return kJBColorLineChartDefaultDashedLineColor;
-    }
-    return (lineIndex == 1 || lineIndex == 4) ? [UIColor clearColor] : kJBColorLineChartDefaultDashedLineColor;
-    //[UIColor clearColor]
+    return [self getColorForIndex:lineIndex];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    if (lineIndex == 1) {
-        return [UIColor greenColor];
-    } else if(lineIndex == 4) {
-        return [UIColor blueColor];
-    }else {
-        return kJBColorLineChartDefaultDashedLineColor;
-    }
-    return (lineIndex == 1 || lineIndex == 4) ? [UIColor clearColor] : kJBColorLineChartDefaultDashedLineColor;}
+    return [self getColorForIndex:lineIndex];
+}
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
+    return [self getColorForIndex:lineIndex];
+}
+
+- (UIColor *)getColorForIndex:(NSUInteger)lineIndex {
     if (lineIndex == 1) {
         return [UIColor greenColor];
     } else if(lineIndex == 4) {
         return [UIColor blueColor];
     }else {
-        return kJBColorLineChartDefaultDashedLineColor;
+        if (lineIndex < 3) { //get sys bounds
+            return [UIColor yellowColor];
+        } else { //get dia bounds
+            return kJBColorLineChartDefaultDashedLineColor;
+        }
+        
     }
-    return (lineIndex == 1 || lineIndex == 4) ? [UIColor clearColor] : kJBColorLineChartDefaultDashedLineColor;
 }
 
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return (lineIndex == 1 || lineIndex == 4) ? JBLineChartViewLineStyleDashed: JBLineChartViewLineStyleSolid;
+    return (lineIndex == 1 || lineIndex == 4) ? 5.0f: BlutdruckGraphDashedLineWidth;
 }
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView dotRadiusForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    return 0.0;
+    
+    return (lineIndex == 1 || lineIndex == 4) ? 8.0f : 0.0f;
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView verticalSelectionColorForLineAtLineIndex:(NSUInteger)lineIndex
@@ -372,7 +379,6 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 {
     return (lineIndex == JBLineChartLineSolid) ? [UIColor clearColor]: kJBColorLineChartDefaultDashedSelectedLineColor; //only points for blutzucker graph
 }
-
 
 
 - (JBLineChartViewLineStyle)lineChartView:(JBLineChartView *)lineChartView lineStyleForLineAtLineIndex:(NSUInteger)lineIndex
