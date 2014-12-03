@@ -313,25 +313,20 @@ NSInteger PulsMaxNumChartPoints = 20;
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    if (lineIndex == 0) {
-        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
-            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
-            return [UIColor redColor];
-        } else {
-            return [UIColor grayColor];
-        }
-    } else {
-        return kJBColorLineChartDefaultDashedLineColor;
-    }
+    return [self getColorForIndex:lineIndex atHorizontalIndex:horizontalIndex];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
 
+    return [self getColorForIndex:lineIndex atHorizontalIndex:horizontalIndex];
+}
+
+- (UIColor *)getColorForIndex:(NSUInteger)lineIndex  atHorizontalIndex:(NSUInteger) horizontalIndex{
     if (lineIndex == 0) {
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
-            return [UIColor redColor];
+            return alertColor;
         } else {
             return [UIColor grayColor];
         }

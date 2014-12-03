@@ -293,25 +293,19 @@ NSInteger GewichtMaxNumChartPoints = 20;
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    if (lineIndex == 0) { //Make global values to set bounds stored in settings
-        if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 78.0 ||
-            [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 74.0) {
-            return [UIColor redColor];
-        } else {
-            return [UIColor grayColor];
-        }
-    } else {
-        return kJBColorLineChartDefaultDashedLineColor;
-    }
+    return [self getColorForIndex:lineIndex atHorizontalIndex:horizontalIndex];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
+    return [self getColorForIndex:lineIndex atHorizontalIndex:horizontalIndex];
+}
 
+- (UIColor *)getColorForIndex:(NSUInteger)lineIndex  atHorizontalIndex:(NSUInteger) horizontalIndex{
     if (lineIndex == 0) {//Make global values to set bounds stored in settings
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 78.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 74.0) {
-            return [UIColor redColor];
+            return alertColor;
         } else {
             return [UIColor grayColor];
         }
@@ -319,7 +313,6 @@ NSInteger GewichtMaxNumChartPoints = 20;
         return kJBColorLineChartDefaultDashedLineColor;
     }
 }
-
 
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex

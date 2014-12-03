@@ -98,11 +98,12 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 {
     NSMutableArray *mutableLineCharts = [NSMutableArray array];
     
-    //6 Linien: syst / diast je 3
+    //4 Linien: syst / diast je 2 - upper bound und werte
     
-    for (int lineIndex=0; lineIndex<6; lineIndex++)
+    for (int lineIndex=0; lineIndex<4; lineIndex++)
     {
         
+        //1 und 3 werte
         //according to http://www.blutdruckdaten.de/blutdruckwerte-tabelle.html
         if (lineIndex == 0) { //upper bound sys
             NSMutableArray *mutableChartData = [NSMutableArray array];
@@ -115,35 +116,23 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*80 + 60]]; // random number between 140 and 60
+                [mutableChartData addObject:[NSNumber numberWithInt:((float)arc4random() / ARC4RANDOM_MAX)*80 + 60]]; // random number between 140 and 60
             }
             [mutableLineCharts addObject:mutableChartData];
-        } else if (lineIndex == 2) { //lower bound sys
-            NSMutableArray *mutableChartData = [NSMutableArray array];
-            for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
-            {
-                [mutableChartData addObject:[NSNumber numberWithFloat:(90.0)]];
-            }
-            [mutableLineCharts addObject:mutableChartData];
-        } else if (lineIndex == 3) { // upper bound dia
+        } else if (lineIndex == 2) { // upper bound dia
+            
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
             {
                 [mutableChartData addObject:[NSNumber numberWithFloat:(80.0)]];
             }
             [mutableLineCharts addObject:mutableChartData];
-        } else if (lineIndex == 4) { //line dia
+            
+        } else {
             NSMutableArray *mutableChartData = [NSMutableArray array];
             for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
             {
-                [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)*70 + 20]]; // random number between 90 and 20
-            }
-            [mutableLineCharts addObject:mutableChartData];
-        }else { //lower bound dia
-            NSMutableArray *mutableChartData = [NSMutableArray array];
-            for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
-            {
-                [mutableChartData addObject:[NSNumber numberWithFloat:(40.0)]];
+                [mutableChartData addObject:[NSNumber numberWithInt:((float)arc4random() / ARC4RANDOM_MAX)*70 + 20]]; // random number between 90 and 20
             }
             [mutableLineCharts addObject:mutableChartData];
         }
@@ -155,7 +144,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     NSMutableArray *mutableChartData = [NSMutableArray array];
     for (int i=0; i<BlutdruckGraphMaxNumChartPoints; i++)
     {
-        NSString *s = [[NSString stringWithFormat:@"%d", i+1] stringByAppendingString:@"-11-2014"];
+        NSString *s = [[NSString stringWithFormat:@"%ld", i+1] stringByAppendingString:@"-11-2014"];
         [mutableChartData addObject:s ];  //Generate Dates for x-Axis from 1-11 to 20-11
         
     }
@@ -249,7 +238,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     
     [self setTooltipVisible:YES animated:YES];
     //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
-    NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
+    NSString *value = [NSString stringWithFormat:@"%ld", [valueNumber intValue]];
     [self.tooltipView setText:value];
 }
 
@@ -298,14 +287,12 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
 {
     NSNumber *valueNumber = [[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex];
-    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:@"mmHg"];
-
-    NSString *s = [self.daysOfWeek objectAtIndex:horizontalIndex];
+    [self.informationView setValueText:[NSString stringWithFormat:@"%d", [valueNumber intValue]] unitText:@"mmHg"];
     
     NSString *titelText;
-    if (lineIndex == 0 || lineIndex == 2 ) {
+    if (lineIndex == 0) {
         titelText = @"Grenzwert systolisch";
-    } else if(lineIndex == 3 ||lineIndex == 5) {
+    } else if(lineIndex == 2) {
     titelText = @"Grenzwert diastolisch";
     } else if (lineIndex == 1) {
         titelText = @"systolisch";
@@ -317,7 +304,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
     //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
-    NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
+    NSString *value = [NSString stringWithFormat:@"%d", [valueNumber intValue]];
     [self.tooltipView setText:value];
 }
 
@@ -346,10 +333,10 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 - (UIColor *)getColorForIndex:(NSUInteger)lineIndex {
     if (lineIndex == 1) {
         return [UIColor greenColor];
-    } else if(lineIndex == 4) {
+    } else if(lineIndex == 3) {
         return [UIColor blueColor];
     }else {
-        if (lineIndex < 3) { //get sys bounds
+        if (lineIndex == 0) { //get sys bounds
             return [UIColor yellowColor];
         } else { //get dia bounds
             return kJBColorLineChartDefaultDashedLineColor;
@@ -361,13 +348,13 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return (lineIndex == 1 || lineIndex == 4) ? 5.0f: BlutdruckGraphDashedLineWidth;
+    return (lineIndex == 1 || lineIndex == 3) ? 5.0f: BlutdruckGraphDashedLineWidth;
 }
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView dotRadiusForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
     
-    return (lineIndex == 1 || lineIndex == 4) ? 8.0f : 0.0f;
+    return (lineIndex == 1 || lineIndex == 3) ? 8.0f : 0.0f;
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView verticalSelectionColorForLineAtLineIndex:(NSUInteger)lineIndex
@@ -383,7 +370,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
 
 - (JBLineChartViewLineStyle)lineChartView:(JBLineChartView *)lineChartView lineStyleForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return (lineIndex == 1 || lineIndex == 4) ? JBLineChartViewLineStyleDashed : JBLineChartViewLineStyleSolid;
+    return (lineIndex == 1 || lineIndex == 3) ? JBLineChartViewLineStyleDashed : JBLineChartViewLineStyleSolid;
 }
 
 #pragma mark - Buttons

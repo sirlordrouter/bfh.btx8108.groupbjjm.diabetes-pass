@@ -8,6 +8,12 @@
 
 #define UIColorFromHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
 
+#pragma accessability
+#define normalColor UIColorFromHex(0x19ACA4)
+#define warningColor UIColorFromHex(0xFEAE8F)
+#define alertColor UIColorFromHex(0xFEAE8F)
+#define neutralColor UIColorFromHex(0x6B8AFF)
+
 #pragma mark - Navigation
 
 #define kJBColorNavigationBarTint UIColorFromHex(0xFFFFFF)

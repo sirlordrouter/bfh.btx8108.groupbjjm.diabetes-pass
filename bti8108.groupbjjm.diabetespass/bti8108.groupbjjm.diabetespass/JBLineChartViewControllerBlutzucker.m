@@ -320,7 +320,7 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     if (lineIndex == 0) {
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
-            return [UIColor redColor];
+            return alertColor;
         } else {
             return [UIColor grayColor];
         }
@@ -335,7 +335,7 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     if (lineIndex == 0) {
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
-            return [UIColor redColor];
+            return alertColor;
         } else {
             return [UIColor grayColor];
         }
