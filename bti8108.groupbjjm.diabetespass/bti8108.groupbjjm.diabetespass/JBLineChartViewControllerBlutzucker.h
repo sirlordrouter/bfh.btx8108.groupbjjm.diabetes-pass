@@ -8,6 +8,6 @@
 
 #import "JBBaseChartViewController.h"
 
-@interface JBLineChartViewController : JBBaseChartViewController
+@interface JBLineChartViewControllerBlutzucker : JBBaseChartViewController
 
 @end

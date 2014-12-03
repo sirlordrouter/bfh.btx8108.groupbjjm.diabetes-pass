@@ -328,20 +328,20 @@ mmHg</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blutdruck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50s-kO-UaV">
-                                <rect key="frame" x="139" y="28" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GjU-39-6Vh">
-                                <rect key="frame" x="9" y="57" width="303" height="491"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjU-39-6Vh">
+                                <rect key="frame" x="0.0" y="28" width="320" height="545"/>
                                 <connections>
                                     <segue destination="LFC-rI-qNz" kind="embed" id="uXd-wj-zeD"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GjU-39-6Vh" firstAttribute="leading" secondItem="KlT-v3-n5p" secondAttribute="leading" id="0Zt-t0-D0r"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GjU-39-6Vh" secondAttribute="bottom" constant="-5" id="DuP-KL-heG"/>
+                            <constraint firstAttribute="trailing" secondItem="GjU-39-6Vh" secondAttribute="trailing" id="r9t-Rc-4FO"/>
+                            <constraint firstItem="GjU-39-6Vh" firstAttribute="top" secondItem="ehw-hj-Dr4" secondAttribute="bottom" constant="8" symbolic="YES" id="rkb-Ae-cZf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="BlutdruckView" destination="KlT-v3-n5p" id="imJ-er-IF3"/>
@@ -363,17 +363,20 @@ mmHg</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puls" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fo-jp-kjp">
-                                <rect key="frame" x="139" y="20" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="puls.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-ux-8bR">
-                                <rect key="frame" x="16" y="70" width="298" height="318"/>
-                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-6Y-wit">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <connections>
+                                    <segue destination="eX0-S8-VW2" kind="embed" id="LCB-jh-uhq"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7k4-6Y-wit" secondAttribute="trailing" id="Ugw-h5-rCc"/>
+                            <constraint firstItem="7k4-6Y-wit" firstAttribute="leading" secondItem="4a9-UP-sLK" secondAttribute="leading" id="iZP-Lc-qzp"/>
+                            <constraint firstItem="7k4-6Y-wit" firstAttribute="top" secondItem="BvS-tN-SUj" secondAttribute="bottom" constant="8" symbolic="YES" id="lO5-YS-98h"/>
+                            <constraint firstItem="7k4-6Y-wit" firstAttribute="bottom" secondItem="beN-Q7-w2J" secondAttribute="top" id="uTK-GJ-FjZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="PulsView" destination="4a9-UP-sLK" id="vCQ-c6-Xq1"/>
@@ -395,17 +398,20 @@ mmHg</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gewicht" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-0V-bv2">
-                                <rect key="frame" x="139" y="28" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gewicht.png" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-6I-vZY">
-                                <rect key="frame" x="11" y="70" width="298" height="318"/>
-                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXu-pB-7UM">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <connections>
+                                    <segue destination="V1C-sj-Xoq" kind="embed" id="sxO-m5-wWc"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rXu-pB-7UM" firstAttribute="top" secondItem="20o-dg-c5L" secondAttribute="bottom" constant="8" symbolic="YES" id="Gkh-8f-pkW"/>
+                            <constraint firstItem="rXu-pB-7UM" firstAttribute="bottom" secondItem="u8J-9f-O9F" secondAttribute="top" id="J7W-ba-eTd"/>
+                            <constraint firstAttribute="trailing" secondItem="rXu-pB-7UM" secondAttribute="trailing" id="LiB-yW-92O"/>
+                            <constraint firstItem="rXu-pB-7UM" firstAttribute="leading" secondItem="0jW-Du-OSn" secondAttribute="leading" id="zrw-4G-7J0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="GewichtView" destination="0jW-Du-OSn" id="VEo-Aa-zbX"/>
@@ -705,10 +711,10 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
             </objects>
             <point key="canvasLocation" x="2348" y="997"/>
         </scene>
-        <!--Line Chart View Controller-->
+        <!--Line Chart View Controller Blutzucker-->
         <scene sceneID="qtd-Ec-57g">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jJT-cu-NHC" customClass="JBLineChartViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jJT-cu-NHC" customClass="JBLineChartViewControllerBlutzucker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YgX-dn-F1G"/>
                         <viewControllerLayoutGuide type="bottom" id="h18-vI-kPb"/>
@@ -724,16 +730,16 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
             </objects>
             <point key="canvasLocation" x="-129" y="3214"/>
         </scene>
-        <!--Blutdruck Chart Page View Controller-->
+        <!--Line Chart View Controller Blutdruck-->
         <scene sceneID="nH0-rW-CYZ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="LFC-rI-qNz" customClass="BlutdruckChartPageViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="LFC-rI-qNz" customClass="JBLineChartViewControllerBlutdruck" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uea-KA-95V"/>
                         <viewControllerLayoutGuide type="bottom" id="gS0-kA-6Vu"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vD4-Pm-MDH">
-                        <rect key="frame" x="0.0" y="0.0" width="303" height="491"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="545"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1318,13 +1324,49 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
             </objects>
             <point key="canvasLocation" x="1640" y="1697"/>
         </scene>
+        <!--Line Chart View Controller Puls-->
+        <scene sceneID="acc-kY-ESh">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eX0-S8-VW2" customClass="JBLineChartViewControllerPuls" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMr-ce-YMq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fwh-e1-nbl"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s2W-Pb-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEv-gf-6fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="3235.5"/>
+        </scene>
+        <!--Line Chart View Controller Gewicht-->
+        <scene sceneID="NPZ-pq-pQH">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="V1C-sj-Xoq" customClass="JBLineChartViewControllerGewicht" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V1W-HU-xj6"/>
+                        <viewControllerLayoutGuide type="bottom" id="mCE-6q-14d"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dBj-37-VeD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGB-oD-yJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103.5" y="3232"/>
+        </scene>
     </scenes>
     <resources>
         <image name="diary.png" width="27" height="25"/>
-        <image name="gewicht.png" width="400" height="397"/>
         <image name="home.png" width="25" height="25"/>
         <image name="list.png" width="25" height="25"/>
-        <image name="puls.png" width="401" height="312"/>
         <image name="settings.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -26,7 +26,7 @@
 #define kJBStringLabelSanFrancisco2013 localize(@"label.san.francisco.2013", @"aktuelle Woche")
 #define kJBStringLabelAverageDailyRainfall localize(@"label.average.daily.rainfall", @"Blutzuckerwerte")
 #define kJBStringLabelMm localize(@"label.mmmol/L", @"mmol/L")
-#define kJBStringLabelMetropolitanAverage localize(@"label.metropolitan.average", @"gemessener Wert")
+#define kJBStringLabelMetropolitanAverage localize(@"label.metropolitan.average", @"gemessener Wert am 28-11-2014")
 #define kJBStringLabelNationalAverage localize(@"label.national.average", @"Grenzwert")
 
 #pragma mark - Labels (Area Chart)

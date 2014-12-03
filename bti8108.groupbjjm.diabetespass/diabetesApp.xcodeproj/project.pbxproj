@@ -15,7 +15,7 @@
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
 		8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */; };
 		8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB701A1E12E30027A02A /* SettingsTherapyPageViewController.m */; };
-		8F5FAB771A1E149E0027A02A /* JBLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB761A1E149E0027A02A /* JBLineChartViewController.m */; };
+		8F5FAB771A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB761A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m */; };
 		8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB791A1E155E0027A02A /* JBBaseChartViewController.m */; };
 		8F5FAB7D1A1E155E0027A02A /* JBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB7B1A1E155E0027A02A /* JBBaseViewController.m */; };
 		8F5FAB851A1E163C0027A02A /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB801A1E163C0027A02A /* JBChartInformationView.m */; };
@@ -42,11 +42,14 @@
 		8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */; };
 		8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */; };
 		8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */; };
-		8FC065431A0C1BDE00D853E6 /* BlutzuckerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */; };
 		8FC065461A0C1C0A00D853E6 /* BlutdruckPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */; };
 		8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */; };
 		8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */; };
 		8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */; };
+		8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */; };
+		8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */; };
+		8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */; };
+		8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74591A2F3D5000CE204A /* JBLineChartViewControllerPuls.m */; };
 		8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */; };
 		8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */; };
 		8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AF1A0CFA9D005DD780 /* blutdruck.png */; };
@@ -54,7 +57,6 @@
 		8FC857B71A0CFA9D005DD780 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B11A0CFA9D005DD780 /* male.png */; };
 		8FC857B81A0CFA9D005DD780 /* puls.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B21A0CFA9D005DD780 /* puls.png */; };
 		8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BA1A0CFD35005DD780 /* glucose.png */; };
-		8FFB56B31A26625C00B48B6C /* BlutdruckLineChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB56B21A26625C00B48B6C /* BlutdruckLineChartController.m */; };
 		DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,8 +72,8 @@
 		8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTypPageViewController.m; sourceTree = "<group>"; };
 		8F5FAB6F1A1E12E30027A02A /* SettingsTherapyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTherapyPageViewController.h; sourceTree = "<group>"; };
 		8F5FAB701A1E12E30027A02A /* SettingsTherapyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTherapyPageViewController.m; sourceTree = "<group>"; };
-		8F5FAB751A1E149E0027A02A /* JBLineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewController.h; sourceTree = "<group>"; };
-		8F5FAB761A1E149E0027A02A /* JBLineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewController.m; sourceTree = "<group>"; };
+		8F5FAB751A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerBlutzucker.h; sourceTree = "<group>"; };
+		8F5FAB761A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewControllerBlutzucker.m; sourceTree = "<group>"; };
 		8F5FAB781A1E155E0027A02A /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseChartViewController.h; sourceTree = "<group>"; };
 		8F5FAB791A1E155E0027A02A /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseChartViewController.m; sourceTree = "<group>"; };
 		8F5FAB7A1A1E155E0027A02A /* JBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseViewController.h; sourceTree = "<group>"; };
@@ -143,8 +145,12 @@
 		8FC857B11A0CFA9D005DD780 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		8FC857B21A0CFA9D005DD780 /* puls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puls.png; sourceTree = "<group>"; };
 		8FC857BA1A0CFD35005DD780 /* glucose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glucose.png; sourceTree = "<group>"; };
-		8FFB56B11A26625C00B48B6C /* BlutdruckLineChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutdruckLineChartController.h; sourceTree = "<group>"; };
-		8FFB56B21A26625C00B48B6C /* BlutdruckLineChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutdruckLineChartController.m; sourceTree = "<group>"; };
+		8FFE74521A2F3BAF00CE204A /* JBLineChartViewControllerBlutdruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerBlutdruck.h; sourceTree = "<group>"; };
+		8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewControllerBlutdruck.m; sourceTree = "<group>"; };
+		8FFE74551A2F3C7C00CE204A /* JBLineChartViewControllerGewicht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerGewicht.h; sourceTree = "<group>"; };
+		8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewControllerGewicht.m; sourceTree = "<group>"; };
+		8FFE74581A2F3D3E00CE204A /* JBLineChartViewControllerPuls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerPuls.h; sourceTree = "<group>"; };
+		8FFE74591A2F3D5000CE204A /* JBLineChartViewControllerPuls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewControllerPuls.m; sourceTree = "<group>"; };
 		DE9319131A1F6DEA00A694C0 /* NotfallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotfallViewController.h; sourceTree = "<group>"; };
 		DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotfallViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -403,10 +409,14 @@
 		8FFB56B41A26626A00B48B6C /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				8FFB56B11A26625C00B48B6C /* BlutdruckLineChartController.h */,
-				8FFB56B21A26625C00B48B6C /* BlutdruckLineChartController.m */,
-				8F5FAB751A1E149E0027A02A /* JBLineChartViewController.h */,
-				8F5FAB761A1E149E0027A02A /* JBLineChartViewController.m */,
+				8FFE74521A2F3BAF00CE204A /* JBLineChartViewControllerBlutdruck.h */,
+				8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */,
+				8F5FAB751A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.h */,
+				8F5FAB761A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m */,
+				8FFE74551A2F3C7C00CE204A /* JBLineChartViewControllerGewicht.h */,
+				8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */,
+				8FFE74581A2F3D3E00CE204A /* JBLineChartViewControllerPuls.h */,
+				8FFE74591A2F3D5000CE204A /* JBLineChartViewControllerPuls.m */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -503,6 +513,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */,
+				8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */,
+				8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */,
+				8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */,
 				8FC065461A0C1C0A00D853E6 /* BlutdruckPageViewController.m in Sources */,
 				8FA1A52F1A1CD865009E1E6C /* JBLineChartView.m in Sources */,
 				8F5FAB901A1E169D0027A02A /* JBLineChartFooterView.m in Sources */,
@@ -510,7 +524,6 @@
 				8F5FAB861A1E163C0027A02A /* JBChartTooltipTipView.m in Sources */,
 				8F5FAB9B1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m in Sources */,
 				8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */,
-				8FC065431A0C1BDE00D853E6 /* BlutzuckerPageViewController.m in Sources */,
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
 				8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */,
 				8F5FAB8F1A1E169D0027A02A /* JBBarChartFooterView.m in Sources */,
@@ -520,13 +533,12 @@
 				8F5FAB871A1E163C0027A02A /* JBChartTooltipView.m in Sources */,
 				8F5FAB851A1E163C0027A02A /* JBChartInformationView.m in Sources */,
 				DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */,
-				8F5FAB771A1E149E0027A02A /* JBLineChartViewController.m in Sources */,
+				8F5FAB771A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */,
 				8F5FAB911A1E169D0027A02A /* JBChartHeaderView.m in Sources */,
 				8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */,
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
-				8FFB56B31A26625C00B48B6C /* BlutdruckLineChartController.m in Sources */,
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
