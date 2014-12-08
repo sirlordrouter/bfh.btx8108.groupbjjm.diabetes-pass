@@ -35,7 +35,14 @@
 		8F84839919CB313800DF1E16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F84839819CB313800DF1E16 /* Images.xcassets */; };
 		8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8483B519CB315E00DF1E16 /* MapKit.framework */; };
 		8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B12281A14FF5700ABC711 /* Launch Screen.xib */; };
-		8F945F7F1A3606C00036EA4C /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F945F7E1A3606C00036EA4C /* SchemaViewController.m */; };
+		8F945F7F1A3606C00036EA4C /* SettingsSchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F945F7E1A3606C00036EA4C /* SettingsSchemaViewController.m */; };
+		8F945F821A3609820036EA4C /* off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F801A3609820036EA4C /* off@2x.png */; };
+		8F945F831A3609820036EA4C /* on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F811A3609820036EA4C /* on@2x.png */; };
+		8F945F861A360AB70036EA4C /* SettingsSchemaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F945F851A360AB70036EA4C /* SettingsSchemaView.m */; };
+		8F945F8D1A363E540036EA4C /* evening@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F891A363E540036EA4C /* evening@2x.png */; };
+		8F945F8E1A363E540036EA4C /* morning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8A1A363E540036EA4C /* morning@2x.png */; };
+		8F945F8F1A363E540036EA4C /* night@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8B1A363E540036EA4C /* night@2x.png */; };
+		8F945F901A363E540036EA4C /* noon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8C1A363E540036EA4C /* noon@2x.png */; };
 		8FA1A5201A1CC77C009E1E6C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */; };
 		8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A5281A1CD865009E1E6C /* JBBarChartView.m */; };
 		8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A52A1A1CD865009E1E6C /* JBChartView.m */; };
@@ -116,8 +123,16 @@
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
 		8F8483B519CB315E00DF1E16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F8B12281A14FF5700ABC711 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
-		8F945F7D1A3606C00036EA4C /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
-		8F945F7E1A3606C00036EA4C /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
+		8F945F7D1A3606C00036EA4C /* SettingsSchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSchemaViewController.h; sourceTree = "<group>"; };
+		8F945F7E1A3606C00036EA4C /* SettingsSchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSchemaViewController.m; sourceTree = "<group>"; };
+		8F945F801A3609820036EA4C /* off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "off@2x.png"; sourceTree = "<group>"; };
+		8F945F811A3609820036EA4C /* on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "on@2x.png"; sourceTree = "<group>"; };
+		8F945F841A360AB70036EA4C /* SettingsSchemaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSchemaView.h; sourceTree = "<group>"; };
+		8F945F851A360AB70036EA4C /* SettingsSchemaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSchemaView.m; sourceTree = "<group>"; };
+		8F945F891A363E540036EA4C /* evening@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "evening@2x.png"; sourceTree = "<group>"; };
+		8F945F8A1A363E540036EA4C /* morning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morning@2x.png"; sourceTree = "<group>"; };
+		8F945F8B1A363E540036EA4C /* night@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night@2x.png"; sourceTree = "<group>"; };
+		8F945F8C1A363E540036EA4C /* noon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noon@2x.png"; sourceTree = "<group>"; };
 		8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8FA1A5211A1CC77C009E1E6C /* bti8108.groupbjjm.diabetespass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bti8108.groupbjjm.diabetespass.entitlements; sourceTree = "<group>"; };
 		8FA1A5271A1CD865009E1E6C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
@@ -320,6 +335,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8F945F871A360CD40036EA4C /* SchemaView */ = {
+			isa = PBXGroup;
+			children = (
+				8F945F7D1A3606C00036EA4C /* SettingsSchemaViewController.h */,
+				8F945F7E1A3606C00036EA4C /* SettingsSchemaViewController.m */,
+			);
+			name = SchemaView;
+			sourceTree = "<group>";
+		};
+		8F945F881A360CE20036EA4C /* SchemaView */ = {
+			isa = PBXGroup;
+			children = (
+				8F945F841A360AB70036EA4C /* SettingsSchemaView.h */,
+				8F945F851A360AB70036EA4C /* SettingsSchemaView.m */,
+			);
+			name = SchemaView;
+			sourceTree = "<group>";
+		};
 		8FA1A5221A1CCE26009E1E6C /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,8 +367,7 @@
 				8F5FAB7E1A1E15670027A02A /* Base */,
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F5FAB741A1E12EA0027A02A /* Settings */,
-				8F945F7D1A3606C00036EA4C /* SchemaViewController.h */,
-				8F945F7E1A3606C00036EA4C /* SchemaViewController.m */,
+				8F945F871A360CD40036EA4C /* SchemaView */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +377,7 @@
 			children = (
 				8F5FAB921A1E16A50027A02A /* HeaderFooter */,
 				8F5FAB881A1E165C0027A02A /* MISC */,
+				8F945F881A360CE20036EA4C /* SchemaView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -400,6 +433,12 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F945F891A363E540036EA4C /* evening@2x.png */,
+				8F945F8A1A363E540036EA4C /* morning@2x.png */,
+				8F945F8B1A363E540036EA4C /* night@2x.png */,
+				8F945F8C1A363E540036EA4C /* noon@2x.png */,
+				8F945F801A3609820036EA4C /* off@2x.png */,
+				8F945F811A3609820036EA4C /* on@2x.png */,
 				8F2EC2301A276E950064DD95 /* list@2x.png */,
 				8F2EC2281A276E280064DD95 /* diary@2x.png */,
 				8F2EC2291A276E280064DD95 /* settings@2x.png */,
@@ -497,22 +536,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F945F8E1A363E540036EA4C /* morning@2x.png in Resources */,
 				8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */,
 				8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */,
+				8F945F831A3609820036EA4C /* on@2x.png in Resources */,
 				8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */,
 				8FC857B61A0CFA9D005DD780 /* gewicht.png in Resources */,
+				8F945F8F1A363E540036EA4C /* night@2x.png in Resources */,
 				8F84839919CB313800DF1E16 /* Images.xcassets in Resources */,
 				8FC857B81A0CFA9D005DD780 /* puls.png in Resources */,
+				8F945F8D1A363E540036EA4C /* evening@2x.png in Resources */,
 				8FC857B71A0CFA9D005DD780 /* male.png in Resources */,
 				8F2EC2311A276E950064DD95 /* list@2x.png in Resources */,
 				8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */,
 				8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */,
 				8F84838E19CB313800DF1E16 /* Main_iPhone.storyboard in Resources */,
+				8F945F901A363E540036EA4C /* noon@2x.png in Resources */,
 				8F84838519CB313800DF1E16 /* InfoPlist.strings in Resources */,
 				8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */,
 				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,
 				8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */,
 				8F2EC22F1A276E280064DD95 /* table.png in Resources */,
+				8F945F821A3609820036EA4C /* off@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */,
-				8F945F7F1A3606C00036EA4C /* SchemaViewController.m in Sources */,
+				8F945F7F1A3606C00036EA4C /* SettingsSchemaViewController.m in Sources */,
 				8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */,
 				8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */,
 				8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */,
@@ -538,6 +583,7 @@
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
 				8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */,
 				8F5FAB8F1A1E169D0027A02A /* JBBarChartFooterView.m in Sources */,
+				8F945F861A360AB70036EA4C /* SettingsSchemaView.m in Sources */,
 				8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */,
 				8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */,
 				8F84838719CB313800DF1E16 /* main.m in Sources */,

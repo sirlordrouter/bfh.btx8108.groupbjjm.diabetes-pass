@@ -424,7 +424,7 @@ mmHg</string>
         <!--Schema-->
         <scene sceneID="bjp-10-9RC">
             <objects>
-                <viewController id="0SY-bU-65V" sceneMemberID="viewController">
+                <viewController id="0SY-bU-65V" customClass="SettingsSchemaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G04-M3-LQv"/>
                         <viewControllerLayoutGuide type="bottom" id="XI0-jE-iBG"/>

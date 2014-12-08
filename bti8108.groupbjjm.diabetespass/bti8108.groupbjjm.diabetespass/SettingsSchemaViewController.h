@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsSchemaView.h"
 
-@interface SchemaViewController : UIViewController
-
+@interface SettingsSchemaViewController : UIViewController
+@property (weak, nonatomic) IBOutlet SettingsSchemaView *schemaView;
 @end
