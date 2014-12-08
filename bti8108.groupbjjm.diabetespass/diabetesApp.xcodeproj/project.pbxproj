@@ -35,6 +35,7 @@
 		8F84839919CB313800DF1E16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F84839819CB313800DF1E16 /* Images.xcassets */; };
 		8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8483B519CB315E00DF1E16 /* MapKit.framework */; };
 		8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B12281A14FF5700ABC711 /* Launch Screen.xib */; };
+		8F945F7F1A3606C00036EA4C /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F945F7E1A3606C00036EA4C /* SchemaViewController.m */; };
 		8FA1A5201A1CC77C009E1E6C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */; };
 		8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A5281A1CD865009E1E6C /* JBBarChartView.m */; };
 		8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A52A1A1CD865009E1E6C /* JBChartView.m */; };
@@ -50,6 +51,7 @@
 		8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */; };
 		8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */; };
 		8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74591A2F3D5000CE204A /* JBLineChartViewControllerPuls.m */; };
+		8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3333A1A2FA86B0051122A /* SettingsWithingsViewController.m */; };
 		8FC857B31A0CFA9D005DD780 /* apfel_biss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */; };
 		8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */; };
 		8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857AF1A0CFA9D005DD780 /* blutdruck.png */; };
@@ -114,6 +116,8 @@
 		8F8483AB19CB313800DF1E16 /* bti8108_groupbjjm_diabetespassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bti8108_groupbjjm_diabetespassTests.m; sourceTree = "<group>"; };
 		8F8483B519CB315E00DF1E16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F8B12281A14FF5700ABC711 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		8F945F7D1A3606C00036EA4C /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
+		8F945F7E1A3606C00036EA4C /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
 		8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8FA1A5211A1CC77C009E1E6C /* bti8108.groupbjjm.diabetespass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bti8108.groupbjjm.diabetespass.entitlements; sourceTree = "<group>"; };
 		8FA1A5271A1CD865009E1E6C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewichtPageViewController.m; sourceTree = "<group>"; };
 		8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
 		8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
+		8FC333391A2FA86B0051122A /* SettingsWithingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWithingsViewController.h; sourceTree = "<group>"; };
+		8FC3333A1A2FA86B0051122A /* SettingsWithingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWithingsViewController.m; sourceTree = "<group>"; };
 		8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_biss.png; sourceTree = "<group>"; };
 		8FC857AE1A0CFA9D005DD780 /* apfel_ganz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_ganz.png; sourceTree = "<group>"; };
 		8FC857AF1A0CFA9D005DD780 /* blutdruck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blutdruck.png; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 				8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */,
 				8F5FAB6F1A1E12E30027A02A /* SettingsTherapyPageViewController.h */,
 				8F5FAB701A1E12E30027A02A /* SettingsTherapyPageViewController.m */,
+				8FC333391A2FA86B0051122A /* SettingsWithingsViewController.h */,
+				8FC3333A1A2FA86B0051122A /* SettingsWithingsViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -326,6 +334,8 @@
 				8F5FAB7E1A1E15670027A02A /* Base */,
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F5FAB741A1E12EA0027A02A /* Settings */,
+				8F945F7D1A3606C00036EA4C /* SchemaViewController.h */,
+				8F945F7E1A3606C00036EA4C /* SchemaViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -514,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */,
+				8F945F7F1A3606C00036EA4C /* SchemaViewController.m in Sources */,
 				8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */,
 				8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */,
 				8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */,
@@ -542,6 +553,7 @@
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
+				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,
 				8F5FAB7D1A1E155E0027A02A /* JBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

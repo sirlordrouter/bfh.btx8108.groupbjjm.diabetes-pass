@@ -7,6 +7,7 @@
 //
 
 #import "NotfallViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface NotfallViewController ()
 
@@ -54,6 +55,15 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
     // NSLog(textFromTextField);
     _myCopiedstring = textFromTextField;
     NSLog(_myCopiedstring);
+    
+    //Calling the systems pasteboard
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+    NSString *text = _myCopiedstring;
+    //Setting the PasteboardItem to the Copied String from the textfield
+    [pb setValue:text forPasteboardType:(NSString *)kUTTypeText];
+    
+    //Presenting the Result in the Log.
+    NSLog(@"%@", [pb items]);
 }
 
 - (IBAction)openNotfallApp:(id)sender{

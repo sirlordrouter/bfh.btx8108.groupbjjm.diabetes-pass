@@ -40,8 +40,6 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
 @property (nonatomic, strong) NSArray *chartData;
 @property (nonatomic, strong) NSArray *daysOfWeek;
 
-// Buttons
-- (void)chartToggleButtonPressed:(id)sender;
 
 // Helpers
 - (void)initFakeData;
@@ -153,6 +151,7 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
 }
 
 #pragma mark - View Lifecycle
+
 
 - (void)loadView
 {

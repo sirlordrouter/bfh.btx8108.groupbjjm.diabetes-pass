@@ -16,26 +16,28 @@
 @property IBOutlet UITableViewCell *morningDatePickerCell;
 @property (strong, nonatomic) NSDateFormatter *morningDateFormatter;
 @property (strong, nonatomic) NSDate *selectedMorningTime;
+@property (assign) BOOL MorningdatePickerIsShowing;
 
 @property IBOutlet UITableViewCell *middayCell;
 @property IBOutlet UIDatePicker *middayDatePicker;
 @property IBOutlet UITableViewCell *middayDatePickerCell;
 @property (strong, nonatomic) NSDateFormatter *middayDateFormatter;
 @property (strong, nonatomic) NSDate *selectedMiddayTime;
+@property (assign) BOOL MiddaydatePickerIsShowing;
 
 @property IBOutlet UITableViewCell *eveningCell;
 @property IBOutlet UIDatePicker *eveningDatePicker;
 @property IBOutlet UITableViewCell *eveningDatePickerCell;
 @property (strong, nonatomic) NSDateFormatter *eveningDateFormatter;
 @property (strong, nonatomic) NSDate *selectedEveningTime;
+@property (assign) BOOL EveningdatePickerIsShowing;
 
 @property IBOutlet UITableViewCell *nightCell;
 @property IBOutlet UIDatePicker *nightDatePicker;
 @property IBOutlet UITableViewCell *nightDatePickerCell;
 @property (strong, nonatomic) NSDateFormatter *nightDateFormatter;
 @property (strong, nonatomic) NSDate *selectedNightTime;
-
-@property (assign) BOOL datePickerIsShowing;
+@property (assign) BOOL NightdatePickerIsShowing;
 
 @property (nonatomic, assign, getter=isMorningDateOpen) BOOL morningDateOpen;
 @property (nonatomic, assign, getter=isMiddayDateOpen) BOOL middayDateOpen;
