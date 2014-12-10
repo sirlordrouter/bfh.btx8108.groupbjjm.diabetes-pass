@@ -31,7 +31,12 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    //CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:applicationFrame];
+    UIImage *backgroundImage = [UIImage imageNamed:@"SchemaBackground@2x"];
+    backgroundImageView.image = backgroundImage;
+    [self.view addSubview:backgroundImageView];
     
     [self initButtonMatrix];
 }
@@ -145,7 +150,7 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     doctorConsultLabel.textAlignment =  NSTextAlignmentLeft;
     doctorConsultLabel.textColor = [UIColor blackColor];
     doctorConsultLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
-    doctorConsultLabel.text = @"Drei Tage vor der nächsten Arztkonsultation";
+    doctorConsultLabel.text = @"Drei Tage bis zur nächsten Arztkonsultation";
     [self.view addSubview:doctorConsultLabel];
     
     UILabel *label07 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 410.0, 50.0, 43.0) ];
@@ -169,70 +174,101 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     label09.text = @"-1";
     [self.view addSubview:label09];
 
-    [self addButtonAtColumn:0 atRow:0 atPosition:[CGRectMake(55.0, 135.0, 30.0, 30.0)]];
-    UIButton *button00 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button00 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button00 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-        //[button00 addTarget:self
-        //           action:@selector(aMethod:)
-        // forControlEvents:UIControlEventTouchUpInside];
-    [button00 setFrame:];
-    [self.view addSubview:button00];
+    //1. Row 130     always 5px more per Row to align
+    [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(55.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:1 atPosition:CGRectMake(90.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:2 atPosition:CGRectMake(130.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:3 atPosition:CGRectMake(170.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:4 atPosition:CGRectMake(210.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:5 atPosition:CGRectMake(250.0, 135.0, 25.0, 25.0)];
+    [self addButtonAtColumn:0 atRow:6 atPosition:CGRectMake(290.0, 135.0, 25.0, 25.0)];
     
-    UIButton *button01 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button01 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button01 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    //[button00 addTarget:self
-    //           action:@selector(aMethod:)
-    // forControlEvents:UIControlEventTouchUpInside];
-    [button01 setFrame:CGRectMake(90.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button01];
+    //2. Row - 160
+    [self addButtonAtColumn:1 atRow:0 atPosition:CGRectMake(55.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:1 atPosition:CGRectMake(90.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:2 atPosition:CGRectMake(130.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:3 atPosition:CGRectMake(170.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:4 atPosition:CGRectMake(210.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:5 atPosition:CGRectMake(250.0, 165.0, 25.0, 25.0)];
+    [self addButtonAtColumn:1 atRow:6 atPosition:CGRectMake(290.0, 165.0, 25.0, 25.0)];
     
-    UIButton *button02 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button02 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button02 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    //[button00 addTarget:self
-    //           action:@selector(aMethod:)
-    // forControlEvents:UIControlEventTouchUpInside];
-    [button02 setFrame:CGRectMake(130.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button02];
+    //3. Row - 190
+    [self addButtonAtColumn:2 atRow:0 atPosition:CGRectMake(55.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:1 atPosition:CGRectMake(90.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:2 atPosition:CGRectMake(130.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:3 atPosition:CGRectMake(170.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:4 atPosition:CGRectMake(210.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:5 atPosition:CGRectMake(250.0, 195.0, 25.0, 25.0)];
+    [self addButtonAtColumn:2 atRow:6 atPosition:CGRectMake(290.0, 195.0, 25.0, 25.0)];
     
-    UIButton *button03 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button03 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button03 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    //[button00 addTarget:self
-    //           action:@selector(aMethod:)
-    // forControlEvents:UIControlEventTouchUpInside];
-    [button03 setFrame:CGRectMake(170.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button03];
     
-    UIButton *button04 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button04 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button04 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    //[button00 addTarget:self
-    //           action:@selector(aMethod:)
-    // forControlEvents:UIControlEventTouchUpInside];
-    [button04 setFrame:CGRectMake(210.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button04];
+    //4. Row - 220
+    [self addButtonAtColumn:3 atRow:0 atPosition:CGRectMake(55.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:1 atPosition:CGRectMake(90.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:2 atPosition:CGRectMake(130.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:3 atPosition:CGRectMake(170.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:4 atPosition:CGRectMake(210.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:5 atPosition:CGRectMake(250.0, 225.0, 25.0, 25.0)];
+    [self addButtonAtColumn:3 atRow:6 atPosition:CGRectMake(290.0, 225.0, 25.0, 25.0)];
     
-    UIButton *button05 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button05 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button05 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    //[button00 addTarget:self
-    //           action:@selector(aMethod:)
-    // forControlEvents:UIControlEventTouchUpInside];
-    [button05 setFrame:CGRectMake(250.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button05];
     
-    UIButton *button06 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button06 setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button06 setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
-    [button00 addTarget:self
-                 action:@selector(timeSelected:)
-     forControlEvents:UIControlEventTouchUpInside];
-    [button06 setFrame:CGRectMake(290.0, 135.0, 30.0, 30.0)];
-    [self.view addSubview:button06];
+    //5. Row - 250
+    [self addButtonAtColumn:4 atRow:0 atPosition:CGRectMake(55.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:1 atPosition:CGRectMake(90.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:2 atPosition:CGRectMake(130.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:3 atPosition:CGRectMake(170.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:4 atPosition:CGRectMake(210.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:5 atPosition:CGRectMake(250.0, 255.0, 25.0, 25.0)];
+    [self addButtonAtColumn:4 atRow:6 atPosition:CGRectMake(290.0, 255.0, 25.0, 25.0)];
     
+    
+    //6. Row - 280
+    [self addButtonAtColumn:5 atRow:0 atPosition:CGRectMake(55.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:1 atPosition:CGRectMake(90.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:2 atPosition:CGRectMake(130.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:3 atPosition:CGRectMake(170.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:4 atPosition:CGRectMake(210.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:5 atPosition:CGRectMake(250.0, 285.0, 25.0, 25.0)];
+    [self addButtonAtColumn:5 atRow:6 atPosition:CGRectMake(290.0, 285.0, 25.0, 25.0)];
+    
+    
+    //7.Row -310
+    [self addButtonAtColumn:6 atRow:0 atPosition:CGRectMake(55.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:1 atPosition:CGRectMake(90.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:2 atPosition:CGRectMake(130.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:3 atPosition:CGRectMake(170.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:4 atPosition:CGRectMake(210.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:5 atPosition:CGRectMake(250.0, 315.0, 25.0, 25.0)];
+    [self addButtonAtColumn:6 atRow:6 atPosition:CGRectMake(290.0, 315.0, 25.0, 25.0)];
+    
+    
+    //8.Row - 410
+    [self addButtonAtColumn:7 atRow:0 atPosition:CGRectMake(55.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:1 atPosition:CGRectMake(90.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:2 atPosition:CGRectMake(130.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:3 atPosition:CGRectMake(170.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:4 atPosition:CGRectMake(210.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:5 atPosition:CGRectMake(250.0, 415.0, 25.0, 25.0)];
+    [self addButtonAtColumn:7 atRow:6 atPosition:CGRectMake(290.0, 415.0, 25.0, 25.0)];
+    
+    
+    //9. ROw - 440
+    [self addButtonAtColumn:8 atRow:0 atPosition:CGRectMake(55.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:1 atPosition:CGRectMake(90.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:2 atPosition:CGRectMake(130.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:3 atPosition:CGRectMake(170.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:4 atPosition:CGRectMake(210.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:5 atPosition:CGRectMake(250.0, 445.0, 25.0, 25.0)];
+    [self addButtonAtColumn:8 atRow:6 atPosition:CGRectMake(290.0, 445.0, 25.0, 25.0)];
+    
+    //10.row - 470
+    [self addButtonAtColumn:9 atRow:0 atPosition:CGRectMake(55.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:1 atPosition:CGRectMake(90.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:2 atPosition:CGRectMake(130.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:3 atPosition:CGRectMake(170.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:4 atPosition:CGRectMake(210.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:5 atPosition:CGRectMake(250.0, 475.0, 25.0, 25.0)];
+    [self addButtonAtColumn:9 atRow:6 atPosition:CGRectMake(290.0, 475.0, 25.0, 25.0)];
 }
 
 -(void)addButtonAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos {
@@ -249,6 +285,7 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
 
 -(void)timeSelected:(id)sender {
     UIButton *tempBtn=(UIButton *) sender;
+    [tempBtn setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateNormal];
     NSString * string = [NSString stringWithFormat:@"%d", tempBtn.tag];
     NSLog(string) ;
 }

@@ -43,6 +43,7 @@
 		8F945F8E1A363E540036EA4C /* morning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8A1A363E540036EA4C /* morning@2x.png */; };
 		8F945F8F1A363E540036EA4C /* night@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8B1A363E540036EA4C /* night@2x.png */; };
 		8F945F901A363E540036EA4C /* noon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F8C1A363E540036EA4C /* noon@2x.png */; };
+		8F945F921A3834A50036EA4C /* SchemaBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F945F911A3834A50036EA4C /* SchemaBackground@2x.png */; };
 		8FA1A5201A1CC77C009E1E6C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */; };
 		8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A5281A1CD865009E1E6C /* JBBarChartView.m */; };
 		8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A52A1A1CD865009E1E6C /* JBChartView.m */; };
@@ -133,6 +134,7 @@
 		8F945F8A1A363E540036EA4C /* morning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morning@2x.png"; sourceTree = "<group>"; };
 		8F945F8B1A363E540036EA4C /* night@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night@2x.png"; sourceTree = "<group>"; };
 		8F945F8C1A363E540036EA4C /* noon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noon@2x.png"; sourceTree = "<group>"; };
+		8F945F911A3834A50036EA4C /* SchemaBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SchemaBackground@2x.png"; sourceTree = "<group>"; };
 		8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8FA1A5211A1CC77C009E1E6C /* bti8108.groupbjjm.diabetespass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bti8108.groupbjjm.diabetespass.entitlements; sourceTree = "<group>"; };
 		8FA1A5271A1CD865009E1E6C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F945F911A3834A50036EA4C /* SchemaBackground@2x.png */,
 				8F945F891A363E540036EA4C /* evening@2x.png */,
 				8F945F8A1A363E540036EA4C /* morning@2x.png */,
 				8F945F8B1A363E540036EA4C /* night@2x.png */,
@@ -558,6 +561,7 @@
 				8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */,
 				8F2EC22F1A276E280064DD95 /* table.png in Resources */,
 				8F945F821A3609820036EA4C /* off@2x.png in Resources */,
+				8F945F921A3834A50036EA4C /* SchemaBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
