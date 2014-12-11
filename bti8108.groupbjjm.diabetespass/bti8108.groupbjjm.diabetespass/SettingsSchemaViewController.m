@@ -43,24 +43,28 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
 
 -(void) initButtonMatrix {
     
+    NSArray *weekdays = [NSArray arrayWithObjects:@"Mo", @"Di", @"Mi", @"Do", @"Fr", @"Sa", @"So", nil];
+    NSArray *remainingDays = [NSArray arrayWithObjects:@"-3", @"-2", @"-1", nil];
+    
+    
     //Images daytime
     
-    UIImageView *morningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 60, 44, 44)];
+    UIImageView *morningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(70, 85, 30, 30)];
     UIImage *morningImage = [UIImage imageNamed:@"morning@2x"];
     morningImageView.image = morningImage;
     [self.view addSubview:morningImageView];
     
-    UIImageView *noonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(130, 60, 44, 44)];
+    UIImageView *noonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(140, 85, 30, 30)];
     UIImage *noonImage = [UIImage imageNamed:@"noon@2x"];
     noonImageView.image = noonImage;
     [self.view addSubview:noonImageView];
     
-    UIImageView *eveningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(230, 60, 44, 44)];
+    UIImageView *eveningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(210, 85, 30, 30)];
     UIImage *eveningImage = [UIImage imageNamed:@"evening@2x"];
     eveningImageView.image = eveningImage;
     [self.view addSubview:eveningImageView];
     
-    UIImageView *nightImageViews = [[UIImageView alloc] initWithFrame:CGRectMake(270, 60, 44, 44)];
+    UIImageView *nightImageViews = [[UIImageView alloc] initWithFrame:CGRectMake(280, 85, 30, 30)];
     UIImage *nightImage = [UIImage imageNamed:@"night@2x"];
     nightImageViews.image = nightImage;
     [self.view addSubview:nightImageViews];
@@ -70,80 +74,46 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
     UIImage *appleSmall = [UIImage imageNamed:@"apfel_biss"];
     
-    UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(55, 105, 30,30)];
+    UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(55, 120, 30,30)];
     morningPre.image = appleBig;
     [self.view addSubview:morningPre];
 
-    UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(90, 105, 30,30)];
+    UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(90, 120, 30,30)];
     morningAfter.image = appleSmall;
     [self.view addSubview:morningAfter];
     
-    UIImageView *noonPre= [[UIImageView alloc] initWithFrame:CGRectMake(130, 105,30,30)];
+    UIImageView *noonPre= [[UIImageView alloc] initWithFrame:CGRectMake(130, 120,30,30)];
     noonPre.image = appleBig;
     [self.view addSubview:noonPre];
     
-    UIImageView *noonAfter= [[UIImageView alloc] initWithFrame:CGRectMake(170, 105, 30,30)];
+    UIImageView *noonAfter= [[UIImageView alloc] initWithFrame:CGRectMake(165, 120, 30,30)];
     noonAfter.image = appleSmall;
     [self.view addSubview:noonAfter];
     
-    UIImageView *eveningPre= [[UIImageView alloc] initWithFrame:CGRectMake(210, 105, 30,30)];
+    UIImageView *eveningPre= [[UIImageView alloc] initWithFrame:CGRectMake(205, 120, 30,30)];
     eveningPre.image = appleBig;
     [self.view addSubview:eveningPre];
     
-    UIImageView *eveningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(250, 105, 30,30)];
+    UIImageView *eveningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(240, 120, 30,30)];
     eveningAfter.image = appleSmall;
     [self.view addSubview:eveningAfter];
     
     //label weekdays
     
-    UILabel *label00 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 130.0, 50.0, 43.0) ];
-    label00.textAlignment =  NSTextAlignmentLeft;
-    label00.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label00.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label00.text = @"Mo";
-    [self.view addSubview:label00];
+    int row = 150;
     
-    UILabel *label01 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 160.0, 50.0, 43.0) ];
-    label01.textAlignment =  NSTextAlignmentLeft;
-    label01.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label01.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label01.text = @"Di";
-    [self.view addSubview:label01];
+    for (int i = 0; i < 7; i++) {
+        [self addLabelAtColumn:0 atRow:0 atPosition:CGRectMake(10.0, row, 50.0, 43.0) withText:weekdays[i]];
+        row += 27.0;
+    }
     
-    UILabel *label02 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 190.0, 50.0, 43.0) ];
-    label02.textAlignment =  NSTextAlignmentLeft;
-    label02.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label02.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label02.text = @"Mi";
-    [self.view addSubview:label02];
+    //label consult
+    row = 395;
     
-    UILabel *label03 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 220.0, 50.0, 43.0) ];
-    label03.textAlignment =  NSTextAlignmentLeft;
-    label03.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label03.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label03.text = @"Do";
-    [self.view addSubview:label03];
-    
-    UILabel *label04 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 250.0, 50.0, 43.0) ];
-    label04.textAlignment =  NSTextAlignmentLeft;
-    label04.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label04.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label04.text = @"Fr";
-    [self.view addSubview:label04];
-    
-    UILabel *label05 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 280.0, 50.0, 43.0) ];
-    label05.textAlignment =  NSTextAlignmentLeft;
-    label05.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label05.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label05.text = @"Sa";
-    [self.view addSubview:label05];
-    
-    UILabel *label06 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 310.0, 50.0, 43.0) ];
-    label06.textAlignment =  NSTextAlignmentLeft;
-    label06.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label06.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label06.text = @"So";
-    [self.view addSubview:label06];
+    for (int i = 0; i < 3; i++) {
+        [self addLabelAtColumn:0 atRow:0 atPosition:CGRectMake(12.0, row, 50.0, 43.0) withText:remainingDays[i]];
+        row += 30.0;
+    }
     
     //Restzeit bis Arztbesuchs
     UILabel *doctorConsultLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 350.0, 350.0, 43.0) ];
@@ -153,122 +123,36 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     doctorConsultLabel.text = @"Drei Tage bis zur nächsten Arztkonsultation";
     [self.view addSubview:doctorConsultLabel];
     
-    UILabel *label07 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 410.0, 50.0, 43.0) ];
-    label07.textAlignment =  NSTextAlignmentLeft;
-    label07.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label07.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label07.text = @"-3";
-    [self.view addSubview:label07];
+    //Buttons matrix weekdays
+    row = 159;
+    int column = 50;
+    for (int rowId = 0; rowId < 7; rowId++) {
+        
+        column = 50;
+        
+        for (int columnId=0; columnId < 7; columnId++) {
+            [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+            column += 39;
+        }
+        
+        if (rowId == 4) { row += 3; } //HACK: Layout not fitting at 4th row
+        
+        row += 27.5;
+        
+    }
     
-    UILabel *label08 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 440.0, 50.0, 43.0) ];
-    label08.textAlignment =  NSTextAlignmentLeft;
-    label08.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label08.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label08.text = @"-2";
-    [self.view addSubview:label08];
-    
-    UILabel *label09 = [ [UILabel alloc ] initWithFrame:CGRectMake(5.0, 470.0, 50.0, 43.0) ];
-    label09.textAlignment =  NSTextAlignmentLeft;
-    label09.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    label09.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
-    label09.text = @"-1";
-    [self.view addSubview:label09];
-
-    //1. Row 130     always 5px more per Row to align
-    [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(55.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:1 atPosition:CGRectMake(90.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:2 atPosition:CGRectMake(130.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:3 atPosition:CGRectMake(170.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:4 atPosition:CGRectMake(210.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:5 atPosition:CGRectMake(250.0, 135.0, 25.0, 25.0)];
-    [self addButtonAtColumn:0 atRow:6 atPosition:CGRectMake(290.0, 135.0, 25.0, 25.0)];
-    
-    //2. Row - 160
-    [self addButtonAtColumn:1 atRow:0 atPosition:CGRectMake(55.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:1 atPosition:CGRectMake(90.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:2 atPosition:CGRectMake(130.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:3 atPosition:CGRectMake(170.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:4 atPosition:CGRectMake(210.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:5 atPosition:CGRectMake(250.0, 165.0, 25.0, 25.0)];
-    [self addButtonAtColumn:1 atRow:6 atPosition:CGRectMake(290.0, 165.0, 25.0, 25.0)];
-    
-    //3. Row - 190
-    [self addButtonAtColumn:2 atRow:0 atPosition:CGRectMake(55.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:1 atPosition:CGRectMake(90.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:2 atPosition:CGRectMake(130.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:3 atPosition:CGRectMake(170.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:4 atPosition:CGRectMake(210.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:5 atPosition:CGRectMake(250.0, 195.0, 25.0, 25.0)];
-    [self addButtonAtColumn:2 atRow:6 atPosition:CGRectMake(290.0, 195.0, 25.0, 25.0)];
-    
-    
-    //4. Row - 220
-    [self addButtonAtColumn:3 atRow:0 atPosition:CGRectMake(55.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:1 atPosition:CGRectMake(90.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:2 atPosition:CGRectMake(130.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:3 atPosition:CGRectMake(170.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:4 atPosition:CGRectMake(210.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:5 atPosition:CGRectMake(250.0, 225.0, 25.0, 25.0)];
-    [self addButtonAtColumn:3 atRow:6 atPosition:CGRectMake(290.0, 225.0, 25.0, 25.0)];
-    
-    
-    //5. Row - 250
-    [self addButtonAtColumn:4 atRow:0 atPosition:CGRectMake(55.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:1 atPosition:CGRectMake(90.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:2 atPosition:CGRectMake(130.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:3 atPosition:CGRectMake(170.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:4 atPosition:CGRectMake(210.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:5 atPosition:CGRectMake(250.0, 255.0, 25.0, 25.0)];
-    [self addButtonAtColumn:4 atRow:6 atPosition:CGRectMake(290.0, 255.0, 25.0, 25.0)];
-    
-    
-    //6. Row - 280
-    [self addButtonAtColumn:5 atRow:0 atPosition:CGRectMake(55.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:1 atPosition:CGRectMake(90.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:2 atPosition:CGRectMake(130.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:3 atPosition:CGRectMake(170.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:4 atPosition:CGRectMake(210.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:5 atPosition:CGRectMake(250.0, 285.0, 25.0, 25.0)];
-    [self addButtonAtColumn:5 atRow:6 atPosition:CGRectMake(290.0, 285.0, 25.0, 25.0)];
-    
-    
-    //7.Row -310
-    [self addButtonAtColumn:6 atRow:0 atPosition:CGRectMake(55.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:1 atPosition:CGRectMake(90.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:2 atPosition:CGRectMake(130.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:3 atPosition:CGRectMake(170.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:4 atPosition:CGRectMake(210.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:5 atPosition:CGRectMake(250.0, 315.0, 25.0, 25.0)];
-    [self addButtonAtColumn:6 atRow:6 atPosition:CGRectMake(290.0, 315.0, 25.0, 25.0)];
-    
-    
-    //8.Row - 410
-    [self addButtonAtColumn:7 atRow:0 atPosition:CGRectMake(55.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:1 atPosition:CGRectMake(90.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:2 atPosition:CGRectMake(130.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:3 atPosition:CGRectMake(170.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:4 atPosition:CGRectMake(210.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:5 atPosition:CGRectMake(250.0, 415.0, 25.0, 25.0)];
-    [self addButtonAtColumn:7 atRow:6 atPosition:CGRectMake(290.0, 415.0, 25.0, 25.0)];
-    
-    
-    //9. ROw - 440
-    [self addButtonAtColumn:8 atRow:0 atPosition:CGRectMake(55.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:1 atPosition:CGRectMake(90.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:2 atPosition:CGRectMake(130.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:3 atPosition:CGRectMake(170.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:4 atPosition:CGRectMake(210.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:5 atPosition:CGRectMake(250.0, 445.0, 25.0, 25.0)];
-    [self addButtonAtColumn:8 atRow:6 atPosition:CGRectMake(290.0, 445.0, 25.0, 25.0)];
-    
-    //10.row - 470
-    [self addButtonAtColumn:9 atRow:0 atPosition:CGRectMake(55.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:1 atPosition:CGRectMake(90.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:2 atPosition:CGRectMake(130.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:3 atPosition:CGRectMake(170.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:4 atPosition:CGRectMake(210.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:5 atPosition:CGRectMake(250.0, 475.0, 25.0, 25.0)];
-    [self addButtonAtColumn:9 atRow:6 atPosition:CGRectMake(290.0, 475.0, 25.0, 25.0)];
+    row = 405; // create matrix for resting days to doctor visit
+    for (int rowId = 0; rowId < 3; rowId++) {
+        
+        column = 50;
+        
+        for (int columnId=0; columnId < 7; columnId++) {
+            [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+            column += 39;
+        }
+        row += 29;
+        
+    }
 }
 
 -(void)addButtonAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos {
@@ -281,6 +165,15 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     [button setFrame:pos];
     [button setTag:column+row];
     [self.view addSubview:button];
+}
+
+-(void)addLabelAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos withText:(NSString*)text {
+    UILabel *label09 = [ [UILabel alloc ] initWithFrame:pos ];
+    label09.textAlignment =  NSTextAlignmentLeft;
+    label09.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+    label09.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
+    label09.text = text;
+    [self.view addSubview:label09];
 }
 
 -(void)timeSelected:(id)sender {
