@@ -524,16 +524,27 @@ mmHg</string>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJF-0n-rPd">
                                                     <rect key="frame" x="266" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" title="häufig">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="412" id="NbR-Oo-EUo">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="NbR-Oo-EUo">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbR-Oo-EUo" id="AH9-1E-XaI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-H8-gSW">
+                                                    <rect key="frame" x="0.0" y="-19" width="320" height="162"/>
+                                                </pickerView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="386" id="Qth-Sg-5pX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qth-Sg-5pX" id="RUV-Bz-tLZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -555,9 +566,6 @@ mmHg</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <connections>
-                                <segue destination="UhF-rX-nX9" kind="unwind" unwindAction="unwindToSchemaView:" id="d37-rc-k5t"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="j2M-BT-2Rw">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vqN-r5-oFj">
@@ -568,17 +576,20 @@ mmHg</string>
                                 </state>
                                 <connections>
                                     <action selector="changeButton:" destination="LlI-oT-L3E" eventType="touchUpInside" id="gnC-6l-ofV"/>
-                                    <segue destination="UhF-rX-nX9" kind="unwind" unwindAction="unwindToSchemaView:" id="4ub-rB-fdk"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="changeSchema" destination="KJF-0n-rPd" id="uzQ-OW-Gf4"/>
+                        <outlet property="defaultSchemePicker" destination="y7d-H8-gSW" id="rCw-w9-0yT"/>
+                        <outlet property="intervallCell" destination="RZ6-lg-bFI" id="fYS-Ib-l8F"/>
+                        <outlet property="intervallPickerCell" destination="NbR-Oo-EUo" id="TBu-sM-N85"/>
                         <outlet property="saveButton" destination="vqN-r5-oFj" id="Dat-VS-zRt"/>
+                        <outlet property="schemaViewCell" destination="RUV-Bz-tLZ" id="eCO-MP-25Y"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsj-f7-xL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="UhF-rX-nX9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1768" y="988"/>
         </scene>
