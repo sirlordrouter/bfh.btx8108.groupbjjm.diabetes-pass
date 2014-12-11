@@ -432,13 +432,21 @@ mmHg</string>
                     <view key="view" contentMode="scaleToFill" id="p4R-Bu-AXp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-c1-Ihc">
+                                <rect key="frame" x="0.0" y="38" width="320" height="162"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schema" image="list.png" id="mJ8-W5-FtL"/>
+                    <connections>
+                        <outlet property="schemaPicker" destination="e5b-c1-Ihc" id="ojX-oX-r8L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQB-NM-h62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="1841"/>
+            <point key="canvasLocation" x="2503" y="322"/>
         </scene>
         <!--Home-->
         <scene sceneID="4pM-ir-qGV">
@@ -473,6 +481,7 @@ mmHg</string>
         <scene sceneID="f2r-o6-hst">
             <objects>
                 <tabBarController id="hKX-Ta-wg0" customClass="MainTabViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6GG-me-VRT"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DoE-lO-xpG">
@@ -483,13 +492,144 @@ mmHg</string>
                     <connections>
                         <segue destination="u3j-IR-4NH" kind="relationship" relationship="viewControllers" id="oar-0i-eeB"/>
                         <segue destination="0ef-ea-jT9" kind="relationship" relationship="viewControllers" id="RNx-ju-DkK"/>
-                        <segue destination="0SY-bU-65V" kind="relationship" relationship="viewControllers" id="aRR-N0-hBe"/>
+                        <segue destination="eS9-1O-6Vg" kind="relationship" relationship="viewControllers" id="Mdn-80-gp0"/>
                         <segue destination="T5c-f5-3vn" kind="relationship" relationship="viewControllers" id="p77-mt-YSb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y0-Vl-ja5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="1024"/>
+        </scene>
+        <!--Schema ändern-->
+        <scene sceneID="AeN-F4-cEH">
+            <objects>
+                <tableViewController id="LlI-oT-L3E" customClass="SetSchemaViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rPe-SI-E4N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="IpS-lw-Asm">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RZ6-lg-bFI">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RZ6-lg-bFI" id="vvD-LQ-Q9y">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Häufigkeit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvk-aP-g9Q">
+                                                    <rect key="frame" x="8" y="11" width="78" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJF-0n-rPd">
+                                                    <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="412" id="NbR-Oo-EUo">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbR-Oo-EUo" id="AH9-1E-XaI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="LlI-oT-L3E" id="NNC-qv-caq"/>
+                            <outlet property="delegate" destination="LlI-oT-L3E" id="bCD-BN-SGl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Schema ändern" id="NkZ-Fp-3Lh">
+                        <barButtonItem key="backBarButtonItem" title="Zurück" id="vzc-2e-4sD"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="OXs-Fe-fUZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e5x-Nz-3PH">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <connections>
+                                <segue destination="UhF-rX-nX9" kind="unwind" unwindAction="unwindToSchemaView:" id="d37-rc-k5t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="j2M-BT-2Rw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vqN-r5-oFj">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sichern">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButton:" destination="LlI-oT-L3E" eventType="touchUpInside" id="gnC-6l-ofV"/>
+                                    <segue destination="UhF-rX-nX9" kind="unwind" unwindAction="unwindToSchemaView:" id="4ub-rB-fdk"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="vqN-r5-oFj" id="Dat-VS-zRt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsj-f7-xL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UhF-rX-nX9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="988"/>
+        </scene>
+        <!--Schema-->
+        <scene sceneID="aD3-PN-fPe">
+            <objects>
+                <viewController id="9Lp-Dc-G8h" customClass="SchemaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kdg-rU-rFz"/>
+                        <viewControllerLayoutGuide type="bottom" id="voq-1p-KA2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6HM-GU-vnz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schema" id="YK5-3k-oOO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="V2q-rt-Dmh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Wq-Cw-wkH">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ändern">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LlI-oT-L3E" kind="push" id="6DY-j8-kHV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGO-Rh-aLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360" y="988"/>
+        </scene>
+        <!--Schema-->
+        <scene sceneID="ssr-Y3-yMT">
+            <objects>
+                <navigationController id="eS9-1O-6Vg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schema" image="list.png" id="Dwa-n2-bh0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eZd-T0-wyv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Lp-Dc-G8h" kind="relationship" relationship="rootViewController" id="xka-cW-XKl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zew-Ic-5Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="988"/>
         </scene>
         <!--Einstellungen-->
         <scene sceneID="Ezp-wX-sAp">
@@ -603,7 +743,7 @@ mmHg</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-pm-qSo">
+                            <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-pm-qSo">
                                 <rect key="frame" x="26" y="137" width="268" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Falls ich bewusstlos bin, geben Sie mir nichts und rufen Sie sofort einen Arzt oder Notfalldienst! 
@@ -1378,6 +1518,6 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ue0-1r-DPN"/>
+        <segue reference="zUA-DL-yIv"/>
     </inferredMetricsTieBreakers>
 </document>

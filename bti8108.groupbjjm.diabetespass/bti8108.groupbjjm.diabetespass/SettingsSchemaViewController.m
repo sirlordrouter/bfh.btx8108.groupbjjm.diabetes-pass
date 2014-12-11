@@ -8,30 +8,34 @@
 
 #import "SettingsSchemaViewController.h"
 
+@interface SettingsSchemaViewController()
+
+@property (nonatomic, strong) NSArray* matrixData;
+
+@end
 
 @implementation SettingsSchemaViewController
 @synthesize schemaView=_schemaView;
+@synthesize pickerDefaults=_pickerDefaults;
 
 
 CGFloat const WeekDayLabelSize = 50.0;
 CGFloat const CheckButtonWith = 50.0;
 CGFloat const MatrixSpacing = 5.0;
-                                                                                //                          NEXT
-CGFloat Column0StartingPoint = MatrixSpacing;                                   //5 + 50Label + 5 spacing  => 60
-CGFloat Column1StartingPoint = MatrixSpacing + CheckButtonWith + MatrixSpacing; //60 + 55                  => 115
-CGFloat Column2StartingPoint = MatrixSpacing + 50 + CheckButtonWith;            //115 + 55                 => 170
-CGFloat Column3StartingPoint = MatrixSpacing + 50 + CheckButtonWith;            //170 + 55      => 225
-CGFloat Column4StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //225 + 55 => 280
-CGFloat Column5StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //280 + 55 => 335
-CGFloat Column6StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //335 + 55 => 390
-CGFloat Column7StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //390 + 55 => 445
-CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 => 500 nxt
-
 
 -(void) viewDidLoad {
     [super viewDidLoad];
     
+    [self initFakeData];
+    
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    _pickerDefaults = @[@"wenig", @"häufig", @"viel"];
+    
+    self.schemaPicker.dataSource = self;
+    self.schemaPicker.delegate = self;
+    
+    
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:applicationFrame];
     UIImage *backgroundImage = [UIImage imageNamed:@"SchemaBackground@2x"];
@@ -39,6 +43,20 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
     [self.view addSubview:backgroundImageView];
     
     [self initButtonMatrix];
+}
+
+-(void)initFakeData {
+    
+    NSMutableArray *matrix = [NSMutableArray array];
+    for (int rows = 0; rows < 10 ; rows++) {
+         NSMutableArray *columns = [NSMutableArray array];
+        for (int col = 0; col < 7; col++) {
+            [columns addObject:[NSNumber numberWithInt:1]];
+        }
+        [matrix addObject:columns];
+    }
+    
+    self.matrixData = matrix;
 }
 
 -(void) initButtonMatrix {
@@ -131,7 +149,7 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
         column = 50;
         
         for (int columnId=0; columnId < 7; columnId++) {
-            [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+            [self addButtonAtColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
         
@@ -178,9 +196,38 @@ CGFloat Column8StartingPoint = MatrixSpacing + 50 + CheckButtonWith; //445 + 55 
 
 -(void)timeSelected:(id)sender {
     UIButton *tempBtn=(UIButton *) sender;
-    [tempBtn setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateNormal];
+    
     NSString * string = [NSString stringWithFormat:@"%d", tempBtn.tag];
     NSLog(string) ;
+    
+    int row = (tempBtn.tag / 10) % 10;
+    int col = tempBtn.tag % 10;
+    
+    if ([[[self.matrixData objectAtIndex:row] objectAtIndex:col] integerValue] == 0) {
+        [tempBtn setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
+        [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInt:1] atIndex:col];
+    } else {
+        [tempBtn setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateNormal];
+        [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInt:0] atIndex:col];
+    }
+}
+
+// The number of columns of data
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return _pickerDefaults.count;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return _pickerDefaults[row];
 }
 
 

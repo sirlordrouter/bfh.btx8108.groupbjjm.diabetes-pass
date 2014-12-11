@@ -12,6 +12,8 @@
 		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
 		8F2EC22F1A276E280064DD95 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22B1A276E280064DD95 /* table.png */; };
 		8F2EC2311A276E950064DD95 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2301A276E950064DD95 /* list@2x.png */; };
+		8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C41A3A334F004EC199 /* SchemaViewController.m */; };
+		8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */; };
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
 		8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6E1A1E12E30027A02A /* SettingsTypPageViewController.m */; };
 		8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB701A1E12E30027A02A /* SettingsTherapyPageViewController.m */; };
@@ -76,6 +78,10 @@
 		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		8F2EC22B1A276E280064DD95 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		8F2EC2301A276E950064DD95 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		8F5050C31A3A334F004EC199 /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
+		8F5050C41A3A334F004EC199 /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
+		8F5050C61A3A33F0004EC199 /* SetSchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSchemaViewController.h; sourceTree = "<group>"; };
+		8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetSchemaViewController.m; sourceTree = "<group>"; };
 		8F5FAB6B1A1E12E30027A02A /* SettingsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPageViewController.h; sourceTree = "<group>"; };
 		8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPageViewController.m; sourceTree = "<group>"; };
 		8F5FAB6D1A1E12E30027A02A /* SettingsTypPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTypPageViewController.h; sourceTree = "<group>"; };
@@ -342,6 +348,10 @@
 			children = (
 				8F945F7D1A3606C00036EA4C /* SettingsSchemaViewController.h */,
 				8F945F7E1A3606C00036EA4C /* SettingsSchemaViewController.m */,
+				8F5050C31A3A334F004EC199 /* SchemaViewController.h */,
+				8F5050C41A3A334F004EC199 /* SchemaViewController.m */,
+				8F5050C61A3A33F0004EC199 /* SetSchemaViewController.h */,
+				8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */,
 			);
 			name = SchemaView;
 			sourceTree = "<group>";
@@ -589,6 +599,7 @@
 				8F5FAB8F1A1E169D0027A02A /* JBBarChartFooterView.m in Sources */,
 				8F945F861A360AB70036EA4C /* SettingsSchemaView.m in Sources */,
 				8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */,
+				8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */,
 				8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */,
 				8F84838719CB313800DF1E16 /* main.m in Sources */,
 				8F5FAB871A1E163C0027A02A /* JBChartTooltipView.m in Sources */,
@@ -601,6 +612,7 @@
 				8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */,
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
+				8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
 				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,
