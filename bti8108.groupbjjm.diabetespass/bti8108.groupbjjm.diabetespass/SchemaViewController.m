@@ -37,12 +37,6 @@ CGFloat const FridayRowX = 265;
 CGFloat const SaturdayRowX = 292;
 CGFloat const SundayRowX = 319;
 
-
-
-
-
-
-
 -(void) viewDidLoad {
     [super viewDidLoad];
     
@@ -63,11 +57,13 @@ CGFloat const SundayRowX = 319;
     
     applicationFrame.origin.y +=60;
     
+    //Set Schema Background
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:applicationFrame];
     UIImage *backgroundImage = [UIImage imageNamed:@"SchemaBackground@2x"];
     backgroundImageView.image = backgroundImage;
     [self.view addSubview:backgroundImageView];
     
+    //Make the current Day visible with blue rectangle
     int weekday =[self getCurrentWeekday];
     float weekdayPosition = [[self.rowPositionsWeekdays objectAtIndex:weekday] floatValue];
     SchemaViewDaySelection *selectionView = [[SchemaViewDaySelection alloc] initWithFrame:CGRectMake(7,weekdayPosition,306,30)];
@@ -77,6 +73,9 @@ CGFloat const SundayRowX = 319;
     [self initButtonMatrix];
 }
 
+/**
+ *  Adds Fake data - Remove when having a DB
+ */
 -(void)initFakeData {
     
     NSMutableArray *matrix = [NSMutableArray array];
@@ -93,65 +92,13 @@ CGFloat const SundayRowX = 319;
 
 #pragma Buttonmatrix initialization
 
+/**
+ *  Set up the whole matrix and labling
+ */
 -(void) initButtonMatrix {
     
     NSArray *weekdays = [NSArray arrayWithObjects:@"Mo", @"Di", @"Mi", @"Do", @"Fr", @"Sa", @"So", nil];
     NSArray *remainingDays = [NSArray arrayWithObjects:@"-3", @"-2", @"-1", nil];
-    
-    
-    //    //Images daytime
-    //
-    //    UIImageView *morningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(70, 85, 30, 30)];
-    //    UIImage *morningImage = [UIImage imageNamed:@"morning@2x"];
-    //    morningImageView.image = morningImage;
-    //    [self.schemaViewCell addSubview:morningImageView];
-    //
-    //    UIImageView *noonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(140, 85, 30, 30)];
-    //    UIImage *noonImage = [UIImage imageNamed:@"noon@2x"];
-    //    noonImageView.image = noonImage;
-    //    [self.schemaViewCell addSubview:noonImageView];
-    //
-    //    UIImageView *eveningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(210, 85, 30, 30)];
-    //    UIImage *eveningImage = [UIImage imageNamed:@"evening@2x"];
-    //    eveningImageView.image = eveningImage;
-    //    [self.schemaViewCell addSubview:eveningImageView];
-    //
-    //    UIImageView *nightImageViews = [[UIImageView alloc] initWithFrame:CGRectMake(280, 85, 30, 30)];
-    //    UIImage *nightImage = [UIImage imageNamed:@"night@2x"];
-    //    nightImageViews.image = nightImage;
-    //    [self.schemaViewCell addSubview:nightImageViews];
-    //
-    //
-    //    // Images before/after MEal
-    //    UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
-    //    UIImage *appleSmall = [UIImage imageNamed:@"apfel_biss"];
-    //
-    //    UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(55, 120, 30,30)];
-    //    morningPre.image = appleBig;
-    //    [self.schemaViewCell addSubview:morningPre];
-    //
-    //    UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(90, 120, 30,30)];
-    //    morningAfter.image = appleSmall;
-    //    [self.schemaViewCell addSubview:morningAfter];
-    //
-    //    UIImageView *noonPre= [[UIImageView alloc] initWithFrame:CGRectMake(130, 120,30,30)];
-    //    noonPre.image = appleBig;
-    //    [self.schemaViewCell addSubview:noonPre];
-    //
-    //    UIImageView *noonAfter= [[UIImageView alloc] initWithFrame:CGRectMake(165, 120, 30,30)];
-    //    noonAfter.image = appleSmall;
-    //    [self.schemaViewCell addSubview:noonAfter];
-    //
-    //    UIImageView *eveningPre= [[UIImageView alloc] initWithFrame:CGRectMake(205, 120, 30,30)];
-    //    eveningPre.image = appleBig;
-    //    [self.schemaViewCell addSubview:eveningPre];
-    //
-    //    UIImageView *eveningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(240, 120, 30,30)];
-    //    eveningAfter.image = appleSmall;
-    //    [self.schemaViewCell addSubview:eveningAfter];
-    
-    //label weekdays
-    
     
     NSMutableArray *labelArray2D = [NSMutableArray array];
     
@@ -191,72 +138,74 @@ CGFloat const SundayRowX = 319;
     //Buttons matrix weekdays
     row = SchemaFirstDataRowPosition + 7;
     int column = 50;
-    for (int rowId = 0; rowId < 7; rowId++) {
+    
+    for (int rowId = 0; rowId < 10; rowId++) {
         NSMutableArray *weekdayArray = [NSMutableArray array];
         column = 50;
-        
-        for (int columnId=0; columnId < 7; columnId++) {
+        for (int columnId=0; columnId < 10; columnId++) {
             UILabel *label = [ [UILabel alloc ] init];
             [weekdayArray addObject:label];
             [self addMark:label atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
+        if (rowId == 4) { row += 3; } // HACK: using a picture not well aligned, make a lager spacing
+        row += rowId < 7 ? 27.5 : 29; //the matrix for resting days to doctor visit has other spacing
         
-        if (rowId == 4) { row += 3; } //HACK: Layout not fitting at 4th row add additional space
-        row += 27.5;
         [buttonsArray2D addObject:weekdayArray];
         
-    }
-    
-    row = SchemaFirstDataRowPosition + 235; // create matrix for resting days to doctor visit
-    for (int rowId = 7; rowId < 10; rowId++) {
-        NSMutableArray *weekdayArray = [NSMutableArray array];
-        column = 50;
-        
-        for (int columnId=0; columnId < 7; columnId++) {
-            UILabel *label = [ [UILabel alloc ] init];
-            [weekdayArray addObject:label];
-            [self addMark:label atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
-            column += 39;
+        //When finished measuretimes for week, make a gap and set position for matrix for doctors visit
+        if (rowId == 6) {
+            row =SchemaFirstDataRowPosition + 235;
         }
-        row += 29;
-        [buttonsArray2D addObject:weekdayArray];
     }
-    
-    
-    
-    
-    
     
     self.xLabel = buttonsArray2D;
     
-        // Images before/after MEal
-        UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
-        UIImage *appleSmall = [UIImage imageNamed:@"apfel_biss"];
+    [self addLegend];
     
-        UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(10, SchemaFirstDataRowPosition + 325, 20,20)];
-        morningPre.image = appleBig;
-        [self.view addSubview:morningPre];
+        }
+
+/**
+ *  Adds the Legend for the images to the matrix
+ */
+-(void) addLegend {
+    // Images before/after MEal for Legend below matrix
+    UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
+    UIImage *appleSmall = [UIImage imageNamed:@"apfel_biss"];
     
-        UILabel *preMealLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(40, SchemaFirstDataRowPosition + 315, 350,43) ];
-        preMealLabel.textAlignment =  NSTextAlignmentLeft;
-        preMealLabel.textColor = [UIColor blackColor];
-        preMealLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
-        preMealLabel.text = @"vor dem Essen";
-        [self.view addSubview:preMealLabel];
+    UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(10, SchemaFirstDataRowPosition + 325, 20,20)];
+    morningPre.image = appleBig;
+    [self.view addSubview:morningPre];
     
-        UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(10, SchemaFirstDataRowPosition + 345, 20,20)];
-        morningAfter.image = appleSmall;
-        [self.view addSubview:morningAfter];
+    UILabel *preMealLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(40, SchemaFirstDataRowPosition + 315, 350,43) ];
+    preMealLabel.textAlignment =  NSTextAlignmentLeft;
+    preMealLabel.textColor = [UIColor blackColor];
+    preMealLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
+    preMealLabel.text = @"vor dem Essen";
+    [self.view addSubview:preMealLabel];
     
-        UILabel *postMealLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(40, SchemaFirstDataRowPosition + 335, 350,43) ];
-        postMealLabel.textAlignment =  NSTextAlignmentLeft;
-        postMealLabel.textColor = [UIColor blackColor];
-        postMealLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
-        postMealLabel.text = @"nach dem Essen";
-        [self.view addSubview:postMealLabel];
+    UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(10, SchemaFirstDataRowPosition + 345, 20,20)];
+    morningAfter.image = appleSmall;
+    [self.view addSubview:morningAfter];
+    
+    UILabel *postMealLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(40, SchemaFirstDataRowPosition + 335, 350,43) ];
+    postMealLabel.textAlignment =  NSTextAlignmentLeft;
+    postMealLabel.textColor = [UIColor blackColor];
+    postMealLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
+    postMealLabel.text = @"nach dem Essen";
+    [self.view addSubview:postMealLabel];
+
 }
 
+
+/**
+ *  Add Labeling for matrix
+ *
+ *  @param label  <#label description#>
+ *  @param column <#column description#>
+ *  @param row    <#row description#>
+ *  @param pos    <#pos description#>
+ */
 -(void)addMark:(UILabel*)label atColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos{
    
     [label setFrame:pos];
@@ -267,6 +216,15 @@ CGFloat const SundayRowX = 319;
     [self.view addSubview:label];
 }
 
+/**
+ *  Add Weekday labels
+ *
+ *  @param column <#column description#>
+ *  @param row    <#row description#>
+ *  @param pos    <#pos description#>
+ *  @param text   <#text description#>
+ *  @param color  <#color description#>
+ */
 -(void)addLabelAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos withText:(NSString*)text withColor:(UIColor*)color {
     UILabel *label09 = [ [UILabel alloc ] initWithFrame:pos ];
     label09.textAlignment =  NSTextAlignmentLeft;
@@ -276,14 +234,16 @@ CGFloat const SundayRowX = 319;
     [self.view addSubview:label09];
 }
 
+//Gets the day of wek as integer value, straing with Monday = 0
 -(int) getCurrentWeekday {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
     return [comps weekday]-2;
 }
 
-
 #pragma Button Actions
+
+//Handle a Save of Schema in the Schema Settings View
 - (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue
 {
     SchemaViewController *source = [segue sourceViewController];
