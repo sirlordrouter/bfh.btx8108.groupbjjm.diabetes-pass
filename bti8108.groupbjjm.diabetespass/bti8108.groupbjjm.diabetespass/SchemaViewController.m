@@ -8,6 +8,7 @@
 
 #import "SchemaViewController.h"
 #import "SchemaViewDaySelection.h"
+#import "SetSchemaViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SchemaViewController()
@@ -15,6 +16,7 @@
 
 @property (nonatomic, strong) NSArray* matrixData;
 @property (nonatomic, strong) NSArray* rowPositionsWeekdays;
+@property (nonatomic, strong) NSArray* xLabel;
 
 @end
 
@@ -37,10 +39,7 @@ CGFloat const SundayRowX = 319;
 
 
 
-- (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue
-{
-    
-}
+
 
 
 
@@ -153,11 +152,14 @@ CGFloat const SundayRowX = 319;
     
     //label weekdays
     
+    
+    NSMutableArray *labelArray2D = [NSMutableArray array];
+    
     UIColor *markColor;
     int currentWeekDay = 0;
     int row =  SchemaFirstDataRowPosition;
     for (int i = 0; i < 7; i++) {
-        
+        NSMutableArray *weekdayArray = [NSMutableArray array];
         if (i == [self getCurrentWeekday]) {
             markColor = [UIColor blackColor];
         } else {
@@ -184,36 +186,49 @@ CGFloat const SundayRowX = 319;
     [self.view addSubview:doctorConsultLabel];
     
     
+    NSMutableArray *buttonsArray2D = [NSMutableArray array];
+    
     //Buttons matrix weekdays
     row = SchemaFirstDataRowPosition + 7;
     int column = 50;
     for (int rowId = 0; rowId < 7; rowId++) {
-        
+        NSMutableArray *weekdayArray = [NSMutableArray array];
         column = 50;
         
         for (int columnId=0; columnId < 7; columnId++) {
-            [self addMarkAtColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+            UILabel *label = [ [UILabel alloc ] init];
+            [weekdayArray addObject:label];
+            [self addMark:label atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
         
         if (rowId == 4) { row += 3; } //HACK: Layout not fitting at 4th row add additional space
-        
         row += 27.5;
+        [buttonsArray2D addObject:weekdayArray];
         
     }
     
     row = SchemaFirstDataRowPosition + 235; // create matrix for resting days to doctor visit
     for (int rowId = 7; rowId < 10; rowId++) {
-        
+        NSMutableArray *weekdayArray = [NSMutableArray array];
         column = 50;
         
         for (int columnId=0; columnId < 7; columnId++) {
-            [self addMarkAtColumn:columnId atRow:rowId*10  atPosition:CGRectMake(column, row, 23.0, 23.0)];
+            UILabel *label = [ [UILabel alloc ] init];
+            [weekdayArray addObject:label];
+            [self addMark:label atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
         row += 29;
-        
+        [buttonsArray2D addObject:weekdayArray];
     }
+    
+    
+    
+    
+    
+    
+    self.xLabel = buttonsArray2D;
     
         // Images before/after MEal
         UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
@@ -242,14 +257,14 @@ CGFloat const SundayRowX = 319;
         [self.view addSubview:postMealLabel];
 }
 
--(void)addMarkAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos{
+-(void)addMark:(UILabel*)label atColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos{
    
-    UILabel *label09 = [ [UILabel alloc ] initWithFrame:pos];
-    label09.textAlignment =  NSTextAlignmentLeft;
-    label09.textColor = [UIColor blackColor];
-    label09.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(26.0)];
-    label09.text = @"x";
-    [self.view addSubview:label09];
+    [label setFrame:pos];
+    label.textAlignment =  NSTextAlignmentLeft;
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(26.0)];
+    label.text = @"x";
+    [self.view addSubview:label];
 }
 
 -(void)addLabelAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos withText:(NSString*)text withColor:(UIColor*)color {
@@ -265,6 +280,26 @@ CGFloat const SundayRowX = 319;
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
     return [comps weekday]-2;
+}
+
+
+#pragma Button Actions
+- (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue
+{
+    SchemaViewController *source = [segue sourceViewController];
+    self.matrixData = source.matrixData;
+    
+    for (int row = 0; row < self.matrixData.count ; row++) {
+        for (int col = 0; col < [[self.matrixData objectAtIndex:row] count]; col++) {
+            UILabel *label = [[self.xLabel objectAtIndex:row] objectAtIndex:col];
+            if ([[[self.matrixData objectAtIndex:row] objectAtIndex:col] integerValue] == 1) {
+                label.text = @"x";
+            } else {
+                label.text = @"";
+            }
+        }
+    }
+    
 }
 
 
