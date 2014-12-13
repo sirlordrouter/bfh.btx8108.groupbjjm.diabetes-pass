@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SchemaBaseController.h"
 
 @interface SetSchemaViewController : UITableViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -19,13 +20,11 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *intervallPickerCell;
 
 @property (assign) BOOL defaultPickerIsShowing;
-
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
-
-- (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue;
-
-
 @property (strong, nonatomic) NSArray *pickerDefaults;
+
+
+
+
 
 @end
 

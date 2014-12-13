@@ -11,7 +11,16 @@
 
 @interface SetSchemaViewController()
 
+@property (nonatomic, strong) NSArray* buttonPics;
 @property (nonatomic, strong) NSArray* matrixData;
+@property (nonatomic, strong) NSArray* buttons;
+@property (nonatomic, strong) NSString* selectedSchema;
+
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (nonatomic, strong) NSArray* fewDataMatrix;
+@property (nonatomic, strong) NSArray* oftenDataMatrix;
+@property (nonatomic, strong) NSArray* numerousDataMatrix;
 
 @end
 
@@ -19,16 +28,15 @@
 
 @synthesize pickerDefaults=_pickerDefaults;
 
-
-CGFloat const WeekDayLabelSize = 50.0;
+NSInteger const MeasureTimes = 7;
+NSInteger const WeekDayMeasureRows = 10;
 CGFloat const CheckButtonWith = 50.0;
+CGFloat const WeekDayLabelSize = 50.0;
 CGFloat const MatrixSpacing = 5.0;
 CGFloat const FirstDataRowPosition = 90.0;
 
-- (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue
-{
-}
 
+#pragma Button Actions
 
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -39,25 +47,26 @@ CGFloat const FirstDataRowPosition = 90.0;
 }
 
 
-
-
+#pragma initialization
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    [self initFakeData];
+    [self initData];
     
     
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     
-    _pickerDefaults = @[@"wenig", @"häufig", @"viel"];
+    _pickerDefaults = @[@"wenig", @"häufig", @"viel", @"individuell"];
+    _buttonPics = @[@"off@2x",@"on@2x"];
     
     self.defaultSchemePicker.dataSource = self;
     self.defaultSchemePicker.delegate = self;
     
     self.defaultSchemePicker.hidden = true;
     
-    NSInteger row = [self.defaultSchemePicker selectedRowInComponent:0];
+    NSInteger row = [self.defaultSchemePicker selectedRowInComponent:0]; //schema mit zuletzt gespeichertem item füllen
     NSString *itemName = [_pickerDefaults objectAtIndex:row];
+
     
     [self.changeSchema setTitle:itemName forState:UIControlStateNormal];
     
@@ -65,16 +74,57 @@ CGFloat const FirstDataRowPosition = 90.0;
     UIImage *backgroundImage = [UIImage imageNamed:@"SchemaBackground@2x"];
     backgroundImageView.image = backgroundImage;
     [self.schemaViewCell addSubview:backgroundImageView];
-    
+
     [self initButtonMatrix];
+    [self pickerView:self.defaultSchemePicker didSelectRow:0 inComponent:0];
 }
 
--(void)initFakeData {
+-(void)initData {
+    
+    self.fewDataMatrix = @[
+                           @[@1,@1,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@1,@1,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@1,@1,@0],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@1,@1,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@1,@1,@0,@0,@0]
+  ];
+    
+    self.oftenDataMatrix = @[
+                           @[@1,@1,@0,@0,@0,@0,@1],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@1,@1,@0,@0,@1],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@1,@1,@1],
+                           @[@0,@0,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@1],
+                           @[@1,@1,@0,@0,@0,@0,@0],
+                           @[@0,@0,@0,@0,@0,@0,@1],
+                           @[@0,@0,@1,@1,@0,@0,@0]
+                           ];
+    
+    self.numerousDataMatrix = @[
+                           @[@1,@1,@0,@0,@0,@0,@0],
+                           @[@1,@0,@0,@0,@0,@0,@0],
+                           @[@1,@0,@1,@1,@0,@0,@0],
+                           @[@1,@0,@0,@0,@0,@0,@0],
+                           @[@1,@0,@0,@0,@1,@1,@0],
+                           @[@1,@0,@0,@0,@0,@0,@0],
+                           @[@1,@0,@0,@0,@0,@0,@0],
+                           @[@1,@1,@0,@0,@0,@0,@0],
+                           @[@1,@0,@0,@0,@0,@0,@0],
+                           @[@1,@0,@1,@1,@0,@0,@0]
+                           ];
+    
     
     NSMutableArray *matrix = [NSMutableArray array];
-    for (int rows = 0; rows < 10 ; rows++) {
+    for (int rows = 0; rows < WeekDayMeasureRows ; rows++) {
         NSMutableArray *columns = [NSMutableArray array];
-        for (int col = 0; col < 7; col++) {
+        for (int col = 0; col < MeasureTimes; col++) {
             [columns addObject:[NSNumber numberWithInt:1]];
         }
         [matrix addObject:columns];
@@ -83,23 +133,8 @@ CGFloat const FirstDataRowPosition = 90.0;
     self.matrixData = matrix;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell == self.intervallCell) { // this is my date cell above the picker cell
-        self.defaultPickerIsShowing = !self.defaultPickerIsShowing;
-        if (self.defaultPickerIsShowing) {
-            [self showPickerCell];
-        } else {
-            [self hidePickerCell];
-        }
-        
-        [UIView animateWithDuration:.4 animations:^{
-            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView reloadData];
-        }];
-    }
-}
 
+#pragma Picker
 - (void)showPickerCell {
     
     // set the boolean to YES, to mark that the datepicker is shown
@@ -138,16 +173,84 @@ CGFloat const FirstDataRowPosition = 90.0;
                          self.defaultSchemePicker.hidden = YES;
                      }];
 }
+#pragma picker delegates
+// The number of columns of data
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
 
+// The number of rows of data
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return _pickerDefaults.count;
+}
 
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return _pickerDefaults[row];
+}
+
+#pragma table delegates
+/**
+ *  When a picker with schema default is selected and a new value selected, this event is fired.
+ *
+ *  @param pickerView picker with 3 default schemes
+ *  @param row        the row that has been selected
+ *  @param component  betroffene Komponente
+ */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
 
     NSString *itemName = [_pickerDefaults objectAtIndex:row];
     
-    NSLog(itemName);
-    
+    //Attention here, just reference to array => must be copied as user can edit data
+    switch (row) {
+        case 0:
+            [self setUpMatrixFromPredefinedSchema:_fewDataMatrix];
+            break;
+        case 1:
+            [self setUpMatrixFromPredefinedSchema:_oftenDataMatrix];
+            break;
+        case 2:
+            [self setUpMatrixFromPredefinedSchema:_numerousDataMatrix];
+            break;
+        case 3:
+            [self setUpMatrixFromPredefinedSchema:_fewDataMatrix];
+            break;
+    }
+
     //wenn geändert: speichern
     [self.changeSchema setTitle:itemName forState:UIControlStateNormal];
+}
+
+-(void)setUpMatrixFromPredefinedSchema:(NSArray*)array {
+    for (int row = 0; row < WeekDayMeasureRows; row++) {
+        for (int col = 0; col < MeasureTimes; col++) {
+            UIButton *currentButton = [[self.buttons objectAtIndex:row] objectAtIndex:col];
+            
+            NSInteger value = [[[array objectAtIndex:row] objectAtIndex:col] integerValue];
+            [currentButton setBackgroundImage:[UIImage imageNamed:[_buttonPics objectAtIndex:value]] forState:UIControlStateNormal];
+            [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInteger:[self toggleButtonValue:value]] atIndex:col];
+        }
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell == self.intervallCell) { // this is my date cell above the picker cell
+        self.defaultPickerIsShowing = !self.defaultPickerIsShowing;
+        if (self.defaultPickerIsShowing) {
+            [self showPickerCell];
+        } else {
+            [self hidePickerCell];
+        }
+        
+        [UIView animateWithDuration:.4 animations:^{
+            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView reloadData];
+        }];
+    }
 }
 
 // store the index path of the date picker cell
@@ -160,78 +263,19 @@ CGFloat const FirstDataRowPosition = 90.0;
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
-//// Customize the appearance of table view cells.
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:1]];
-//    if (cell == nil) {
-//        [cell.contentView addSubview:[SettingsSchemaView init]];
-//    }
-//    
-//    return cell;
-//}
+#pragma Buttonmatrix initialization
 
 -(void) initButtonMatrix {
     
     NSArray *weekdays = [NSArray arrayWithObjects:@"Mo", @"Di", @"Mi", @"Do", @"Fr", @"Sa", @"So", nil];
     NSArray *remainingDays = [NSArray arrayWithObjects:@"-3", @"-2", @"-1", nil];
-    
-    
-//    //Images daytime
-//    
-//    UIImageView *morningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(70, 85, 30, 30)];
-//    UIImage *morningImage = [UIImage imageNamed:@"morning@2x"];
-//    morningImageView.image = morningImage;
-//    [self.schemaViewCell addSubview:morningImageView];
-//    
-//    UIImageView *noonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(140, 85, 30, 30)];
-//    UIImage *noonImage = [UIImage imageNamed:@"noon@2x"];
-//    noonImageView.image = noonImage;
-//    [self.schemaViewCell addSubview:noonImageView];
-//    
-//    UIImageView *eveningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(210, 85, 30, 30)];
-//    UIImage *eveningImage = [UIImage imageNamed:@"evening@2x"];
-//    eveningImageView.image = eveningImage;
-//    [self.schemaViewCell addSubview:eveningImageView];
-//    
-//    UIImageView *nightImageViews = [[UIImageView alloc] initWithFrame:CGRectMake(280, 85, 30, 30)];
-//    UIImage *nightImage = [UIImage imageNamed:@"night@2x"];
-//    nightImageViews.image = nightImage;
-//    [self.schemaViewCell addSubview:nightImageViews];
-//    
-//    
-//    // Images before/after MEal
-//    UIImage *appleBig = [UIImage imageNamed:@"apfel_ganz"];
-//    UIImage *appleSmall = [UIImage imageNamed:@"apfel_biss"];
-//    
-//    UIImageView *morningPre= [[UIImageView alloc] initWithFrame:CGRectMake(55, 120, 30,30)];
-//    morningPre.image = appleBig;
-//    [self.schemaViewCell addSubview:morningPre];
-//    
-//    UIImageView *morningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(90, 120, 30,30)];
-//    morningAfter.image = appleSmall;
-//    [self.schemaViewCell addSubview:morningAfter];
-//    
-//    UIImageView *noonPre= [[UIImageView alloc] initWithFrame:CGRectMake(130, 120,30,30)];
-//    noonPre.image = appleBig;
-//    [self.schemaViewCell addSubview:noonPre];
-//    
-//    UIImageView *noonAfter= [[UIImageView alloc] initWithFrame:CGRectMake(165, 120, 30,30)];
-//    noonAfter.image = appleSmall;
-//    [self.schemaViewCell addSubview:noonAfter];
-//    
-//    UIImageView *eveningPre= [[UIImageView alloc] initWithFrame:CGRectMake(205, 120, 30,30)];
-//    eveningPre.image = appleBig;
-//    [self.schemaViewCell addSubview:eveningPre];
-//    
-//    UIImageView *eveningAfter= [[UIImageView alloc] initWithFrame:CGRectMake(240, 120, 30,30)];
-//    eveningAfter.image = appleSmall;
-//    [self.schemaViewCell addSubview:eveningAfter];
+
     
     //label weekdays
     
     int row =  FirstDataRowPosition;
     
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < MeasureTimes; i++) {
         [self addLabelAtColumn:0 atRow:0 atPosition:CGRectMake(10.0, row, 50.0, 43.0) withText:weekdays[i]];
         row += 27.0;
     }
@@ -252,47 +296,53 @@ CGFloat const FirstDataRowPosition = 90.0;
     doctorConsultLabel.text = @"Drei Tage bis zur nächsten Arztkonsultation";
     [self.schemaViewCell addSubview:doctorConsultLabel];
     
+    NSMutableArray *buttonsArray2D = [NSMutableArray array];
+    
+    
     //Buttons matrix weekdays
     row = FirstDataRowPosition + 9;
     int column = 50;
-    for (int rowId = 0; rowId < 7; rowId++) {
-        
+    for (int rowId = 0; rowId < MeasureTimes; rowId++) {
+        NSMutableArray *weekdayArray = [NSMutableArray array];
         column = 50;
-        
-        for (int columnId=0; columnId < 7; columnId++) {
-            [self addButtonAtColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+        for (int columnId=0; columnId < MeasureTimes; columnId++) {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [weekdayArray addObject:button];
+            [self addButton:button atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
         
-        if (rowId == 4) { row += 3; } //HACK: Layout not fitting at 4th row
+        if (rowId == 4) { row += 3; } //HACK: Layout not fitting at 4th row add additional space
         
         row += 27.5;
-        
+        [buttonsArray2D addObject:weekdayArray];
     }
     
     row = FirstDataRowPosition + 237; // create matrix for resting days to doctor visit
-    for (int rowId = 0; rowId < 3; rowId++) {
-        
+    for (int rowId = MeasureTimes; rowId < WeekDayMeasureRows; rowId++) {
+        NSMutableArray *weekdayArray = [NSMutableArray array];
         column = 50;
-        
-        for (int columnId=0; columnId < 7; columnId++) {
-            [self addButtonAtColumn:0 atRow:0 atPosition:CGRectMake(column, row, 23.0, 23.0)];
+        for (int columnId=0; columnId < MeasureTimes; columnId++) {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [weekdayArray addObject:button];
+            [self addButton:button atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
         row += 29;
-        
+        [buttonsArray2D addObject:weekdayArray];
     }
+    
+    self.buttons = buttonsArray2D;
 }
 
--(void)addButtonAtColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+-(void)addButton:(UIButton*)button atColumn:(NSInteger)column atRow:(NSInteger)row atPosition:(CGRect)pos {
     [button setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateSelected];
     [button addTarget:self
                action:@selector(timeSelected:)
      forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:pos];
     [button setTag:column+row];
+
     [self.schemaViewCell addSubview:button];
 }
 
@@ -314,32 +364,36 @@ CGFloat const FirstDataRowPosition = 90.0;
     int row = (tempBtn.tag / 10) % 10;
     int col = tempBtn.tag % 10;
     
-    if ([[[self.matrixData objectAtIndex:row] objectAtIndex:col] integerValue] == 0) {
-        [tempBtn setBackgroundImage:[UIImage imageNamed:@"on@2x.png"] forState:UIControlStateNormal];
-        [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInt:1] atIndex:col];
+    NSInteger value = [[[self.matrixData objectAtIndex:row] objectAtIndex:col] integerValue];
+    [tempBtn setBackgroundImage:[UIImage imageNamed:[_buttonPics objectAtIndex:value]] forState:UIControlStateNormal];
+    [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInteger:[self toggleButtonValue:value]] atIndex:col];
+    
+    NSInteger schema = [self arrayEqualToPredefinedScheme:self.matrixData];
+    [_defaultSchemePicker selectRow:schema inComponent:0 animated:TRUE];
+    [self.changeSchema setTitle:[self.pickerDefaults objectAtIndex:schema] forState:UIControlStateNormal];
+}
+
+
+-(NSInteger)toggleButtonValue:(NSInteger)value {
+    return value == 1 ? 0 : 1;
+}
+
+-(NSInteger)arrayEqualToPredefinedScheme:(NSArray*)array {
+    
+    if ([array isEqualToArray:_fewDataMatrix]) {
+        return 0;
+    } else if([array isEqualToArray:_oftenDataMatrix]) {
+        return 1;
+    }else if([array isEqualToArray:_numerousDataMatrix]){
+        return 2;
     } else {
-        [tempBtn setBackgroundImage:[UIImage imageNamed:@"off@2x.png"] forState:UIControlStateNormal];
-        [[self.matrixData objectAtIndex:row] setObject:[NSNumber numberWithInt:0] atIndex:col];
+        return 3;
     }
 }
 
-// The number of columns of data
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
 
-// The number of rows of data
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return _pickerDefaults.count;
-}
 
-// The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return _pickerDefaults[row];
-}
+
 
 
 @end

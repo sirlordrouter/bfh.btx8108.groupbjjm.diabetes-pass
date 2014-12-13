@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SchemaBaseController.h"
+#import "SchemaViewDaySelection.h"
 
 @interface SchemaViewController : UIViewController
+
+
+@property (weak, nonatomic) IBOutlet UIView *setSchemaDaySelection;
+- (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue;
 
 @end
