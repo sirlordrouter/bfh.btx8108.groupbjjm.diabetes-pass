@@ -100,13 +100,9 @@ CGFloat const SundayRowX = 319;
     NSArray *weekdays = [NSArray arrayWithObjects:@"Mo", @"Di", @"Mi", @"Do", @"Fr", @"Sa", @"So", nil];
     NSArray *remainingDays = [NSArray arrayWithObjects:@"-3", @"-2", @"-1", nil];
     
-    NSMutableArray *labelArray2D = [NSMutableArray array];
-    
     UIColor *markColor;
-    int currentWeekDay = 0;
     int row =  SchemaFirstDataRowPosition;
     for (int i = 0; i < 7; i++) {
-        NSMutableArray *weekdayArray = [NSMutableArray array];
         if (i == [self getCurrentWeekday]) {
             markColor = [UIColor blackColor];
         } else {
