@@ -737,7 +737,7 @@ mmHg</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="607-lk-UeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="2544"/>
+            <point key="canvasLocation" x="1640" y="3232"/>
         </scene>
         <!--Notfallpass-->
         <scene sceneID="a5l-Pj-QlQ">
@@ -806,7 +806,57 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Woa-kn-ykK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="2544"/>
+            <point key="canvasLocation" x="1640" y="2540"/>
+        </scene>
+        <!--Withings-->
+        <scene sceneID="G3l-dY-4VJ">
+            <objects>
+                <navigationController title="Withings" id="EhB-Az-0oq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mUc-98-FpR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t5v-5E-ekn" kind="relationship" relationship="rootViewController" id="6Ef-8i-fM3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2U-2B-xIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="3232"/>
+        </scene>
+        <!--Withings-->
+        <scene sceneID="Y0m-h6-6Ct">
+            <objects>
+                <viewController title="Withings" id="t5v-5E-ekn" customClass="SettingsWithingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KBb-kX-f0L"/>
+                        <viewControllerLayoutGuide type="bottom" id="jnL-jD-iBS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ugo-X5-d09">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIr-Ly-PEa">
+                                <rect key="frame" x="0.0" y="64" width="320" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bIr-Ly-PEa" firstAttribute="top" secondItem="KBb-kX-f0L" secondAttribute="bottom" id="NVh-et-bNq"/>
+                            <constraint firstAttribute="trailing" secondItem="bIr-Ly-PEa" secondAttribute="trailing" id="W9c-kr-x9a"/>
+                            <constraint firstItem="bIr-Ly-PEa" firstAttribute="leading" secondItem="Ugo-X5-d09" secondAttribute="leading" id="YK8-Ny-VpJ"/>
+                            <constraint firstItem="jnL-jD-iBS" firstAttribute="top" secondItem="bIr-Ly-PEa" secondAttribute="bottom" constant="54" id="qID-1r-UoD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rWg-pJ-UMb"/>
+                    <connections>
+                        <outlet property="webView" destination="bIr-Ly-PEa" id="c0e-Q8-PQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eA-ay-fjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="2546"/>
         </scene>
         <!--Settings Therapy Page View Controller-->
         <scene sceneID="FNQ-A7-jHI">
@@ -909,7 +959,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
         <!--Tagebuchansicht-->
         <scene sceneID="ioH-d2-7ew">
             <objects>
-                <tableViewController id="MdY-Nh-cSo" sceneMemberID="viewController">
+                <tableViewController id="MdY-Nh-cSo" customClass="DiaryViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="g3O-sb-UxT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1391,6 +1441,27 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Withings Account" id="qfI-dd-YaB">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dzS-pA-SSq" style="IBUITableViewCellStyleDefault" id="qb4-MX-rY3">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qb4-MX-rY3" id="9ph-jv-oPb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Konto Einstellungen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dzS-pA-SSq">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="t5v-5E-ekn" kind="push" id="hLR-IH-HuG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Notfallpass" id="QhP-J2-646">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="r37-dw-bZq" style="IBUITableViewCellStyleDefault" id="y9Z-cw-5y3">
@@ -1409,24 +1480,6 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                         <connections>
                                             <segue destination="K9Q-UX-3YC" kind="push" id="zUA-DL-yIv"/>
                                         </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Withings Account" id="qfI-dd-YaB">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dzS-pA-SSq" style="IBUITableViewCellStyleDefault" id="qb4-MX-rY3">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qb4-MX-rY3" id="9ph-jv-oPb">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Konto Einstellungen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dzS-pA-SSq">
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1533,5 +1586,6 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="zUA-DL-yIv"/>
+        <segue reference="6Ef-8i-fM3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsWithingsViewController.h"
 
 @interface ch_bfh_bti8108_groupbjjmAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) SettingsWithingsViewController *withingsController;
 
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsWithingsViewController : UIViewController
+@interface SettingsWithingsViewController : UIViewController<UIWebViewDelegate> {
+    
+    NSString *userId;
+}
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) NSString *oauthToken;
+@property (nonatomic, strong) NSString *oauthTokenSecret;
 
 @end

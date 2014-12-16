@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F19E1BC1A40C5950028555F /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BB1A40C5950028555F /* DiaryViewController.m */; };
 		8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2281A276E280064DD95 /* diary@2x.png */; };
 		8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2291A276E280064DD95 /* settings@2x.png */; };
 		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
@@ -29,6 +30,11 @@
 		8F5FAB901A1E169D0027A02A /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB8C1A1E169D0027A02A /* JBLineChartFooterView.m */; };
 		8F5FAB911A1E169D0027A02A /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB8E1A1E169D0027A02A /* JBChartHeaderView.m */; };
 		8F5FAB9B1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */; };
+		8F5FBE6A1A3F839000E82409 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE601A3F839000E82409 /* Base64Transcoder.c */; };
+		8F5FBE6B1A3F839000E82409 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE621A3F839000E82409 /* hmac.c */; };
+		8F5FBE6C1A3F839000E82409 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE641A3F839000E82409 /* sha1.c */; };
+		8F5FBE6D1A3F839000E82409 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE671A3F839000E82409 /* NSString+URLEncoding.m */; };
+		8F5FBE6E1A3F839000E82409 /* OAuth1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE691A3F839000E82409 /* OAuth1Controller.m */; };
 		8F84837B19CB313800DF1E16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837A19CB313800DF1E16 /* Foundation.framework */; };
 		8F84837D19CB313800DF1E16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837C19CB313800DF1E16 /* CoreGraphics.framework */; };
 		8F84837F19CB313800DF1E16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F84837E19CB313800DF1E16 /* UIKit.framework */; };
@@ -74,6 +80,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F19E1BA1A40C5950028555F /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
+		8F19E1BB1A40C5950028555F /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
 		8F2EC2281A276E280064DD95 /* diary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diary@2x.png"; sourceTree = "<group>"; };
 		8F2EC2291A276E280064DD95 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
@@ -118,6 +126,16 @@
 		8F5FAB981A1E17D20027A02A /* JBUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		8F5FAB991A1E2D3A0027A02A /* BlutdruckChartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutdruckChartPageViewController.h; sourceTree = "<group>"; };
 		8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutdruckChartPageViewController.m; sourceTree = "<group>"; };
+		8F5FBE601A3F839000E82409 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		8F5FBE611A3F839000E82409 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		8F5FBE621A3F839000E82409 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		8F5FBE631A3F839000E82409 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		8F5FBE641A3F839000E82409 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		8F5FBE651A3F839000E82409 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		8F5FBE661A3F839000E82409 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		8F5FBE671A3F839000E82409 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		8F5FBE681A3F839000E82409 /* OAuth1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth1Controller.h; sourceTree = "<group>"; };
+		8F5FBE691A3F839000E82409 /* OAuth1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth1Controller.m; sourceTree = "<group>"; };
 		8F84837719CB313800DF1E16 /* diabetesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diabetesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F84837A19CB313800DF1E16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F84837C19CB313800DF1E16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -269,6 +287,31 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		8F5FBE5F1A3F839000E82409 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FBE601A3F839000E82409 /* Base64Transcoder.c */,
+				8F5FBE611A3F839000E82409 /* Base64Transcoder.h */,
+				8F5FBE621A3F839000E82409 /* hmac.c */,
+				8F5FBE631A3F839000E82409 /* hmac.h */,
+				8F5FBE641A3F839000E82409 /* sha1.c */,
+				8F5FBE651A3F839000E82409 /* sha1.h */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		8F5FBE6F1A3F839F00E82409 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FBE5F1A3F839000E82409 /* Crypto */,
+				8F5FBE661A3F839000E82409 /* NSString+URLEncoding.h */,
+				8F5FBE671A3F839000E82409 /* NSString+URLEncoding.m */,
+				8F5FBE681A3F839000E82409 /* OAuth1Controller.h */,
+				8F5FBE691A3F839000E82409 /* OAuth1Controller.m */,
+			);
+			name = OAuth;
+			sourceTree = "<group>";
+		};
 		8F84836E19CB313700DF1E16 = {
 			isa = PBXGroup;
 			children = (
@@ -373,7 +416,8 @@
 		8FA1A5221A1CCE26009E1E6C /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				8FA1A5261A1CD865009E1E6C /* Classes */,
+				8F5FBE6F1A3F839F00E82409 /* OAuth */,
+				8FA1A5261A1CD865009E1E6C /* JBCharts */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -385,6 +429,8 @@
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F5FAB741A1E12EA0027A02A /* Settings */,
 				8F945F871A360CD40036EA4C /* SchemaView */,
+				8F19E1BA1A40C5950028555F /* DiaryViewController.h */,
+				8F19E1BB1A40C5950028555F /* DiaryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -408,7 +454,7 @@
 			name = Delegate;
 			sourceTree = "<group>";
 		};
-		8FA1A5261A1CD865009E1E6C /* Classes */ = {
+		8FA1A5261A1CD865009E1E6C /* JBCharts */ = {
 			isa = PBXGroup;
 			children = (
 				8FA1A5271A1CD865009E1E6C /* JBBarChartView.h */,
@@ -418,6 +464,7 @@
 				8FA1A52B1A1CD865009E1E6C /* JBLineChartView.h */,
 				8FA1A52C1A1CD865009E1E6C /* JBLineChartView.m */,
 			);
+			name = JBCharts;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -587,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5FBE6C1A3F839000E82409 /* sha1.c in Sources */,
 				8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */,
 				8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */,
 				8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */,
@@ -599,9 +647,12 @@
 				8F5FAB9B1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m in Sources */,
 				8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */,
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
+				8F5FBE6B1A3F839000E82409 /* hmac.c in Sources */,
+				8F19E1BC1A40C5950028555F /* DiaryViewController.m in Sources */,
 				8FC0653D1A0BC82300D853E6 /* MainTabViewController.m in Sources */,
 				8F5FAB8F1A1E169D0027A02A /* JBBarChartFooterView.m in Sources */,
 				8F945F861A360AB70036EA4C /* SettingsSchemaView.m in Sources */,
+				8F5FBE6A1A3F839000E82409 /* Base64Transcoder.c in Sources */,
 				8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */,
 				8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */,
 				8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */,
@@ -614,6 +665,7 @@
 				8F5FAB771A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */,
+				8F5FBE6D1A3F839000E82409 /* NSString+URLEncoding.m in Sources */,
 				8F5FAB911A1E169D0027A02A /* JBChartHeaderView.m in Sources */,
 				8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */,
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
@@ -622,6 +674,7 @@
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
 				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,
+				8F5FBE6E1A3F839000E82409 /* OAuth1Controller.m in Sources */,
 				8F5FAB7D1A1E155E0027A02A /* JBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
