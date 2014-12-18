@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiaryViewController : UITableViewController {
+@interface DiaryViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource> {
     NSString *userId;
 }
+
+@property NSMutableArray *diaryData;
+
 @end

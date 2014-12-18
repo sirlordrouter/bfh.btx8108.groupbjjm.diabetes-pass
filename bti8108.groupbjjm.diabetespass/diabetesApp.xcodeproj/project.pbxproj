@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8F19E1BC1A40C5950028555F /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BB1A40C5950028555F /* DiaryViewController.m */; };
+		8F19E1BF1A41FCF90028555F /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BE1A41FCF90028555F /* DiaryEntry.m */; };
+		8F19E1C51A4215630028555F /* DiaryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F19E1C41A4215630028555F /* DiaryTableCell.xib */; };
+		8F19E1C81A4216640028555F /* DiaryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1C71A4216640028555F /* DiaryTableCell.m */; };
 		8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2281A276E280064DD95 /* diary@2x.png */; };
 		8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2291A276E280064DD95 /* settings@2x.png */; };
 		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
@@ -82,6 +85,11 @@
 /* Begin PBXFileReference section */
 		8F19E1BA1A40C5950028555F /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
 		8F19E1BB1A40C5950028555F /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
+		8F19E1BD1A41FCF90028555F /* DiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEntry.h; sourceTree = "<group>"; };
+		8F19E1BE1A41FCF90028555F /* DiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEntry.m; sourceTree = "<group>"; };
+		8F19E1C41A4215630028555F /* DiaryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableCell.xib; sourceTree = "<group>"; };
+		8F19E1C61A4216640028555F /* DiaryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableCell.h; sourceTree = "<group>"; };
+		8F19E1C71A4216640028555F /* DiaryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableCell.m; sourceTree = "<group>"; };
 		8F2EC2281A276E280064DD95 /* diary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diary@2x.png"; sourceTree = "<group>"; };
 		8F2EC2291A276E280064DD95 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
@@ -221,6 +229,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F19E1C01A41FD6B0028555F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8F19E1BD1A41FCF90028555F /* DiaryEntry.h */,
+				8F19E1BE1A41FCF90028555F /* DiaryEntry.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		8F19E1C11A4203690028555F /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				8F19E1BA1A40C5950028555F /* DiaryViewController.h */,
+				8F19E1BB1A40C5950028555F /* DiaryViewController.m */,
+				8F19E1C41A4215630028555F /* DiaryTableCell.xib */,
+				8F19E1C61A4216640028555F /* DiaryTableCell.h */,
+				8F19E1C71A4216640028555F /* DiaryTableCell.m */,
+			);
+			name = Diary;
+			sourceTree = "<group>";
+		};
 		8F5FAB741A1E12EA0027A02A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +385,7 @@
 				8F84839819CB313800DF1E16 /* Images.xcassets */,
 				8F84838119CB313800DF1E16 /* Supporting Files */,
 				8F8B12281A14FF5700ABC711 /* Launch Screen.xib */,
+				8F19E1C01A41FD6B0028555F /* Entities */,
 			);
 			path = bti8108.groupbjjm.diabetespass;
 			sourceTree = "<group>";
@@ -429,8 +459,7 @@
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F5FAB741A1E12EA0027A02A /* Settings */,
 				8F945F871A360CD40036EA4C /* SchemaView */,
-				8F19E1BA1A40C5950028555F /* DiaryViewController.h */,
-				8F19E1BB1A40C5950028555F /* DiaryViewController.m */,
+				8F19E1C11A4203690028555F /* Diary */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -571,6 +600,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.iOS = {
 								enabled = 1;
 							};
@@ -621,6 +653,7 @@
 				8FC857B51A0CFA9D005DD780 /* blutdruck.png in Resources */,
 				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,
 				8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */,
+				8F19E1C51A4215630028555F /* DiaryTableCell.xib in Resources */,
 				8F2EC22F1A276E280064DD95 /* table.png in Resources */,
 				8F945F821A3609820036EA4C /* off@2x.png in Resources */,
 				8F945F921A3834A50036EA4C /* SchemaBackground@2x.png in Resources */,
@@ -634,9 +667,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F19E1C81A4216640028555F /* DiaryTableCell.m in Sources */,
 				8F5FBE6C1A3F839000E82409 /* sha1.c in Sources */,
 				8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */,
 				8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */,
+				8F19E1BF1A41FCF90028555F /* DiaryEntry.m in Sources */,
 				8FC333371A2F76780051122A /* JBLineChartViewControllerPuls.m in Sources */,
 				8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */,
 				8FC065461A0C1C0A00D853E6 /* BlutdruckPageViewController.m in Sources */,

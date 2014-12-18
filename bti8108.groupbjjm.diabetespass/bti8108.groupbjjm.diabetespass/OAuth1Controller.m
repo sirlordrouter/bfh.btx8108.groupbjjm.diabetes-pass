@@ -4,6 +4,7 @@
 //
 //  Created by Christian Hansen on 02/12/12.
 //  Copyright (c) 2012 Christian-Hansen. All rights reserved.
+//  Edited by Johannes Gnägi on 17-12-2014
 //
 
 #import "OAuth1Controller.h"
@@ -14,8 +15,8 @@
 typedef void (^WebWiewDelegateHandler)(NSDictionary *oauthParams);
 
 #define OAUTH_CALLBACK       @"http://wbsapi.withings.net/user" //Sometimes this has to be the same as the registered app callback url
-#define CONSUMER_KEY         @"1d7d1cd7552c57c66f34d3904b794b4be1d4200cb8e55f0148619b9893923c"
-#define CONSUMER_SECRET      @"560bb2b9553b490f81f7edfd58f3393b139cd2ce25c10f05b47072dbb5b"
+#define CONSUMER_KEY         @"813c21935ed454156e8d6954b85e14c8ddf3c8d07b4e5f131c2c625ddc7e9"
+#define CONSUMER_SECRET      @"1e13b49093337ceb307bf1d229508c3e44823e0c6986bc73133696d1587290"
 #define AUTH_URL             @"https://oauth.withings.com/"
 #define REQUEST_TOKEN_URL    @"account/request_token"
 #define AUTHENTICATE_URL     @"account/authorize"
