@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @property (nonatomic, strong) OAuth1Controller *oauth1Controller;
+@property (nonatomic, strong) SettingsWithingsViewController *withingsController;
 @property (nonatomic, strong) NSString *oauthToken;
 @property (nonatomic, strong) NSString *oauthTokenSecret;
 
@@ -34,19 +35,26 @@
     self.tableView.dataSource = self;
     
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
-    SettingsWithingsViewController *withings = delegate.withingsController;
-    self.oauthToken = withings.oauthToken;
-    self.oauthTokenSecret = withings.oauthTokenSecret;
-    userId = @"4899465";
-    
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    self.refreshControl.tintColor = [UIColor whiteColor];
-    [self.refreshControl addTarget:self
-                            action:@selector(getWithingsData)
-                  forControlEvents:UIControlEventValueChanged];
-    
+    self.withingsController = delegate.withingsController;
+   
+    /*
+     If user has not registered withings, refreshcontrol should be insantiated => string must be removed.
+     */
+    if (![self.withingsController.oauthToken isEqual:@""]) {
+        self.oauthToken = self.withingsController .oauthToken;
+        self.oauthTokenSecret = self.withingsController.oauthTokenSecret;
+        userId = @"4899465";
+        
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        self.refreshControl.tintColor = [UIColor whiteColor];
+        [self.refreshControl addTarget:self
+                                action:@selector(getWithingsData)
+                      forControlEvents:UIControlEventValueChanged];
+    }
+   
     self.diaryData = [[NSMutableArray alloc] init];
+    
 }
 
 - (void)reloadData
@@ -66,17 +74,17 @@
         self.refreshControl.attributedTitle = attributedTitle;
         
         [self.refreshControl endRefreshing];
-        
-
     }
 }
 
 -(void)getWithingsData {
-    //    meastype
-    //    1 : Weight (kg)
-    //    9 : Diastolic Blood Pressure (mmHg)
-    //    10 : Systolic Blood Pressure (mmHg)
-    //    11 : Heart Pulse (bpm)
+    
+    
+    if (![self.withingsController .oauthToken isEqual:@""]) {
+        self.oauthToken = self.withingsController .oauthToken;
+        self.oauthTokenSecret = self.withingsController .oauthTokenSecret;
+        userId = @"4899465";
+    }
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:@"getmeas" forKey:@"action"];
@@ -84,6 +92,8 @@
     //[dict setObject:@"1" forKey:@"meastype"];
     [dict setObject:@"1" forKey:@"category"]; //get measurements not user objectives
     NSLog(@"self.oauthToken=%@,self.oauthTokenSecret=%@",self.oauthToken,self.oauthTokenSecret);
+    
+    //Create
     NSURLRequest *request =
     [OAuth1Controller preparedRequestForPath:@"measure"
                                   parameters:dict
@@ -115,7 +125,12 @@
                      DiaryEntry *newEntry = [[DiaryEntry alloc] init];
                      
                      newEntry.date =  [self getDateStringForUnit:[nsdict objectForKey:@"date"]];
-                     
+                    
+                     //    meastype
+                     //    1 : Weight (kg)
+                     //    9 : Diastolic Blood Pressure (mmHg)
+                     //    10 : Systolic Blood Pressure (mmHg)
+                     //    11 : Heart Pulse (bpm)
                      
                      if ([[ms objectForKey:@"type"]integerValue] == 1) {
                          newEntry.value = [NSString stringWithFormat:@"%ld",[[ms objectForKey:@"value"] integerValue]  / 100 ];
@@ -138,8 +153,6 @@
                          [self.diaryData addObject:newEntry];
                      }
                      
-                     
-                     
                  }
              }
              
@@ -152,43 +165,37 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     NSString *valueCellIdentifier = @"DiaryTableCell";
     DiaryTableCell *cell = (DiaryTableCell *)[self.tableView dequeueReusableCellWithIdentifier:valueCellIdentifier];
     if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DiaryTableCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DiaryTableCell" owner:nil options:nil];
         cell = [nib objectAtIndex:0];
     }
     
-//    UITableViewCell *cell = [tableView
-//                             dequeueReusableCellWithIdentifier:@"DiaryCell" forIndexPath:indexPath];
-
-    
     DiaryEntry *currentEntry = [self.diaryData objectAtIndex:indexPath.row];
     
-    cell.dateLabel.text = currentEntry.date;
-    cell.valueLabel.text = currentEntry.value;
-    cell.unitLabel.text = currentEntry.unit;
-    
-//    cell.textLabel.text = [self.diaryData objectAtIndex:indexPath.row];
-//    cell.textLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
-
+    [cell.dateLabel setText: [NSString stringWithFormat:@"%@", currentEntry.date]]; //@"18-12-2014 23:00";//currentEntry.date;
+    [cell.valueLabel setText: [NSString stringWithFormat:@"%@", currentEntry.value]]; // @"180/180";//currentEntry.value;
+    [cell.unitLabel setText: [NSString stringWithFormat:@"%@", currentEntry.unit]]; //@"mmol/L"; //currentEntry.unit;
     
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    
     return [self.diaryData count];
 }
 
+/**
+ *  Formats a given String with a Unix Date
+ *
+ *  @param datestring A UNIX Timestamp
+ *
+ *  @return String with Date Formatted like: dd.MM.yyyy HH:mm
+ */
 -(NSString *) getDateStringForUnit:(NSString*)datestring {
     double unixTimeStamp =[datestring doubleValue];
     NSTimeInterval _interval=unixTimeStamp;

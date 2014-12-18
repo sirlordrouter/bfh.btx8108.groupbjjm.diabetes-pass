@@ -49,8 +49,6 @@
             self.oauthToken = oauthTokens[@"oauth_token"];
             self.oauthTokenSecret = oauthTokens[@"oauth_token_secret"];
             userId=oauthTokens[@"userid"];
-
-            
             
         }
         else
@@ -63,7 +61,6 @@
     
     }];
 }
-    
 
 - (OAuth1Controller *)oauth1Controller
 {

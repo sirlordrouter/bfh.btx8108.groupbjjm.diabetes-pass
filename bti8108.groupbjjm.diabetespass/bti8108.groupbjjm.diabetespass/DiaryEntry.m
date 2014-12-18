@@ -34,5 +34,9 @@
     return YES;
 }
 
+- (NSComparisonResult)compare:(DiaryEntry *)otherObject {
+    return [self.date compare:otherObject.date];
+}
+
 
 @end
