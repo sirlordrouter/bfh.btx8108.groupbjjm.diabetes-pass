@@ -11,6 +11,9 @@
 		8F19E1BF1A41FCF90028555F /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BE1A41FCF90028555F /* DiaryEntry.m */; };
 		8F19E1C51A4215630028555F /* DiaryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F19E1C41A4215630028555F /* DiaryTableCell.xib */; };
 		8F19E1C81A4216640028555F /* DiaryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1C71A4216640028555F /* DiaryTableCell.m */; };
+		8F19E1CA1A4325250028555F /* iOS_7_icon_shape.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F19E1C91A4325250028555F /* iOS_7_icon_shape.png */; };
+		8F19E1CD1A4438470028555F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F19E1CB1A4438470028555F /* EventKit.framework */; };
+		8F19E1CE1A4438470028555F /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F19E1CC1A4438470028555F /* EventKitUI.framework */; };
 		8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2281A276E280064DD95 /* diary@2x.png */; };
 		8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2291A276E280064DD95 /* settings@2x.png */; };
 		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
@@ -90,6 +93,9 @@
 		8F19E1C41A4215630028555F /* DiaryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableCell.xib; sourceTree = "<group>"; };
 		8F19E1C61A4216640028555F /* DiaryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableCell.h; sourceTree = "<group>"; };
 		8F19E1C71A4216640028555F /* DiaryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableCell.m; sourceTree = "<group>"; };
+		8F19E1C91A4325250028555F /* iOS_7_icon_shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_7_icon_shape.png; sourceTree = "<group>"; };
+		8F19E1CB1A4438470028555F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		8F19E1CC1A4438470028555F /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		8F2EC2281A276E280064DD95 /* diary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diary@2x.png"; sourceTree = "<group>"; };
 		8F2EC2291A276E280064DD95 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F19E1CD1A4438470028555F /* EventKit.framework in Frameworks */,
+				8F19E1CE1A4438470028555F /* EventKitUI.framework in Frameworks */,
 				8F84837D19CB313800DF1E16 /* CoreGraphics.framework in Frameworks */,
 				8F84837F19CB313800DF1E16 /* UIKit.framework in Frameworks */,
 				8F8483B619CB315E00DF1E16 /* MapKit.framework in Frameworks */,
@@ -362,6 +370,8 @@
 		8F84837919CB313800DF1E16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F19E1CB1A4438470028555F /* EventKit.framework */,
+				8F19E1CC1A4438470028555F /* EventKitUI.framework */,
 				8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */,
 				8F8483B519CB315E00DF1E16 /* MapKit.framework */,
 				8F84837A19CB313800DF1E16 /* Foundation.framework */,
@@ -526,6 +536,7 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F19E1C91A4325250028555F /* iOS_7_icon_shape.png */,
 				8F945F911A3834A50036EA4C /* SchemaBackground@2x.png */,
 				8F945F891A363E540036EA4C /* evening@2x.png */,
 				8F945F8A1A363E540036EA4C /* morning@2x.png */,
@@ -601,7 +612,7 @@
 								enabled = 1;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iOS = {
 								enabled = 1;
@@ -635,6 +646,7 @@
 			files = (
 				8F945F8E1A363E540036EA4C /* morning@2x.png in Resources */,
 				8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */,
+				8F19E1CA1A4325250028555F /* iOS_7_icon_shape.png in Resources */,
 				8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */,
 				8F945F831A3609820036EA4C /* on@2x.png in Resources */,
 				8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */,
