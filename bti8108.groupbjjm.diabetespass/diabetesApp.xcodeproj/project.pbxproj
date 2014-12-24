@@ -21,8 +21,8 @@
 		8F2EC2311A276E950064DD95 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2301A276E950064DD95 /* list@2x.png */; };
 		8F381F661A3AE4B400F7F2E3 /* SchemaBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F381F651A3AE4B400F7F2E3 /* SchemaBaseController.m */; };
 		8F381F691A3AF60D00F7F2E3 /* SchemaViewDaySelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */; };
-		8F4173981A4AD563000300F3 /* Homeansicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4173961A4AD563000300F3 /* Homeansicht.png */; };
-		8F4173991A4AD563000300F3 /* Schema.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4173971A4AD563000300F3 /* Schema.png */; };
+		8F4173A01A4AE8E5000300F3 /* Homeansicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739E1A4AE8E5000300F3 /* Homeansicht.png */; };
+		8F4173A11A4AE8E5000300F3 /* Schema.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739F1A4AE8E5000300F3 /* Schema.png */; };
 		8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C41A3A334F004EC199 /* SchemaViewController.m */; };
 		8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */; };
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
@@ -107,8 +107,8 @@
 		8F381F651A3AE4B400F7F2E3 /* SchemaBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaBaseController.m; sourceTree = "<group>"; };
 		8F381F671A3AF60D00F7F2E3 /* SchemaViewDaySelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewDaySelection.h; sourceTree = "<group>"; };
 		8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewDaySelection.m; sourceTree = "<group>"; };
-		8F4173961A4AD563000300F3 /* Homeansicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Homeansicht.png; path = ../../../../../Desktop/Homeansicht.png; sourceTree = "<group>"; };
-		8F4173971A4AD563000300F3 /* Schema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Schema.png; path = ../../../../../Desktop/Schema.png; sourceTree = "<group>"; };
+		8F41739E1A4AE8E5000300F3 /* Homeansicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homeansicht.png; sourceTree = "<group>"; };
+		8F41739F1A4AE8E5000300F3 /* Schema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schema.png; sourceTree = "<group>"; };
 		8F5050C31A3A334F004EC199 /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
 		8F5050C41A3A334F004EC199 /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
 		8F5050C61A3A33F0004EC199 /* SetSchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSchemaViewController.h; sourceTree = "<group>"; };
@@ -540,8 +540,8 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				8F4173961A4AD563000300F3 /* Homeansicht.png */,
-				8F4173971A4AD563000300F3 /* Schema.png */,
+				8F41739E1A4AE8E5000300F3 /* Homeansicht.png */,
+				8F41739F1A4AE8E5000300F3 /* Schema.png */,
 				8F19E1C91A4325250028555F /* iOS_7_icon_shape.png */,
 				8F945F911A3834A50036EA4C /* SchemaBackground@2x.png */,
 				8F945F891A363E540036EA4C /* evening@2x.png */,
@@ -658,11 +658,11 @@
 				8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */,
 				8FC857B61A0CFA9D005DD780 /* gewicht.png in Resources */,
 				8F945F8F1A363E540036EA4C /* night@2x.png in Resources */,
-				8F4173991A4AD563000300F3 /* Schema.png in Resources */,
+				8F4173A11A4AE8E5000300F3 /* Schema.png in Resources */,
 				8F84839919CB313800DF1E16 /* Images.xcassets in Resources */,
 				8FC857B81A0CFA9D005DD780 /* puls.png in Resources */,
 				8F945F8D1A363E540036EA4C /* evening@2x.png in Resources */,
-				8F4173981A4AD563000300F3 /* Homeansicht.png in Resources */,
+				8F4173A01A4AE8E5000300F3 /* Homeansicht.png in Resources */,
 				8FC857B71A0CFA9D005DD780 /* male.png in Resources */,
 				8F2EC2311A276E950064DD95 /* list@2x.png in Resources */,
 				8F2EC22D1A276E280064DD95 /* settings@2x.png in Resources */,
