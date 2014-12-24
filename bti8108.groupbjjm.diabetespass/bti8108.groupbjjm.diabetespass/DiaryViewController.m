@@ -28,22 +28,33 @@
 
 @implementation DiaryViewController
 
+@synthesize syncWithingsLabel;
+
 -(void)viewDidLoad {
     
+    syncWithingsLabel.text = @"";
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+   
+    self.diaryData = [[NSMutableArray alloc] init];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     self.withingsController = delegate.withingsController;
-   
     /*
      If user has not registered withings, refreshcontrol should be insantiated => string must be removed.
      */
-    if (![self.withingsController.oauthToken isEqual:@""]) {
+    if (![self.withingsController.oauthToken length]==0) {
         self.oauthToken = self.withingsController .oauthToken;
         self.oauthTokenSecret = self.withingsController.oauthTokenSecret;
-        userId = @"4899465";
+        userId = @"4899465"; ///HARDCODED
+        
+        syncWithingsLabel.text = @"Slide down to synchronise with Withings";
         
         self.refreshControl = [[UIRefreshControl alloc] init];
         self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
@@ -52,10 +63,8 @@
                                 action:@selector(getWithingsData)
                       forControlEvents:UIControlEventValueChanged];
     }
-   
-    self.diaryData = [[NSMutableArray alloc] init];
-    
 }
+
 
 - (void)reloadData
 {
@@ -78,13 +87,6 @@
 }
 
 -(void)getWithingsData {
-    
-    
-    if (![self.withingsController .oauthToken isEqual:@""]) {
-        self.oauthToken = self.withingsController .oauthToken;
-        self.oauthTokenSecret = self.withingsController .oauthTokenSecret;
-        userId = @"4899465";
-    }
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:@"getmeas" forKey:@"action"];
@@ -157,9 +159,10 @@
              }
              
          }
+         
+             [self reloadData];
      }];
-    
-    [self reloadData];
+
 
 }
 

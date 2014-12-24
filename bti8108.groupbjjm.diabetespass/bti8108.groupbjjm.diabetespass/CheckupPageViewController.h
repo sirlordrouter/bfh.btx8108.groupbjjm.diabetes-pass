@@ -15,4 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *Label;
 @property NSString *titleText;
 
+@property IBOutlet UIButton *OverlayButton;
+- (IBAction)showOverlay:(id)sender;
+
 @end

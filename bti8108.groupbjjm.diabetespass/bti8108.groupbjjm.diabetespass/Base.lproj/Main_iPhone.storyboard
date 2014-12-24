@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPA-Pc-msv">
-                                <rect key="frame" x="98" y="20" width="125" height="30"/>
+                                <rect key="frame" x="98" y="38" width="125" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ycI-nm-9qe"/>
                                 </constraints>
@@ -226,6 +226,15 @@ mmHg</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrX-9h-M2P">
+                                <rect key="frame" x="16" y="20" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOverlay:" destination="n0H-mz-tcH" eventType="touchUpInside" id="qc7-ap-OKd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -254,9 +263,9 @@ mmHg</string>
                             <constraint firstItem="D11-K0-fd1" firstAttribute="bottom" secondItem="GEm-aB-1qm" secondAttribute="bottom" id="cyd-yP-Bvq"/>
                             <constraint firstItem="IaK-jx-EsU" firstAttribute="leading" secondItem="Yk6-Zj-zZR" secondAttribute="leadingMargin" constant="9" id="diX-nA-4IV"/>
                             <constraint firstItem="IaK-jx-EsU" firstAttribute="top" secondItem="lrV-1a-l2B" secondAttribute="bottom" constant="47" id="drd-IS-9Tk"/>
-                            <constraint firstItem="gPA-Pc-msv" firstAttribute="top" secondItem="f8i-6P-nja" secondAttribute="bottom" id="lmZ-Qa-FWv"/>
+                            <constraint firstItem="gPA-Pc-msv" firstAttribute="top" secondItem="f8i-6P-nja" secondAttribute="bottom" constant="18" id="lmZ-Qa-FWv"/>
                             <constraint firstItem="3Ke-Zf-DKP" firstAttribute="baseline" secondItem="lrV-1a-l2B" secondAttribute="baseline" id="niS-YP-Cga"/>
-                            <constraint firstItem="D11-K0-fd1" firstAttribute="top" secondItem="gPA-Pc-msv" secondAttribute="bottom" constant="53" id="qap-8r-j3j"/>
+                            <constraint firstItem="D11-K0-fd1" firstAttribute="top" secondItem="gPA-Pc-msv" secondAttribute="bottom" constant="35" id="qap-8r-j3j"/>
                             <constraint firstItem="3Ke-Zf-DKP" firstAttribute="centerX" secondItem="XOd-x2-KTe" secondAttribute="centerX" id="qef-7y-xNO"/>
                             <constraint firstItem="gPA-Pc-msv" firstAttribute="leading" secondItem="Yk6-Zj-zZR" secondAttribute="leadingMargin" constant="82" id="r3R-FM-kWW"/>
                             <constraint firstItem="GEm-aB-1qm" firstAttribute="leading" secondItem="D11-K0-fd1" secondAttribute="trailing" constant="40" id="rHM-6u-np5"/>
@@ -610,6 +619,18 @@ mmHg</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Schema" id="YK5-3k-oOO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="MbG-Qc-JI9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="TPY-aS-Jnl">
+                                <rect key="frame" x="16" y="7" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOverlay:" destination="9Lp-Dc-G8h" eventType="touchUpInside" id="9dM-od-oK4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="V2q-rt-Dmh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Wq-Cw-wkH">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
@@ -1112,6 +1133,9 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="syncWithingsLabel" destination="wVO-3V-fw8" id="jHO-Gz-hCc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebo-pI-ePQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

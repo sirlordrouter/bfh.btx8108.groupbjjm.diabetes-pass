@@ -15,5 +15,10 @@
 
 @property (weak, nonatomic) IBOutlet UIView *setSchemaDaySelection;
 - (IBAction)unwindToSchemaView:(UIStoryboardSegue *)segue;
+- (IBAction)showOverlay:(id)sender;
+
+
+
+@property IBOutlet UIButton *OverlayButton;
 
 @end

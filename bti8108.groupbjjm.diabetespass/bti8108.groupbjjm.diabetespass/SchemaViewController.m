@@ -22,6 +22,7 @@
 
 @implementation SchemaViewController
 
+@synthesize OverlayButton;
 
 
 CGFloat const SchemaWeekDayLabelSize = 50.0;
@@ -71,7 +72,31 @@ CGFloat const SundayRowX = 319;
     [self.view addSubview:selectionView];
     
     [self initButtonMatrix];
+    
+    
+    OverlayButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [OverlayButton setFrame:CGRectMake(0,20,applicationFrame.size.width,applicationFrame.size.height)];
+    
+    [OverlayButton setImage:[UIImage imageNamed:@"Schema"] forState:UIControlStateNormal];
+    OverlayButton.adjustsImageWhenHighlighted = NO;
+    [OverlayButton addTarget:self action:@selector(buttonPushed:)
+            forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.view addSubview:OverlayButton];
+    OverlayButton.hidden = YES;
+    
 }
+
+-(void)setProfileImage
+{
+    [self.navigationController.view addSubview:OverlayButton];
+}
+
+/**Overlay function - remove the overlay when the user clicks somewhere*/
+- (void) buttonPushed:(id)sender
+{
+    OverlayButton.hidden = YES;
+}
+
 
 /**
  *  Adds Fake data - Remove when having a DB
@@ -256,6 +281,10 @@ CGFloat const SundayRowX = 319;
         }
     }
     
+}
+
+- (IBAction)showOverlay:(id)sender {
+    OverlayButton.hidden = NO;
 }
 
 
