@@ -23,6 +23,7 @@
 		8F381F691A3AF60D00F7F2E3 /* SchemaViewDaySelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */; };
 		8F4173A01A4AE8E5000300F3 /* Homeansicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739E1A4AE8E5000300F3 /* Homeansicht.png */; };
 		8F4173A11A4AE8E5000300F3 /* Schema.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739F1A4AE8E5000300F3 /* Schema.png */; };
+		8F4173A51A4EF2F7000300F3 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4173A41A4EF2F7000300F3 /* DBManager.m */; };
 		8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C41A3A334F004EC199 /* SchemaViewController.m */; };
 		8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */; };
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
@@ -109,6 +110,8 @@
 		8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewDaySelection.m; sourceTree = "<group>"; };
 		8F41739E1A4AE8E5000300F3 /* Homeansicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homeansicht.png; sourceTree = "<group>"; };
 		8F41739F1A4AE8E5000300F3 /* Schema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schema.png; sourceTree = "<group>"; };
+		8F4173A31A4EF2F7000300F3 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		8F4173A41A4EF2F7000300F3 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		8F5050C31A3A334F004EC199 /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
 		8F5050C41A3A334F004EC199 /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
 		8F5050C61A3A33F0004EC199 /* SetSchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSchemaViewController.h; sourceTree = "<group>"; };
@@ -262,6 +265,15 @@
 			name = Diary;
 			sourceTree = "<group>";
 		};
+		8F4173A21A4EF2CF000300F3 /* Peristence */ = {
+			isa = PBXGroup;
+			children = (
+				8F4173A31A4EF2F7000300F3 /* DBManager.h */,
+				8F4173A41A4EF2F7000300F3 /* DBManager.m */,
+			);
+			name = Peristence;
+			sourceTree = "<group>";
+		};
 		8F5FAB741A1E12EA0027A02A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +400,7 @@
 		8F84838019CB313800DF1E16 /* bti8108.groupbjjm.diabetespass */ = {
 			isa = PBXGroup;
 			children = (
+				8F4173A21A4EF2CF000300F3 /* Peristence */,
 				8F5FAB931A1E16D90027A02A /* Constants */,
 				8FA1A5241A1CD28C009E1E6C /* Views */,
 				8FA1A5231A1CD285009E1E6C /* Controllers */,
@@ -726,6 +739,7 @@
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
 				8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */,
+				8F4173A51A4EF2F7000300F3 /* DBManager.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
 				8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */,
 				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,

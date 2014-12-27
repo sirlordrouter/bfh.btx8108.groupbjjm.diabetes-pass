@@ -7,6 +7,7 @@
 //
 
 #import "CheckupViewController.h"
+#import "ch_bfh_bti8108_groupbjjmAppDelegate.h"
 
 
 @interface CheckupViewController ()
@@ -17,12 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    delegate.checkupViewController = self;
+    
     // Do any additional setup after loading the view.
     self.view.autoresizesSubviews = YES;
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
-    
-    
     
     
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

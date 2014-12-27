@@ -7,12 +7,16 @@
 //
 
 #import "CheckupPageViewController.h"
+#import "CheckupViewController.h"
+#import "ch_bfh_bti8108_groupbjjmAppDelegate.h"
 
 @interface CheckupPageViewController ()
 
 @end
 
 @implementation CheckupPageViewController
+
+//@synthesize checkupViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +32,9 @@
             forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_OverlayButton];
     _OverlayButton.hidden = YES;
+    
+   // ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+   // self.checkupViewController = delegate.checkupViewController;
     
 }
 
@@ -55,4 +62,37 @@
 - (IBAction)showOverlay:(id)sender {
     _OverlayButton.hidden = NO;
 }
+
+
+- (IBAction)goToTargetValues:(id)sender {
+    
+    
+}
+
+
+- (IBAction)goToGlucosePre:(id)sender {
+    
+}
+
+- (IBAction)goToGlucosePost:(id)sender {
+    
+}
+
+- (IBAction)goToPressure:(id)sender {
+    
+}
+
+- (IBAction)goToWeight:(id)sender {
+    
+}
+
+- (IBAction)goToPulse:(id)sender {
+    
+}
+
+- (IBAction)addNewDiaryEntry:(id)sender {
+    
+}
+
+
 @end
