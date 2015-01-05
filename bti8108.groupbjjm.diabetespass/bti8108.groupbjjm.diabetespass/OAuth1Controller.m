@@ -4,7 +4,7 @@
 //
 //  Created by Christian Hansen on 02/12/12.
 //  Copyright (c) 2012 Christian-Hansen. All rights reserved.
-//  Edited by Johannes Gnägi on 17-12-2014
+//  Edited by Johannes Gnägi on 17-12-2014 (Added Consumer Key and Secret from Withings)
 //
 
 #import "OAuth1Controller.h"

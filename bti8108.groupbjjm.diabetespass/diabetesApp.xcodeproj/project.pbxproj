@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0054A71A5AF49F0079788B /* WeightPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0054A61A5AF49F0079788B /* WeightPickerView.m */; };
 		8F19E1BC1A40C5950028555F /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BB1A40C5950028555F /* DiaryViewController.m */; };
 		8F19E1BF1A41FCF90028555F /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19E1BE1A41FCF90028555F /* DiaryEntry.m */; };
 		8F19E1C51A4215630028555F /* DiaryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F19E1C41A4215630028555F /* DiaryTableCell.xib */; };
@@ -19,8 +20,8 @@
 		8F2EC22E1A276E280064DD95 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22A1A276E280064DD95 /* home@2x.png */; };
 		8F2EC22F1A276E280064DD95 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC22B1A276E280064DD95 /* table.png */; };
 		8F2EC2311A276E950064DD95 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2EC2301A276E950064DD95 /* list@2x.png */; };
-		8F381F661A3AE4B400F7F2E3 /* SchemaBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F381F651A3AE4B400F7F2E3 /* SchemaBaseController.m */; };
 		8F381F691A3AF60D00F7F2E3 /* SchemaViewDaySelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */; };
+		8F4154441A5840DA00F01241 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4154431A5840DA00F01241 /* libsqlite3.0.dylib */; };
 		8F4173A01A4AE8E5000300F3 /* Homeansicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739E1A4AE8E5000300F3 /* Homeansicht.png */; };
 		8F4173A11A4AE8E5000300F3 /* Schema.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739F1A4AE8E5000300F3 /* Schema.png */; };
 		8F4173A51A4EF2F7000300F3 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4173A41A4EF2F7000300F3 /* DBManager.m */; };
@@ -38,7 +39,6 @@
 		8F5FAB8F1A1E169D0027A02A /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB8A1A1E169D0027A02A /* JBBarChartFooterView.m */; };
 		8F5FAB901A1E169D0027A02A /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB8C1A1E169D0027A02A /* JBLineChartFooterView.m */; };
 		8F5FAB911A1E169D0027A02A /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB8E1A1E169D0027A02A /* JBChartHeaderView.m */; };
-		8F5FAB9B1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */; };
 		8F5FBE6A1A3F839000E82409 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE601A3F839000E82409 /* Base64Transcoder.c */; };
 		8F5FBE6B1A3F839000E82409 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE621A3F839000E82409 /* hmac.c */; };
 		8F5FBE6C1A3F839000E82409 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FBE641A3F839000E82409 /* sha1.c */; };
@@ -73,6 +73,7 @@
 		8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */; };
 		8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */; };
 		8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */; };
+		8FC1C1DD1A5A83580030988E /* TagebucheintraegePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */; };
 		8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */; };
 		8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */; };
 		8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */; };
@@ -89,6 +90,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F0054A51A5AF49F0079788B /* WeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightPickerView.h; sourceTree = "<group>"; };
+		8F0054A61A5AF49F0079788B /* WeightPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightPickerView.m; sourceTree = "<group>"; };
 		8F19E1BA1A40C5950028555F /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
 		8F19E1BB1A40C5950028555F /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
 		8F19E1BD1A41FCF90028555F /* DiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEntry.h; sourceTree = "<group>"; };
@@ -104,10 +107,9 @@
 		8F2EC22A1A276E280064DD95 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		8F2EC22B1A276E280064DD95 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		8F2EC2301A276E950064DD95 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
-		8F381F641A3AE4B400F7F2E3 /* SchemaBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaBaseController.h; sourceTree = "<group>"; };
-		8F381F651A3AE4B400F7F2E3 /* SchemaBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaBaseController.m; sourceTree = "<group>"; };
 		8F381F671A3AF60D00F7F2E3 /* SchemaViewDaySelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewDaySelection.h; sourceTree = "<group>"; };
 		8F381F681A3AF60D00F7F2E3 /* SchemaViewDaySelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewDaySelection.m; sourceTree = "<group>"; };
+		8F4154431A5840DA00F01241 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		8F41739E1A4AE8E5000300F3 /* Homeansicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homeansicht.png; sourceTree = "<group>"; };
 		8F41739F1A4AE8E5000300F3 /* Schema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schema.png; sourceTree = "<group>"; };
 		8F4173A31A4EF2F7000300F3 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
@@ -145,8 +147,6 @@
 		8F5FAB961A1E17D20027A02A /* JBFontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
 		8F5FAB971A1E17D20027A02A /* JBStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
 		8F5FAB981A1E17D20027A02A /* JBUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
-		8F5FAB991A1E2D3A0027A02A /* BlutdruckChartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlutdruckChartPageViewController.h; sourceTree = "<group>"; };
-		8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlutdruckChartPageViewController.m; sourceTree = "<group>"; };
 		8F5FBE601A3F839000E82409 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		8F5FBE611A3F839000E82409 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		8F5FBE621A3F839000E82409 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
@@ -207,6 +207,8 @@
 		8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewichtPageViewController.m; sourceTree = "<group>"; };
 		8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
 		8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
+		8FC1C1D91A5A83580030988E /* TagebucheintraegePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagebucheintraegePageViewController.h; path = "../../../../../Downloads/B761B7A0-D59E-4A3A-835E-837FC73EA357/bfh.btx8108.groupbjjm.diabetes-pass/bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass/TagebucheintraegePageViewController.h"; sourceTree = "<group>"; };
+		8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagebucheintraegePageViewController.m; path = "../../../../../Downloads/B761B7A0-D59E-4A3A-835E-837FC73EA357/bfh.btx8108.groupbjjm.diabetes-pass/bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass/TagebucheintraegePageViewController.m"; sourceTree = "<group>"; };
 		8FC333391A2FA86B0051122A /* SettingsWithingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWithingsViewController.h; sourceTree = "<group>"; };
 		8FC3333A1A2FA86B0051122A /* SettingsWithingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWithingsViewController.m; sourceTree = "<group>"; };
 		8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_biss.png; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4154441A5840DA00F01241 /* libsqlite3.0.dylib in Frameworks */,
 				8F19E1CD1A4438470028555F /* EventKit.framework in Frameworks */,
 				8F19E1CE1A4438470028555F /* EventKitUI.framework in Frameworks */,
 				8F84837D19CB313800DF1E16 /* CoreGraphics.framework in Frameworks */,
@@ -256,11 +259,15 @@
 		8F19E1C11A4203690028555F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				8FC1C1D91A5A83580030988E /* TagebucheintraegePageViewController.h */,
+				8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */,
 				8F19E1BA1A40C5950028555F /* DiaryViewController.h */,
 				8F19E1BB1A40C5950028555F /* DiaryViewController.m */,
 				8F19E1C41A4215630028555F /* DiaryTableCell.xib */,
 				8F19E1C61A4216640028555F /* DiaryTableCell.h */,
 				8F19E1C71A4216640028555F /* DiaryTableCell.m */,
+				8F0054A51A5AF49F0079788B /* WeightPickerView.h */,
+				8F0054A61A5AF49F0079788B /* WeightPickerView.m */,
 			);
 			name = Diary;
 			sourceTree = "<group>";
@@ -272,6 +279,24 @@
 				8F4173A41A4EF2F7000300F3 /* DBManager.m */,
 			);
 			name = Peristence;
+			sourceTree = "<group>";
+		};
+		8F4173A61A4EF801000300F3 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				8FC065381A0BC56100D853E6 /* CheckupPageViewController.h */,
+				8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
+		8F4173A71A4EF8BD000300F3 /* ViewHolder */ = {
+			isa = PBXGroup;
+			children = (
+				8FC0653E1A0C07AE00D853E6 /* CheckupViewController.h */,
+				8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */,
+			);
+			name = ViewHolder;
 			sourceTree = "<group>";
 		};
 		8F5FAB741A1E12EA0027A02A /* Settings */ = {
@@ -386,6 +411,7 @@
 		8F84837919CB313800DF1E16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F4154431A5840DA00F01241 /* libsqlite3.0.dylib */,
 				8F19E1CB1A4438470028555F /* EventKit.framework */,
 				8F19E1CC1A4438470028555F /* EventKitUI.framework */,
 				8FA1A51F1A1CC77C009E1E6C /* HealthKit.framework */,
@@ -453,8 +479,6 @@
 				8F5050C31A3A334F004EC199 /* SchemaViewController.h */,
 				8F5050C41A3A334F004EC199 /* SchemaViewController.m */,
 				8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */,
-				8F381F641A3AE4B400F7F2E3 /* SchemaBaseController.h */,
-				8F381F651A3AE4B400F7F2E3 /* SchemaBaseController.m */,
 			);
 			name = SchemaView;
 			sourceTree = "<group>";
@@ -482,7 +506,8 @@
 		8FA1A5231A1CD285009E1E6C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8F5FAB7E1A1E15670027A02A /* Base */,
+				8FC0653B1A0BC82300D853E6 /* MainTabViewController.h */,
+				8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */,
 				8FC065471A0C1C1B00D853E6 /* Overview */,
 				8F5FAB741A1E12EA0027A02A /* Settings */,
 				8F945F871A360CD40036EA4C /* SchemaView */,
@@ -528,24 +553,8 @@
 			isa = PBXGroup;
 			children = (
 				8FFB56B41A26626A00B48B6C /* Charts */,
-				8FC065381A0BC56100D853E6 /* CheckupPageViewController.h */,
-				8FC065391A0BC56100D853E6 /* CheckupPageViewController.m */,
-				8FC0653B1A0BC82300D853E6 /* MainTabViewController.h */,
-				8FC0653C1A0BC82300D853E6 /* MainTabViewController.m */,
-				8FC0653E1A0C07AE00D853E6 /* CheckupViewController.h */,
-				8FC0653F1A0C07AE00D853E6 /* CheckupViewController.m */,
-				8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */,
-				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
-				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
-				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
-				8FC065481A0C1C3E00D853E6 /* PulsPageViewController.h */,
-				8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */,
-				8FC0654B1A0C1C6300D853E6 /* GewichtPageViewController.h */,
-				8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */,
-				8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */,
-				8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */,
-				8F5FAB991A1E2D3A0027A02A /* BlutdruckChartPageViewController.h */,
-				8F5FAB9A1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m */,
+				8F4173A61A4EF801000300F3 /* Start */,
+				8F4173A71A4EF8BD000300F3 /* ViewHolder */,
 			);
 			name = Overview;
 			sourceTree = "<group>";
@@ -582,6 +591,17 @@
 		8FFB56B41A26626A00B48B6C /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				8F5FAB7E1A1E15670027A02A /* Base */,
+				8FC065411A0C1BDE00D853E6 /* BlutzuckerPageViewController.h */,
+				8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */,
+				8FC065441A0C1C0A00D853E6 /* BlutdruckPageViewController.h */,
+				8FC065451A0C1C0A00D853E6 /* BlutdruckPageViewController.m */,
+				8FC065481A0C1C3E00D853E6 /* PulsPageViewController.h */,
+				8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */,
+				8FC0654B1A0C1C6300D853E6 /* GewichtPageViewController.h */,
+				8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */,
+				8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */,
+				8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */,
 				8FFE74521A2F3BAF00CE204A /* JBLineChartViewControllerBlutdruck.h */,
 				8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */,
 				8F5FAB751A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.h */,
@@ -712,7 +732,6 @@
 				8F5FAB901A1E169D0027A02A /* JBLineChartFooterView.m in Sources */,
 				8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */,
 				8F5FAB861A1E163C0027A02A /* JBChartTooltipTipView.m in Sources */,
-				8F5FAB9B1A1E2D3A0027A02A /* BlutdruckChartPageViewController.m in Sources */,
 				8FA1A52E1A1CD865009E1E6C /* JBChartView.m in Sources */,
 				8F84838B19CB313800DF1E16 /* ch_bfh_bti8108_groupbjjmAppDelegate.m in Sources */,
 				8F5FBE6B1A3F839000E82409 /* hmac.c in Sources */,
@@ -722,12 +741,12 @@
 				8F945F861A360AB70036EA4C /* SettingsSchemaView.m in Sources */,
 				8F5FBE6A1A3F839000E82409 /* Base64Transcoder.c in Sources */,
 				8FA1A52D1A1CD865009E1E6C /* JBBarChartView.m in Sources */,
+				8F0054A71A5AF49F0079788B /* WeightPickerView.m in Sources */,
 				8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */,
 				8F5FAB731A1E12E30027A02A /* SettingsTherapyPageViewController.m in Sources */,
 				8F84838719CB313800DF1E16 /* main.m in Sources */,
 				8F5FAB871A1E163C0027A02A /* JBChartTooltipView.m in Sources */,
 				8F5FAB851A1E163C0027A02A /* JBChartInformationView.m in Sources */,
-				8F381F661A3AE4B400F7F2E3 /* SchemaBaseController.m in Sources */,
 				DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */,
 				8F381F691A3AF60D00F7F2E3 /* SchemaViewDaySelection.m in Sources */,
 				8F5FAB771A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m in Sources */,
@@ -745,6 +764,7 @@
 				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,
 				8F5FBE6E1A3F839000E82409 /* OAuth1Controller.m in Sources */,
 				8F5FAB7D1A1E155E0027A02A /* JBBaseViewController.m in Sources */,
+				8FC1C1DD1A5A83580030988E /* TagebucheintraegePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

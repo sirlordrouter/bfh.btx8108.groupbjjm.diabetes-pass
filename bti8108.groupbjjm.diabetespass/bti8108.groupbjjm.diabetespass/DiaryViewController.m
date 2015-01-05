@@ -14,6 +14,7 @@
 #import "SettingsWithingsViewController.h"
 #import "DiaryTableCell.h"
 #import "DiaryEntry.h"
+#import "TagebucheintraegePageViewController.h"
 
 @interface DiaryViewController()
 
@@ -102,8 +103,7 @@
                                   HTTPmethod:@"GET"
                                   oauthToken:self.oauthToken
                                  oauthSecret:self.oauthTokenSecret];
-    
-    NSLog(@"RRRRR %@",request.URL);
+
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
@@ -215,6 +215,17 @@
         _oauth1Controller = [[OAuth1Controller alloc] init];
     }
     return _oauth1Controller;
+}
+
+- (IBAction)unwindToDiaryView:(UIStoryboardSegue *)segue
+{
+    TagebucheintraegePageViewController *source = [segue sourceViewController];
+    source.GewichtLabel;
+    source.DatumDateLabel;
+    source.BlutzuckerField;
+    source.GlucoseField;
+    source.HbA1cField;
+
 }
 
 @end

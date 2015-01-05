@@ -14,5 +14,6 @@
 
 @property NSMutableArray *diaryData;
 @property (weak, nonatomic) IBOutlet UILabel *syncWithingsLabel;
+- (IBAction)unwindToDiaryView:(UIStoryboardSegue *)segue;
 
 @end

@@ -119,14 +119,18 @@ mmHg</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aktuell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-ZV-Lzk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aktuell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-ZV-Lzk">
                                 <rect key="frame" x="25" y="74" width="52" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="Aktuell gemessene Werte">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" summaryElement="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrX-9h-M2P">
                                 <rect key="frame" x="16" y="20" width="22" height="22"/>
+                                <accessibility key="accessibilityConfiguration" hint="Blendet ein Bild mit Anleitung ein" label="Information"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,6 +140,9 @@ mmHg</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4b-Ya-GHg">
                                 <rect key="frame" x="28" y="113" width="76" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Wert 6.0 ist zu tief, Zielwert ist 6.4" label="Letzter Blutzuckerwert vor dem Essen">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cbZ-cI-qxV"/>
                                 </constraints>
@@ -157,21 +164,24 @@ mmHg</string>
                                     <action selector="goToTargetValues:" destination="n0H-mz-tcH" eventType="touchUpInside" id="niJ-MC-mvN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uME-hB-hSs">
-                                <rect key="frame" x="28" y="151" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uME-hB-hSs">
+                                <rect key="frame" x="28" y="151" width="93" height="48"/>
+                                <accessibility key="accessibilityConfiguration" hint="Wert 11 ist zu hoch, Zielwert ist 9" label="Letzter Blutzuckerwert nach dem Essen">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jEc-as-xTO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="9.0">
+                                <state key="normal" title="11.0">
                                     <color key="titleColor" red="0.99588793519999996" green="0.68160444499999995" blue="0.56116974350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="goToGlucosePost:" destination="n0H-mz-tcH" eventType="touchUpInside" id="5XJ-HX-cnt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-5e-GfR">
-                                <rect key="frame" x="221" y="151" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-5e-GfR">
+                                <rect key="frame" x="221" y="151" width="84" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="9.4">
                                     <color key="titleColor" red="0.42055648565292358" green="0.54215061664581299" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,8 +190,8 @@ mmHg</string>
                                     <action selector="goToTargetValues:" destination="n0H-mz-tcH" eventType="touchUpInside" id="kyk-49-BAh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-Qc-YJJ">
-                                <rect key="frame" x="172" y="223" width="132" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-Qc-YJJ">
+                                <rect key="frame" x="172" y="222" width="132" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="120 / 70">
                                     <color key="titleColor" red="0.42055648565292358" green="0.54215061664581299" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,8 +200,11 @@ mmHg</string>
                                     <action selector="goToTargetValues:" destination="n0H-mz-tcH" eventType="touchUpInside" id="wu3-9h-iJA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd7-Me-DyO">
-                                <rect key="frame" x="16" y="223" width="116" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd7-Me-DyO">
+                                <rect key="frame" x="16" y="222" width="116" height="31"/>
+                                <accessibility key="accessibilityConfiguration" hint="Diastolischer Wert 90 ist zu hoch, Zielwert ist 120/90" label="">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="120 / 90">
                                     <color key="titleColor" red="0.99588793519999996" green="0.68160444499999995" blue="0.56116974350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,6 +215,9 @@ mmHg</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPL-jT-I4f">
                                 <rect key="frame" x="28" y="380" width="104" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Wert 74 ist in Ordnung, Ziel ist 74 Schläge in der Minute" label="Letzter gemessener Puls">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="74.0">
                                     <color key="titleColor" red="0.097488962113857269" green="0.67425203323364258" blue="0.64324450492858887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,6 +228,7 @@ mmHg</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfI-lM-4Hu">
                                 <rect key="frame" x="28" y="299" width="104" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Wert 74 ist in Ordnung, Ziel ist 74 Kilogramm" label="Letzte Gewichtsmessung"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="74.0">
                                     <color key="titleColor" red="0.097488962113857269" green="0.67425203323364258" blue="0.64324450492858887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +274,7 @@ mmHg</string>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jG-hv-FbH">
                                 <rect key="frame" x="153" y="465" width="22" height="22"/>
+                                <accessibility key="accessibilityConfiguration" hint="Öffnet die Ansicht zum Erfassen von Tagebucheinträgen" label="Tagebucheintrag hinzufügen"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -311,7 +329,7 @@ mmHg</string>
                             <constraint firstItem="OVG-vv-Vgt" firstAttribute="top" secondItem="RfI-lM-4Hu" secondAttribute="top" id="P4U-jn-CVA"/>
                             <constraint firstItem="AIX-jK-ex3" firstAttribute="centerX" secondItem="3jG-hv-FbH" secondAttribute="centerX" id="Pdb-fT-Xoy"/>
                             <constraint firstItem="1ou-2W-iPv" firstAttribute="top" secondItem="m4b-Ya-GHg" secondAttribute="top" id="QhN-Dm-zw3"/>
-                            <constraint firstItem="Nd7-Me-DyO" firstAttribute="top" secondItem="uME-hB-hSs" secondAttribute="bottom" constant="42" id="SUd-0s-VHj"/>
+                            <constraint firstItem="Nd7-Me-DyO" firstAttribute="top" secondItem="uME-hB-hSs" secondAttribute="bottom" constant="23" id="SUd-0s-VHj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XOd-x2-KTe" secondAttribute="trailing" constant="94" id="T3k-ao-O1c"/>
                             <constraint firstItem="m4b-Ya-GHg" firstAttribute="leading" secondItem="Yk6-Zj-zZR" secondAttribute="leadingMargin" constant="12" id="UIL-Pt-RnH"/>
                             <constraint firstItem="D11-K0-fd1" firstAttribute="top" secondItem="gPA-Pc-msv" secondAttribute="bottom" constant="50" id="VSc-ZS-R7h"/>
@@ -323,7 +341,7 @@ mmHg</string>
                             <constraint firstItem="OVG-vv-Vgt" firstAttribute="centerY" secondItem="3Ke-Zf-DKP" secondAttribute="centerY" id="Z2D-uv-eIo"/>
                             <constraint firstItem="XOd-x2-KTe" firstAttribute="top" secondItem="Yk6-Zj-zZR" secondAttribute="top" constant="222" id="aKo-kS-8Vu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lwL-Kl-wmo" secondAttribute="trailing" constant="5" id="aL6-rM-Hh7"/>
-                            <constraint firstItem="dvx-Qc-YJJ" firstAttribute="top" secondItem="CzY-5e-GfR" secondAttribute="bottom" constant="42" id="atQ-N1-ceN"/>
+                            <constraint firstItem="dvx-Qc-YJJ" firstAttribute="top" secondItem="CzY-5e-GfR" secondAttribute="bottom" constant="23" id="atQ-N1-ceN"/>
                             <constraint firstItem="CzY-5e-GfR" firstAttribute="trailing" secondItem="1ou-2W-iPv" secondAttribute="trailing" id="bCx-kh-8KM"/>
                             <constraint firstItem="OVG-vv-Vgt" firstAttribute="firstBaseline" secondItem="RfI-lM-4Hu" secondAttribute="baseline" id="c22-p3-5xe"/>
                             <constraint firstItem="Daj-kq-LCg" firstAttribute="firstBaseline" secondItem="nPL-jT-I4f" secondAttribute="baseline" id="dKf-MI-JP8"/>
@@ -501,33 +519,6 @@ mmHg</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9V-as-mMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="2592"/>
-        </scene>
-        <!--Schema-->
-        <scene sceneID="bjp-10-9RC">
-            <objects>
-                <viewController id="0SY-bU-65V" customClass="SettingsSchemaViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G04-M3-LQv"/>
-                        <viewControllerLayoutGuide type="bottom" id="XI0-jE-iBG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p4R-Bu-AXp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-c1-Ihc">
-                                <rect key="frame" x="0.0" y="38" width="320" height="162"/>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Schema" image="list.png" id="mJ8-W5-FtL"/>
-                    <connections>
-                        <outlet property="schemaPicker" destination="e5b-c1-Ihc" id="ojX-oX-r8L"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vQB-NM-h62" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2503" y="322"/>
         </scene>
         <!--Home-->
         <scene sceneID="4pM-ir-qGV">
@@ -1201,7 +1192,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         <barButtonItem key="leftBarButtonItem" title="Zielwerte" id="J3H-L5-XkE"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="Y1c-u7-9hY">
                             <connections>
-                                <segue destination="fEA-vK-YvV" kind="push" id="9dI-XZ-wjQ"/>
+                                <segue destination="x0z-6r-O9H" kind="push" id="rIk-8y-EAP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1212,60 +1203,6 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebo-pI-ePQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="310" y="272"/>
-        </scene>
-        <!--Tagebuchansicht-->
-        <scene sceneID="qNl-xU-TyX">
-            <objects>
-                <tableViewController id="fEA-vK-YvV" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EiT-Ec-dmC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="8kA-79-6KY">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SZR-xg-F3j">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZR-xg-F3j" id="oRm-BH-rFj">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zMN-pF-9JE">
-                                                    <rect key="frame" x="0.0" y="-39" width="414" height="162"/>
-                                                    <date key="date" timeIntervalSinceReferenceDate="438188072.71588802">
-                                                        <!--2014-11-20 14:54:32 +0000-->
-                                                    </date>
-                                                </datePicker>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fCJ-SS-4ll">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCJ-SS-4ll" id="nbO-8U-e1w">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pnn-6z-C58">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pnn-6z-C58" id="At0-Tc-e3T">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="fEA-vK-YvV" id="4jf-cL-xPy"/>
-                            <outlet property="delegate" destination="fEA-vK-YvV" id="SDR-3L-mgg"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Tagebuchansicht" id="6fH-fB-Mgd"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ho-ih-FU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="811" y="272"/>
         </scene>
         <!--Tagebuch-->
         <scene sceneID="uS6-pH-xmv">
@@ -1678,6 +1615,209 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGB-oD-yJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103.5" y="3232"/>
+        </scene>
+        <!--Tagebucheinträge-->
+        <scene sceneID="V7c-Hb-FHD">
+            <objects>
+                <tableViewController title="Tagebucheinträge" id="x0z-6r-O9H" customClass="TagebucheintraegePageViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uwc-r9-zqV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Zeiterfassung" id="0qj-dt-Qml">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DatumCell" id="ynQ-Hy-o36">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ynQ-Hy-o36" id="3Ff-x1-qST">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Datum/Zeit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkc-TB-OMJ">
+                                                    <rect key="frame" x="20" y="14" width="86" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-ff-5ed">
+                                                    <rect key="frame" x="135" y="10" width="168" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DatumDatePickerCell" rowHeight="162" id="lfo-oe-ecB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lfo-oe-ecB" id="Shj-Iz-b5C">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-Pm-fEM">
+                                                    <rect key="frame" x="0.0" y="-8" width="320" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="438787586.42602199">
+                                                        <!--2014-11-27 13:26:26 +0000-->
+                                                    </date>
+                                                    <locale key="locale" localeIdentifier="de_DE"/>
+                                                    <connections>
+                                                        <action selector="pickerDatumDateChanged:" destination="x0z-6r-O9H" eventType="valueChanged" id="EDF-eC-QYe"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Einträge" id="3Iv-XU-svA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseWertCell" id="gxa-pc-yj3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gxa-pc-yj3" id="mcn-sJ-XeG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glucose" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-6s-QXb">
+                                                    <rect key="frame" x="19" y="12" width="64" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GlucoseField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmol/l" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTg-no-gCJ">
+                                                    <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlutdruckCell" id="d3g-o4-Ox4">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d3g-o4-Ox4" id="Sae-lB-7GQ" userLabel="Blutdruck">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blutdruck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOQ-Ao-qdG">
+                                                    <rect key="frame" x="19" y="11" width="74" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="BlutdruckField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mm Hg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-A8-4Ub">
+                                                    <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GewichtCell" id="ren-Uc-vwY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ren-Uc-vwY" id="aMW-mM-6hx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gewicht" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-n3-76Q">
+                                                    <rect key="frame" x="20" y="14" width="64" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0S-jb-xbH">
+                                                    <rect key="frame" x="135" y="15" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GewichtPickerViewCell" rowHeight="162" id="3Jk-vt-9tn">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jk-vt-9tn" id="YgB-eD-aql">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HbA1cCell" id="4Cn-m7-3bq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Cn-m7-3bq" id="4dR-j6-w9C">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HbA1c" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyI-fi-71h">
+                                                    <rect key="frame" x="20" y="11" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HbA1cField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmol/l" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2FN-U3-T8w">
+                                                    <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseCell" id="ugI-nk-GG7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ugI-nk-GG7" id="JcO-l9-ySP" userLabel="GlucoseCell">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseCell" id="YBC-nB-mEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBC-nB-mEs" id="e2w-SL-U0j" userLabel="GlucoseCell">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="x0z-6r-O9H" id="5YY-rR-0EN"/>
+                            <outlet property="delegate" destination="x0z-6r-O9H" id="fv0-ro-FYc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tagebucheinträge" id="siU-0G-fMz">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Vnu-N3-9aQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z6v-mX-cMx">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fn3-nt-YbO" kind="unwind" unwindAction="unwindToDiaryView:" id="16e-sU-HbI"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="bsM-Bc-Sjd">
+                            <connections>
+                                <segue destination="fn3-nt-YbO" kind="unwind" unwindAction="unwindToDiaryView:" id="ESM-9E-Pak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BlutzuckerField" destination="H1W-A8-4Ub" id="Ktq-jj-YRe"/>
+                        <outlet property="DatumCell" destination="ynQ-Hy-o36" id="fvd-8j-TYF"/>
+                        <outlet property="DatumDateLabel" destination="Brq-ff-5ed" id="zcj-UG-ZVt"/>
+                        <outlet property="DatumDatePicker" destination="6Xd-Pm-fEM" id="W1q-BO-dIL"/>
+                        <outlet property="DatumDatePickerCell" destination="lfo-oe-ecB" id="CZr-Mw-cwO"/>
+                        <outlet property="GewichtCell" destination="ren-Uc-vwY" id="YQv-yT-xaC"/>
+                        <outlet property="GewichtLabel" destination="P0S-jb-xbH" id="GFQ-yl-GSj"/>
+                        <outlet property="GewichtPickerViewCell" destination="3Jk-vt-9tn" id="iwf-DC-9d9"/>
+                        <outlet property="GlucoseField" destination="rTg-no-gCJ" id="FTu-XB-Fx9"/>
+                        <outlet property="HbA1cField" destination="2FN-U3-T8w" id="Q66-iN-PDl"/>
+                        <outlet property="saveButton" destination="bsM-Bc-Sjd" id="J0V-Zp-kWd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XeU-Ue-EZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fn3-nt-YbO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="226"/>
         </scene>
     </scenes>
     <resources>
