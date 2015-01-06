@@ -19,9 +19,7 @@
 @interface TagebucheintraegePageViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
 
-@property IBOutlet UITableViewCell *DatumCell;
-@property IBOutlet UIDatePicker *DatumDatePicker;
-@property IBOutlet UITableViewCell *DatumDatePickerCell;
+
 @property (strong, nonatomic) NSDateFormatter *DatumDateFormatter;
 @property (strong, nonatomic) NSDate *selectedDatumDate;
 
@@ -29,7 +27,7 @@
 @property (assign) BOOL PickerViewIsShowing;
 
 @property (nonatomic, assign, getter=isDatumDateOpen) BOOL DatumDateOpen;
-
+@property(nonatomic, readonly, getter=isEditing) BOOL editing;
 
 @property IBOutlet UITableViewCell *GewichtCell;
 @property IBOutlet WeightPickerView *GewichtPickerView;
@@ -40,10 +38,15 @@
 @property IBOutlet UITextField *GlucoseField;
 @property IBOutlet UITextField *BlutzuckerField;
 @property IBOutlet UITextField *HbA1cField;
+@property IBOutlet UITableViewCell *DatumCell;
+@property IBOutlet UIDatePicker *DatumDatePicker;
+@property IBOutlet UITableViewCell *DatumDatePickerCell;
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
-@property(nonatomic, readonly, getter=isEditing) BOOL editing;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *glucoseIsBeforeMeal;
+
+@property BOOL glucoseIsBeforeMealBool;
 
 
 @end

@@ -1192,7 +1192,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         <barButtonItem key="leftBarButtonItem" title="Zielwerte" id="J3H-L5-XkE"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="Y1c-u7-9hY">
                             <connections>
-                                <segue destination="x0z-6r-O9H" kind="push" id="rIk-8y-EAP"/>
+                                <segue destination="x0z-6r-O9H" kind="push" id="kEb-vY-fT8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1671,7 +1671,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                             </tableViewSection>
                             <tableViewSection headerTitle="Einträge" id="3Iv-XU-svA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseWertCell" id="gxa-pc-yj3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseWertCell" rowHeight="77" id="gxa-pc-yj3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gxa-pc-yj3" id="mcn-sJ-XeG">
@@ -1685,9 +1685,17 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GlucoseField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmol/l" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTg-no-gCJ">
                                                     <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Em-bH-Min">
+                                                    <rect key="frame" x="19" y="41" width="288" height="29"/>
+                                                    <segments>
+                                                        <segment title="nüchtern"/>
+                                                        <segment title="postprandial"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1705,6 +1713,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="BlutdruckField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mm Hg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-A8-4Ub">
                                                     <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -1732,7 +1741,7 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GewichtPickerViewCell" rowHeight="162" id="3Jk-vt-9tn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GewichtPickerViewCell" rowHeight="200" id="3Jk-vt-9tn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jk-vt-9tn" id="YgB-eD-aql">
@@ -1753,24 +1762,11 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HbA1cField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmol/l" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2FN-U3-T8w">
                                                     <rect key="frame" x="236" y="8" width="71" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseCell" id="ugI-nk-GG7">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ugI-nk-GG7" id="JcO-l9-ySP" userLabel="GlucoseCell">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlucoseCell" id="YBC-nB-mEs">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBC-nB-mEs" id="e2w-SL-U0j" userLabel="GlucoseCell">
-                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1811,13 +1807,14 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         <outlet property="GewichtPickerViewCell" destination="3Jk-vt-9tn" id="iwf-DC-9d9"/>
                         <outlet property="GlucoseField" destination="rTg-no-gCJ" id="FTu-XB-Fx9"/>
                         <outlet property="HbA1cField" destination="2FN-U3-T8w" id="Q66-iN-PDl"/>
+                        <outlet property="glucoseIsBeforeMeal" destination="2Em-bH-Min" id="pW6-lq-gro"/>
                         <outlet property="saveButton" destination="bsM-Bc-Sjd" id="J0V-Zp-kWd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeU-Ue-EZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fn3-nt-YbO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="897" y="226"/>
+            <point key="canvasLocation" x="897" y="228"/>
         </scene>
     </scenes>
     <resources>

@@ -25,6 +25,7 @@
 @synthesize DatumCell;
 @synthesize DatumDatePicker;
 @synthesize DatumDatePickerCell;
+@synthesize DatumDateLabel;
 
 @synthesize GewichtCell;
 @synthesize GewichtPickerView;
@@ -34,6 +35,10 @@
 @synthesize BlutzuckerField;
 @synthesize HbA1cField;
 @synthesize GewichtLabel;
+
+@synthesize glucoseIsBeforeMeal;
+@synthesize glucoseIsBeforeMealBool;
+
 
 
     - (void)viewDidLoad {
@@ -55,6 +60,8 @@
         [self.GewichtPickerView setValue:74.0];
         
         [self.GewichtPickerView setHidden:YES];
+        
+        glucoseIsBeforeMealBool = true;
     }
 
 
@@ -104,6 +111,10 @@
     if (cell == DatumCell){
         self.DatumDateOpen = !self.isDatumDateOpen;
         
+        self.DatumDateLabel.text =  [self.DatumDateFormatter stringFromDate:DatumDatePicker.date];
+        
+        self.selectedDatumDate = DatumDatePicker.date;
+        
         if (self.datePickerIsShowing){
             
             [self hideDatumDatePickerCell];
@@ -127,6 +138,7 @@
     
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.tableView reloadData];
 }
 
 
@@ -186,6 +198,11 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+    if (!glucoseIsBeforeMeal.selectedSegmentIndex == 0) {
+        glucoseIsBeforeMealBool = false;
+    }
+    
     if (sender != self.saveButton) return;
     //else if did schema change? => store new data
     
