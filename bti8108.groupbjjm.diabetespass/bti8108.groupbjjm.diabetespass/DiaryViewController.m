@@ -224,15 +224,16 @@
     NSArray *diaryEntries = @[source.GewichtLabel.text,
                              source.BlutzuckerField.text,
                              source.GlucoseField.text,
-                             source.HbA1cField.text];
-    NSArray *units = @[@"kg",@"mmHg",@"mmol/l",@"mmol/l"];
+                             source.HbA1cField.text,
+                              source.PulsLabel.text];
+    NSArray *units = @[@"kg",@"mmHg",@"mmol/l",@"mmol/l", @"bpm"];
     
     NSString *prePost = source.glucoseIsBeforeMealBool ? @" (N)":@" (P)";
     
-    for (int i = 0; i<4; i++) {
+    for (int i = 0; i<5; i++) {
         
         NSString * text = [NSString stringWithFormat:@"%@", [diaryEntries objectAtIndex:i] ];
-        int lenght =text.length;
+
         if (!(text.length == 0 || [text isEqual:@"-"])) {
             DiaryEntry *newEntry = [[DiaryEntry alloc] init];
             newEntry.date = source.DatumDateLabel.text;

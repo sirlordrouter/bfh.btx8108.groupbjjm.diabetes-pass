@@ -41,6 +41,7 @@
 @property IBOutlet UITableViewCell *DatumCell;
 @property IBOutlet UIDatePicker *DatumDatePicker;
 @property IBOutlet UITableViewCell *DatumDatePickerCell;
+@property (weak, nonatomic) IBOutlet UITextField *PulsLabel;
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 
