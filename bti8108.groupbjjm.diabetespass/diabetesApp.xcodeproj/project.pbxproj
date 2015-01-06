@@ -73,7 +73,6 @@
 		8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065491A0C1C3E00D853E6 /* PulsPageViewController.m */; };
 		8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */; };
 		8FC065501A0C204A00D853E6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */; };
-		8FC1C1DD1A5A83580030988E /* TagebucheintraegePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */; };
 		8FC333311A2F73D40051122A /* BlutzuckerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC065421A0C1BDE00D853E6 /* BlutzuckerPageViewController.m */; };
 		8FC333351A2F76780051122A /* JBLineChartViewControllerBlutdruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */; };
 		8FC333361A2F76780051122A /* JBLineChartViewControllerGewicht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE74561A2F3CA900CE204A /* JBLineChartViewControllerGewicht.m */; };
@@ -86,6 +85,7 @@
 		8FC857B71A0CFA9D005DD780 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B11A0CFA9D005DD780 /* male.png */; };
 		8FC857B81A0CFA9D005DD780 /* puls.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B21A0CFA9D005DD780 /* puls.png */; };
 		8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BA1A0CFD35005DD780 /* glucose.png */; };
+		8FE9968D1A5C088F00709428 /* TagebucheintraegePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9968C1A5C088F00709428 /* TagebucheintraegePageViewController.m */; };
 		DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -207,8 +207,6 @@
 		8FC0654C1A0C1C6300D853E6 /* GewichtPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewichtPageViewController.m; sourceTree = "<group>"; };
 		8FC0654E1A0C204A00D853E6 /* BasePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
 		8FC0654F1A0C204A00D853E6 /* BasePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
-		8FC1C1D91A5A83580030988E /* TagebucheintraegePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagebucheintraegePageViewController.h; path = "../../../../../Downloads/B761B7A0-D59E-4A3A-835E-837FC73EA357/bfh.btx8108.groupbjjm.diabetes-pass/bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass/TagebucheintraegePageViewController.h"; sourceTree = "<group>"; };
-		8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagebucheintraegePageViewController.m; path = "../../../../../Downloads/B761B7A0-D59E-4A3A-835E-837FC73EA357/bfh.btx8108.groupbjjm.diabetes-pass/bti8108.groupbjjm.diabetespass/bti8108.groupbjjm.diabetespass/TagebucheintraegePageViewController.m"; sourceTree = "<group>"; };
 		8FC333391A2FA86B0051122A /* SettingsWithingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWithingsViewController.h; sourceTree = "<group>"; };
 		8FC3333A1A2FA86B0051122A /* SettingsWithingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWithingsViewController.m; sourceTree = "<group>"; };
 		8FC857AD1A0CFA9D005DD780 /* apfel_biss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel_biss.png; sourceTree = "<group>"; };
@@ -218,6 +216,8 @@
 		8FC857B11A0CFA9D005DD780 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		8FC857B21A0CFA9D005DD780 /* puls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puls.png; sourceTree = "<group>"; };
 		8FC857BA1A0CFD35005DD780 /* glucose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glucose.png; sourceTree = "<group>"; };
+		8FE9968B1A5C088F00709428 /* TagebucheintraegePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagebucheintraegePageViewController.h; sourceTree = "<group>"; };
+		8FE9968C1A5C088F00709428 /* TagebucheintraegePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagebucheintraegePageViewController.m; sourceTree = "<group>"; };
 		8FFE74521A2F3BAF00CE204A /* JBLineChartViewControllerBlutdruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerBlutdruck.h; sourceTree = "<group>"; };
 		8FFE74531A2F3BC100CE204A /* JBLineChartViewControllerBlutdruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewControllerBlutdruck.m; sourceTree = "<group>"; };
 		8FFE74551A2F3C7C00CE204A /* JBLineChartViewControllerGewicht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerGewicht.h; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 		8F19E1C11A4203690028555F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				8FC1C1D91A5A83580030988E /* TagebucheintraegePageViewController.h */,
-				8FC1C1DA1A5A83580030988E /* TagebucheintraegePageViewController.m */,
+				8FE9968B1A5C088F00709428 /* TagebucheintraegePageViewController.h */,
+				8FE9968C1A5C088F00709428 /* TagebucheintraegePageViewController.m */,
 				8F19E1BA1A40C5950028555F /* DiaryViewController.h */,
 				8F19E1BB1A40C5950028555F /* DiaryViewController.m */,
 				8F19E1C41A4215630028555F /* DiaryTableCell.xib */,
@@ -750,6 +750,7 @@
 				DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */,
 				8F381F691A3AF60D00F7F2E3 /* SchemaViewDaySelection.m in Sources */,
 				8F5FAB771A1E149E0027A02A /* JBLineChartViewControllerBlutzucker.m in Sources */,
+				8FE9968D1A5C088F00709428 /* TagebucheintraegePageViewController.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */,
 				8F5FBE6D1A3F839000E82409 /* NSString+URLEncoding.m in Sources */,
@@ -764,7 +765,6 @@
 				8FC3333B1A2FA86B0051122A /* SettingsWithingsViewController.m in Sources */,
 				8F5FBE6E1A3F839000E82409 /* OAuth1Controller.m in Sources */,
 				8F5FAB7D1A1E155E0027A02A /* JBBaseViewController.m in Sources */,
-				8FC1C1DD1A5A83580030988E /* TagebucheintraegePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
