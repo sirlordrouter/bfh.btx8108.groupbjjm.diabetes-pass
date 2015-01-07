@@ -43,7 +43,7 @@ static int numberOfMeasurementsInDB;
         if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
             char *errMSG;
           
-            const char *sql_stmt_measurementTable = "create table if not exists measurements (measurementID integer primary key, measurementValue double NOT NULL, unit text NOT NULL, upperLimit double, lowerLimit double, dateOfMeasurement date NOT NULL, isBeforeMeal integer)";
+            const char *sql_stmt_measurementTable = "create table if not exists measurements (measurementID integer primary key, measurementValue string NOT NULL, unit text NOT NULL, upperLimit double, lowerLimit double, dateOfMeasurement date NOT NULL, isBeforeMeal integer)";
             
             const char *sql_stmt_schemaTable = "create table if not exists schema (currentschema text)";
             
@@ -75,11 +75,10 @@ static int numberOfMeasurementsInDB;
 
 
 //saveMeasurement Method. Returns TRUE if save was succesfull. Returns FALSE if save failed.
--(BOOL) writeMeasurementInDB:(double)measurementValue measurementUnit:(NSString *)unit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal;{
+-(BOOL) writeMeasurementInDB:(NSString*)measurementValue measurementUnit:(NSString *)unit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date {
     
     int idNumber = [self GetMeasurementsCount]+1;
     int flag = (isBeforeMeal)? 1 : 0; //Because sqlite only saves 1 (true) or 0 (false) values for Boolean types
-    NSDate *dateOfMeasurement = [[NSDate alloc]init];//Getting the actual date (CET) and time for this measurement
     
     const char *dbpath = [databasePath UTF8String];
     
@@ -88,7 +87,7 @@ static int numberOfMeasurementsInDB;
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
     
         
-        NSString *insertSQL = [NSString stringWithFormat:@"insert into measurements (measurementID, measurementValue, unit, upperLimit, lowerLimit, dateOfMeasurement, isBeforeMeal) values(%d,%f,\"%@\",%f,%f,\"%@\",%d)", (int)idNumber, (double)measurementValue, unit, (double)upperLimit, (double)lowerLimit, dateOfMeasurement, (int)flag];
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into measurements (measurementID, measurementValue, unit, upperLimit, lowerLimit, dateOfMeasurement, isBeforeMeal) values(%d,\"%@\",\"%@\",%f,%f,\"%@\",%d)", (int)idNumber, (NSString*)measurementValue, unit, (double)upperLimit, (double)lowerLimit, date, (int)flag];
 
         const char *insert_stmt_measurement = [insertSQL UTF8String];
         
@@ -157,9 +156,9 @@ static int numberOfMeasurementsInDB;
 
 
 //saveMeasurement method. The Date of the measurements is automatically created in the writeMeasurementInDB method.
--(void) saveMeasurement:(double)measurementValue measurementUnit:(NSString *)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal{
+-(void) saveMeasurement:(NSString*)measurementValue measurementUnit:(NSString *)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date {
     
-    bool success = [[DBManager getSharedInstance]writeMeasurementInDB:measurementValue measurementUnit:measurementUnit upperLimit:upperLimit lowerLimit:lowerLimit isBeforeMeal:isBeforeMeal];
+    bool success = [[DBManager getSharedInstance]writeMeasurementInDB:measurementValue measurementUnit:measurementUnit upperLimit:upperLimit lowerLimit:lowerLimit isBeforeMeal:isBeforeMeal aDate:date];
    
     if (success == YES) {
         
@@ -190,7 +189,7 @@ static int numberOfMeasurementsInDB;
             NSNumber *measurementID = [NSNumber numberWithInteger:sqlite3_column_int(statement, 0)];
             [resultArray addObject:measurementID];
             
-            NSNumber *measurementValue = [NSNumber numberWithDouble:sqlite3_column_double(statement,1)];
+            NSString *measurementValue = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement,1)];
             [resultArray addObject:measurementValue];
             
             NSString *measurementUnit = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 2)];
@@ -204,12 +203,7 @@ static int numberOfMeasurementsInDB;
             
             NSString *stringDateOfMeasurement = [[NSString alloc] initWithUTF8String: (const char *)sqlite3_column_text(statement, 5)];
             
-            NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Europe/London"];
-            NSDateFormatter *formatter = [NSDateFormatter new];
-            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
-            [formatter setTimeZone:timeZone];
-            NSDate *dateOfMeasurement = [formatter dateFromString:stringDateOfMeasurement];
-            [resultArray addObject:dateOfMeasurement];
+            [resultArray addObject:stringDateOfMeasurement];
           
             NSNumber *isBeforeMealNumber = [NSNumber numberWithInt:sqlite3_column_int(statement, 6)];
             [resultArray addObject:isBeforeMealNumber];

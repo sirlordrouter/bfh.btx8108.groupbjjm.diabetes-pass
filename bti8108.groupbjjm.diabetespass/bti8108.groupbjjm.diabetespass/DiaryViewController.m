@@ -184,6 +184,16 @@
              
          }
          
+         NSArray *sortedArray = [self.diaryData sortedArrayUsingComparator:^NSComparisonResult(DiaryEntry *e1, DiaryEntry *e2){
+             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+             [dateFormat setDateFormat:@"dd.MM.yyyy HH:mm"];
+             
+             return [[dateFormat dateFromString:e2.date] compare:[dateFormat dateFromString:e1.date]];
+         }];
+         
+         self.diaryData = sortedArray.mutableCopy;
+        
+         
              [self reloadData];
      }];
 
@@ -266,17 +276,22 @@
             [self.diaryData addObject:newEntry];
             
             [manager
-             saveMeasurement:newEntry.value.floatValue
+             saveMeasurement:newEntry.value
              measurementUnit:newEntry.unit
              upperLimit:newEntry.value.floatValue
              lowerLimit:newEntry.value.floatValue
-             isBeforeMeal:source.glucoseIsBeforeMealBool]; //TODO save real Limit Data
+             isBeforeMeal:source.glucoseIsBeforeMealBool
+             aDate:newEntry.date]; //TODO save real Limit Data
         }
         
     }
     
     NSArray *sortedArray = [self.diaryData sortedArrayUsingComparator:^NSComparisonResult(DiaryEntry *e1, DiaryEntry *e2){
-        return [e1.date compare:e2.date];
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.MM.yyyy HH:mm"];
+        
+        return [[dateFormat dateFromString:e2.date] compare:[dateFormat dateFromString:e1.date]];
     }];
     
     self.diaryData = sortedArray.mutableCopy;
