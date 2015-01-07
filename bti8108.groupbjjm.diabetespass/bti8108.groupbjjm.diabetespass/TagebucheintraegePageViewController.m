@@ -64,7 +64,11 @@
         glucoseIsBeforeMealBool = true;
     }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self setupDatumLabel];
+}
 
 - (void)didReceiveMemoryWarning {
     
@@ -86,6 +90,7 @@
     self.DatumDateLabel.textColor = [self.tableView tintColor];
     
     self.selectedDatumDate = defaultDate;
+    self.DatumDateLabel.text = [self.DatumDateFormatter stringFromDate:defaultDate];;
 }
 
 

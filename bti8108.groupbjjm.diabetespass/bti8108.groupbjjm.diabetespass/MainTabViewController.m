@@ -7,6 +7,7 @@
 //
 
 #import "MainTabViewController.h"
+#import "ch_bfh_bti8108_groupbjjmAppDelegate.h"
 
 @interface MainTabViewController ()
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    delegate.tabbarViewController = self;
+    
     // Do any additional setup after loading the view.
     //
     //self.view.autoresizesSubviews = YES;

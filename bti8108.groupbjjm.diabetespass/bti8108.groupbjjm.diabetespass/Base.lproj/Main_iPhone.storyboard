@@ -279,7 +279,7 @@ mmHg</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addNewDiaryEntry:" destination="n0H-mz-tcH" eventType="touchUpInside" id="yXN-15-mFz"/>
+                                    <action selector="addDiaryEntry:" destination="n0H-mz-tcH" eventType="touchUpInside" id="uI6-a4-6Xe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Neuer Tagebucheintrag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-A0-PIg">
@@ -374,6 +374,7 @@ mmHg</string>
                     <connections>
                         <outlet property="CheckupView" destination="Yk6-Zj-zZR" id="Y8M-nd-Pjl"/>
                         <outlet property="Label" destination="gPA-Pc-msv" id="NL3-7L-5Zb"/>
+                        <segue destination="0ef-ea-jT9" kind="custom" identifier="checkupAddEntry" id="ziR-U9-vFU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaM-Gb-6cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,7 +634,7 @@ mmHg</string>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V67-XR-AI9">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Zurück">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -645,7 +646,7 @@ mmHg</string>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q4b-3O-JVg">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Speichern">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1040,6 +1041,46 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
             </objects>
             <point key="canvasLocation" x="285.5" y="3234.5"/>
         </scene>
+        <!--Zielwerte-->
+        <scene sceneID="Ea2-9t-n4B">
+            <objects>
+                <tableViewController id="ghx-pl-jys" customClass="TargetValueTableController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5CZ-rj-VqT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="QQW-m9-xEl">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQW-m9-xEl" id="lNq-GX-mgK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Ls-8h-FV6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ls-8h-FV6" id="zFu-02-ChE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="erU-Fx-3vA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erU-Fx-3vA" id="bo0-qS-IfZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ghx-pl-jys" id="aeN-5U-wSQ"/>
+                            <outlet property="delegate" destination="ghx-pl-jys" id="aoE-bg-3Fp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Zielwerte" id="7dC-93-MC4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTA-JK-Eyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="-436"/>
+        </scene>
         <!--Tagebuchansicht-->
         <scene sceneID="ioH-d2-7ew">
             <objects>
@@ -1048,15 +1089,14 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wVO-3V-fw8">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wVO-3V-fw8">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <attributedString key="attributedText">
-                                <fragment content="Slide down to synchronise with Withings">
+                                <fragment content="Herunterziehen um mit Withings zu synchronisieren">
                                     <attributes>
                                         <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <font key="NSFont" size="17" name="Helvetica"/>
-                                        <font key="NSOriginalFont" size="17" name="Helvetica"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural"/>
                                     </attributes>
                                 </fragment>
@@ -1189,10 +1229,14 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tagebuchansicht" id="cda-Rx-P9l">
-                        <barButtonItem key="leftBarButtonItem" title="Zielwerte" id="J3H-L5-XkE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Zielwerte" id="J3H-L5-XkE">
+                            <connections>
+                                <segue destination="ghx-pl-jys" kind="push" id="015-w9-Ig2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="Y1c-u7-9hY">
                             <connections>
-                                <segue destination="x0z-6r-O9H" kind="push" id="kEb-vY-fT8"/>
+                                <segue destination="x0z-6r-O9H" kind="push" identifier="addDiaryEntry" id="Jjh-53-x29"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1616,6 +1660,22 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
             </objects>
             <point key="canvasLocation" x="1103.5" y="3232"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PT3-vq-QjO">
+            <objects>
+                <navigationController id="FiX-Ic-93L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oNe-1k-nyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x0z-6r-O9H" kind="relationship" relationship="rootViewController" id="Shy-4W-WKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAj-fp-wmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="-534"/>
+        </scene>
         <!--Tagebucheinträge-->
         <scene sceneID="V7c-Hb-FHD">
             <objects>
@@ -1889,6 +1949,8 @@ Verbessert sich mein Zustand nicht inner 10 Minuten, rufen Sie einen Arzt oder N
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="ziR-U9-vFU"/>
+        <segue reference="Jjh-53-x29"/>
         <segue reference="zUA-DL-yIv"/>
         <segue reference="6Ef-8i-fM3"/>
     </inferredMetricsTieBreakers>

@@ -103,16 +103,27 @@ CGFloat const SundayRowX = 319;
  */
 -(void)initFakeData {
     
-    NSMutableArray *matrix = [NSMutableArray array];
-    for (int rows = 0; rows < 10 ; rows++) {
-        NSMutableArray *columns = [NSMutableArray array];
-        for (int col = 0; col < 7; col++) {
-            [columns addObject:[NSNumber numberWithInt:1]];
-        }
-        [matrix addObject:columns];
-    }
+//    NSMutableArray *matrix = [NSMutableArray array];
+//    for (int rows = 0; rows < 10 ; rows++) {
+//        NSMutableArray *columns = [NSMutableArray array];
+//        for (int col = 0; col < 7; col++) {
+//            [columns addObject:[NSNumber numberWithInt:1]];
+//        }
+//        [matrix addObject:columns];
+//    }
     
-    self.matrixData = matrix;
+    self.matrixData = @[
+                        @[@1,@1,@0,@0,@0,@0,@0],
+                        @[@0,@0,@0,@0,@0,@0,@0],
+                        @[@0,@0,@1,@1,@0,@0,@0],
+                        @[@0,@0,@0,@0,@0,@0,@0],
+                        @[@0,@0,@0,@0,@1,@1,@0],
+                        @[@0,@0,@0,@0,@0,@0,@0],
+                        @[@0,@0,@0,@0,@0,@0,@0],
+                        @[@1,@1,@0,@0,@0,@0,@0],
+                        @[@0,@0,@0,@0,@0,@0,@0],
+                        @[@0,@0,@1,@1,@0,@0,@0]
+                        ];
 }
 
 #pragma Buttonmatrix initialization
@@ -129,8 +140,10 @@ CGFloat const SundayRowX = 319;
     int row =  SchemaFirstDataRowPosition;
     for (int i = 0; i < 7; i++) {
         if (i == [self getCurrentWeekday]) {
+            //blue background for current weekday
             markColor = [UIColor blackColor];
         } else {
+            //use normal color for all Labels which are not in current weekday line
             markColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
         }
         
@@ -166,6 +179,7 @@ CGFloat const SundayRowX = 319;
         for (int columnId=0; columnId < 10; columnId++) {
             UILabel *label = [ [UILabel alloc ] init];
             [weekdayArray addObject:label];
+            
             [self addMark:label atColumn:columnId atRow:rowId*10 atPosition:CGRectMake(column, row, 23.0, 23.0)];
             column += 39;
         }
@@ -181,6 +195,19 @@ CGFloat const SundayRowX = 319;
     }
     
     self.xLabel = buttonsArray2D;
+    
+    //hack, set the 'x' for a specific schema after every label has been crated
+    for (int row = 0; row < self.matrixData.count ; row++) {
+        for (int col = 0; col < [[self.matrixData objectAtIndex:row] count]; col++) {
+            UILabel *label = [[self.xLabel objectAtIndex:row] objectAtIndex:col];
+            if ([[[self.matrixData objectAtIndex:row] objectAtIndex:col] integerValue] == 1) {
+                label.text = @"x";
+            } else {
+                label.text = @"";
+            }
+        }
+    }
+    
     
     [self addLegend];
     

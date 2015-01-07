@@ -71,23 +71,58 @@
 
 
 - (IBAction)goToGlucosePre:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    
+    BasePageViewController *startingViewController = [delegate.checkupViewController.controllers objectAtIndex:1];
+    NSArray *viewControllers = @[startingViewController];
+    
+    [delegate.checkupViewController.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
 }
 
 - (IBAction)goToGlucosePost:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     
+    BasePageViewController *startingViewController = [delegate.checkupViewController.controllers objectAtIndex:1];
+    NSArray *viewControllers = @[startingViewController];
+    
+    [delegate.checkupViewController.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
 - (IBAction)goToPressure:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    
+    BasePageViewController *startingViewController = [delegate.checkupViewController.controllers objectAtIndex:2];
+    NSArray *viewControllers = @[startingViewController];
+    
+    [delegate.checkupViewController.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
 }
 
 - (IBAction)goToWeight:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    
+    BasePageViewController *startingViewController = [delegate.checkupViewController.controllers objectAtIndex:4];
+    NSArray *viewControllers = @[startingViewController];
+    
+    [delegate.checkupViewController.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
 }
 
 - (IBAction)goToPulse:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     
+    BasePageViewController *startingViewController = [delegate.checkupViewController.controllers objectAtIndex:3];
+    NSArray *viewControllers = @[startingViewController];
+    
+    [delegate.checkupViewController.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+}
+- (IBAction)addDiaryEntry:(id)sender {
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    delegate.navigationFromCheckupView = TRUE;
+    [delegate.tabbarViewController setSelectedIndex:1];
+
 }
 
 - (IBAction)addNewDiaryEntry:(id)sender {

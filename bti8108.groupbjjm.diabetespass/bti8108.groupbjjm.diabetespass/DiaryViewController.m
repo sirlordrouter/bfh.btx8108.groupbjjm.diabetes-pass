@@ -31,6 +31,7 @@
 
 @synthesize syncWithingsLabel;
 
+
 -(void)viewDidLoad {
     
     syncWithingsLabel.text = @"";
@@ -40,6 +41,10 @@
    
     self.diaryData = [[NSMutableArray alloc] init];
     
+    ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    delegate.diaryViewController = self;
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,6 +52,7 @@
     
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     self.withingsController = delegate.withingsController;
+    
     /*
      If user has not registered withings, refreshcontrol should be insantiated => string must be removed.
      */
@@ -55,7 +61,7 @@
         self.oauthTokenSecret = self.withingsController.oauthTokenSecret;
         userId = @"4899465"; ///HARDCODED
         
-        syncWithingsLabel.text = @"Slide down to synchronise with Withings";
+        syncWithingsLabel.text = @"Herunterziehen um mit Withings zu synchronisieren";
         
         self.refreshControl = [[UIRefreshControl alloc] init];
         self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
@@ -63,6 +69,11 @@
         [self.refreshControl addTarget:self
                                 action:@selector(getWithingsData)
                       forControlEvents:UIControlEventValueChanged];
+    }
+    
+    if (delegate.navigationFromCheckupView) {
+        [self performSegueWithIdentifier:@"addDiaryEntry" sender:self];
+        delegate.navigationFromCheckupView = false;
     }
 }
 
@@ -243,6 +254,17 @@
         }
         
     }
+    
+    NSArray *sortedArray = [self.diaryData sortedArrayUsingComparator:^NSComparisonResult(DiaryEntry *e1, DiaryEntry *e2){
+        return [e1.date compare:e2.date];
+    }];
+    
+    self.diaryData = sortedArray.mutableCopy;
+
+}
+
+- (IBAction)unwindFromAnotherViewToDiaryView:(UIStoryboardSegue *)segue
+{
 
 }
 

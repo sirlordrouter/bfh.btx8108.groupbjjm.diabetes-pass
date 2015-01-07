@@ -12,8 +12,10 @@
     NSString *userId;
 }
 
+
 @property NSMutableArray *diaryData;
 @property (weak, nonatomic) IBOutlet UILabel *syncWithingsLabel;
 - (IBAction)unwindToDiaryView:(UIStoryboardSegue *)segue;
+- (IBAction)unwindFromAnotherViewToDiaryView:(UIStoryboardSegue *)segue;
 
 @end

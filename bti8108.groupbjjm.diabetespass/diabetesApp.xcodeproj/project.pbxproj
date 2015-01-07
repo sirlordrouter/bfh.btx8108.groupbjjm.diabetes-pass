@@ -25,6 +25,9 @@
 		8F4173A01A4AE8E5000300F3 /* Homeansicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739E1A4AE8E5000300F3 /* Homeansicht.png */; };
 		8F4173A11A4AE8E5000300F3 /* Schema.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F41739F1A4AE8E5000300F3 /* Schema.png */; };
 		8F4173A51A4EF2F7000300F3 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4173A41A4EF2F7000300F3 /* DBManager.m */; };
+		8F43206B1A5C876F008ABA42 /* TargetValuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F43206A1A5C876F008ABA42 /* TargetValuesCell.xib */; };
+		8F43206E1A5C8978008ABA42 /* TargetValueTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F43206D1A5C8978008ABA42 /* TargetValueTableController.m */; };
+		8F4320711A5C8A18008ABA42 /* TargetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4320701A5C8A18008ABA42 /* TargetViewCell.m */; };
 		8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C41A3A334F004EC199 /* SchemaViewController.m */; };
 		8F5050C81A3A33F0004EC199 /* SetSchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5050C71A3A33F0004EC199 /* SetSchemaViewController.m */; };
 		8F5FAB711A1E12E30027A02A /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FAB6C1A1E12E30027A02A /* SettingsPageViewController.m */; };
@@ -114,6 +117,11 @@
 		8F41739F1A4AE8E5000300F3 /* Schema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schema.png; sourceTree = "<group>"; };
 		8F4173A31A4EF2F7000300F3 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		8F4173A41A4EF2F7000300F3 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		8F43206A1A5C876F008ABA42 /* TargetValuesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetValuesCell.xib; sourceTree = "<group>"; };
+		8F43206C1A5C8978008ABA42 /* TargetValueTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetValueTableController.h; sourceTree = "<group>"; };
+		8F43206D1A5C8978008ABA42 /* TargetValueTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetValueTableController.m; sourceTree = "<group>"; };
+		8F43206F1A5C8A18008ABA42 /* TargetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetViewCell.h; sourceTree = "<group>"; };
+		8F4320701A5C8A18008ABA42 /* TargetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetViewCell.m; sourceTree = "<group>"; };
 		8F5050C31A3A334F004EC199 /* SchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
 		8F5050C41A3A334F004EC199 /* SchemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
 		8F5050C61A3A33F0004EC199 /* SetSchemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSchemaViewController.h; sourceTree = "<group>"; };
@@ -268,6 +276,11 @@
 				8F19E1C71A4216640028555F /* DiaryTableCell.m */,
 				8F0054A51A5AF49F0079788B /* WeightPickerView.h */,
 				8F0054A61A5AF49F0079788B /* WeightPickerView.m */,
+				8F43206A1A5C876F008ABA42 /* TargetValuesCell.xib */,
+				8F43206C1A5C8978008ABA42 /* TargetValueTableController.h */,
+				8F43206D1A5C8978008ABA42 /* TargetValueTableController.m */,
+				8F43206F1A5C8A18008ABA42 /* TargetViewCell.h */,
+				8F4320701A5C8A18008ABA42 /* TargetViewCell.m */,
 			);
 			name = Diary;
 			sourceTree = "<group>";
@@ -683,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F43206B1A5C876F008ABA42 /* TargetValuesCell.xib in Resources */,
 				8F945F8E1A363E540036EA4C /* morning@2x.png in Resources */,
 				8F2EC22C1A276E280064DD95 /* diary@2x.png in Resources */,
 				8F19E1CA1A4325250028555F /* iOS_7_icon_shape.png in Resources */,
@@ -753,11 +767,13 @@
 				8FE9968D1A5C088F00709428 /* TagebucheintraegePageViewController.m in Sources */,
 				8FC0653A1A0BC56100D853E6 /* CheckupPageViewController.m in Sources */,
 				8F5FAB7C1A1E155E0027A02A /* JBBaseChartViewController.m in Sources */,
+				8F43206E1A5C8978008ABA42 /* TargetValueTableController.m in Sources */,
 				8F5FBE6D1A3F839000E82409 /* NSString+URLEncoding.m in Sources */,
 				8F5FAB911A1E169D0027A02A /* JBChartHeaderView.m in Sources */,
 				8F5FAB721A1E12E30027A02A /* SettingsTypPageViewController.m in Sources */,
 				8FC0654A1A0C1C3E00D853E6 /* PulsPageViewController.m in Sources */,
 				8FC0654D1A0C1C6300D853E6 /* GewichtPageViewController.m in Sources */,
+				8F4320711A5C8A18008ABA42 /* TargetViewCell.m in Sources */,
 				8F5050C51A3A334F004EC199 /* SchemaViewController.m in Sources */,
 				8F4173A51A4EF2F7000300F3 /* DBManager.m in Sources */,
 				8FC065401A0C07AE00D853E6 /* CheckupViewController.m in Sources */,
