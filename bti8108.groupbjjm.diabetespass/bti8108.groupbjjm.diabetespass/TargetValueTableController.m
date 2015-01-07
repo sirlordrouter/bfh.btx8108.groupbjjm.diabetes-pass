@@ -11,18 +11,19 @@
 
 @interface TargetValueTableController ()
 
+@property NSMutableArray *targetValueSectionNames;
+
 @end
 
+
 @implementation TargetValueTableController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _targetValueSectionNames = @[@"09-01-2015", @"24-12-2014"].mutableCopy;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +36,12 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 2;
+    return _targetValueSectionNames.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [_targetValueSectionNames objectAtIndex:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

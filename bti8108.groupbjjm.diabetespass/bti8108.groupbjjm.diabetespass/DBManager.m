@@ -81,27 +81,43 @@ static int numberOfMeasurementsInDB;
     int flag = (isBeforeMeal)? 1 : 0; //Because sqlite only saves 1 (true) or 0 (false) values for Boolean types
     NSDate *dateOfMeasurement = [[NSDate alloc]init];//Getting the actual date (CET) and time for this measurement
     
-    
     const char *dbpath = [databasePath UTF8String];
     
+    statement = nil;
+    
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
+    
         
         NSString *insertSQL = [NSString stringWithFormat:@"insert into measurements (measurementID, measurementValue, unit, upperLimit, lowerLimit, dateOfMeasurement, isBeforeMeal) values(%d,%f,\"%@\",%f,%f,\"%@\",%d)", (int)idNumber, (double)measurementValue, unit, (double)upperLimit, (double)lowerLimit, dateOfMeasurement, (int)flag];
-        
-        
-        
+
         const char *insert_stmt_measurement = [insertSQL UTF8String];
-        sqlite3_prepare(database, insert_stmt_measurement, -1, &statement, NULL);
         
+        int rc = sqlite3_prepare(database, insert_stmt_measurement, -1, &statement, NULL);
         
-        if (sqlite3_step(statement) == SQLITE_DONE) {
+        if (rc != SQLITE_OK) {
+            sqlite3_close(database);
+            return NO;
+        }
+        
+        rc = sqlite3_step(statement);
+        
+        if (rc == SQLITE_DONE) {
+            
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
             return YES;
         }
         else{
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
              NSLog( @"Failed from sqlite3_prepare_v2. Error is:  %s", sqlite3_errmsg(database) );
             return NO;
         }
-    }sqlite3_reset(statement);
+    }
+    
+    sqlite3_reset(statement);
+    sqlite3_finalize(statement);
+    sqlite3_close(database);
 
 
    return NO;
@@ -147,12 +163,12 @@ static int numberOfMeasurementsInDB;
    
     if (success == YES) {
         
-        UIAlertView *succesAlert = [[UIAlertView alloc]initWithTitle:@"Measurement saved" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [succesAlert show];
+        //UIAlertView *succesAlert = [[UIAlertView alloc]initWithTitle:@"Measurement saved" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //[succesAlert show];
     }
     else{
-        UIAlertView *failedAlert =[[UIAlertView alloc]initWithTitle:@"Save Failed" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [failedAlert show];
+       // UIAlertView *failedAlert =[[UIAlertView alloc]initWithTitle:@"Save Failed" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+       // [failedAlert show];
         NSLog( @"Failed to save. Error is:  %s", sqlite3_errmsg(database) );
     }
 }
@@ -162,6 +178,7 @@ static int numberOfMeasurementsInDB;
 - (NSArray*) getMeasurementResult:(NSInteger)measurementID{
     const char *dbpath = [databasePath UTF8String];
     NSMutableArray *resultArray = [[NSMutableArray alloc]init];
+    
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
         NSString *querySQL = [NSString stringWithFormat:@"select measurementID, measurementValue, unit, upperLimit, lowerLimit, dateOfMeasurement, isBeforeMeal from measurements where measurementID=%d", (int) measurementID];
          const char *query = [querySQL UTF8String];
@@ -197,13 +214,19 @@ static int numberOfMeasurementsInDB;
             NSNumber *isBeforeMealNumber = [NSNumber numberWithInt:sqlite3_column_int(statement, 6)];
             [resultArray addObject:isBeforeMealNumber];
             
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
+            
             return resultArray;
+            
+            
                                         
         }}
         else
         {
             NSLog(@"Building resultarray failed");
         }
+        
         // Finalize and close database.
         sqlite3_finalize(statement);
         sqlite3_close(database);
@@ -223,12 +246,20 @@ static int numberOfMeasurementsInDB;
         sqlite3_prepare_v2(database, insert_stmt, -1, &statement, NULL);
     }
     if (sqlite3_step(statement)== SQLITE_DONE) {
+        sqlite3_finalize(statement);
+        sqlite3_close(database);
+        
         return YES;
     }
     else {
+        sqlite3_finalize(statement);
+        sqlite3_close(database);
         NSLog(@"Failed from insertion in currentschema. Error is: %s", sqlite3_errmsg(database));
         return NO;
     }
+    
+    sqlite3_finalize(statement);
+    sqlite3_close(database);
 
 }
 

@@ -15,6 +15,7 @@
 #import "DiaryTableCell.h"
 #import "DiaryEntry.h"
 #import "TagebucheintraegePageViewController.h"
+#import "DBManager.h"
 
 @interface DiaryViewController()
 
@@ -44,6 +45,18 @@
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     delegate.diaryViewController = self;
     
+    DBManager *manager = [DBManager getSharedInstance];
+    int count = [manager GetMeasurementsCount];
+    for (int i = 1; i <= count; i++) {
+        NSArray *entries = [manager getMeasurementResult:i];
+        DiaryEntry *newEntry = [[DiaryEntry alloc] init];
+        
+        newEntry.date =[NSString stringWithFormat:@"%@",[entries objectAtIndex:5]];
+        newEntry.value =[NSString stringWithFormat:@"%@",[entries objectAtIndex:1]];
+        newEntry.unit = [NSString stringWithFormat:@"%@",[entries objectAtIndex:2]];
+        
+        [self.diaryData addObject:newEntry];
+    }
     
 }
 
@@ -240,7 +253,7 @@
     NSArray *units = @[@"kg",@"mmHg",@"mmol/l",@"mmol/l", @"bpm"];
     
     NSString *prePost = source.glucoseIsBeforeMealBool ? @" (N)":@" (P)";
-    
+    DBManager *manager = [DBManager getSharedInstance];
     for (int i = 0; i<5; i++) {
         
         NSString * text = [NSString stringWithFormat:@"%@", [diaryEntries objectAtIndex:i] ];
@@ -251,6 +264,13 @@
             newEntry.value = i == 2 ? [text stringByAppendingString:prePost] : text;
             newEntry.unit = [units objectAtIndex:i];
             [self.diaryData addObject:newEntry];
+            
+            [manager
+             saveMeasurement:newEntry.value.floatValue
+             measurementUnit:newEntry.unit
+             upperLimit:newEntry.value.floatValue
+             lowerLimit:newEntry.value.floatValue
+             isBeforeMeal:source.glucoseIsBeforeMealBool]; //TODO save real Limit Data
         }
         
     }
@@ -260,6 +280,8 @@
     }];
     
     self.diaryData = sortedArray.mutableCopy;
+    
+    [self.tableView reloadData];
 
 }
 
