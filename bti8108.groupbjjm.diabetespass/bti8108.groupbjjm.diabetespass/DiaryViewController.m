@@ -17,6 +17,9 @@
 #import "TagebucheintraegePageViewController.h"
 #import "DBManager.h"
 
+#define BEFORE_MEAL_TEXT = @"nüchtern"; //TODO Localize
+#define AFTER_MEAL_TEXT = @"postprandial"; //TODO Localize
+
 @interface DiaryViewController()
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -55,8 +58,26 @@
         newEntry.value =[NSString stringWithFormat:@"%@",[entries objectAtIndex:1]];
         newEntry.unit = [NSString stringWithFormat:@"%@",[entries objectAtIndex:2]];
         
+        if ([newEntry.unit isEqual:@"mmol/l"]) {
+            newEntry.isBeforeMeal = [entries objectAtIndex:6] ? @"nüchtern" : @"postprandial";
+        } else {
+            newEntry.isBeforeMeal = @"";
+        } //TODO solve better
+        
+        
+        newEntry.unitLabel = [NSString stringWithFormat:@"%@",[entries objectAtIndex:7]];
+        
         [self.diaryData addObject:newEntry];
     }
+    
+    //Sort all the entries for newest entry is first
+    NSArray *sortedArray = [self.diaryData sortedArrayUsingComparator:^NSComparisonResult(DiaryEntry *e1, DiaryEntry *e2){
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.MM.yyyy HH:mm"];
+        
+        return [[dateFormat dateFromString:e2.date] compare:[dateFormat dateFromString:e1.date]];
+    }];
     
 }
 
@@ -111,6 +132,10 @@
     }
 }
 
+/**
+ * Delegate Method for Refresh Control
+ * Executes an asynchronous Withings Webservice Request
+ */
 -(void)getWithingsData {
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -151,31 +176,40 @@
                      DiaryEntry *newEntry = [[DiaryEntry alloc] init];
                      
                      newEntry.date =  [self getDateStringForUnit:[nsdict objectForKey:@"date"]];
-                    
-                     //    meastype
+                     
+                     //    meastype - Numbers from Withings JSON
                      //    1 : Weight (kg)
                      //    9 : Diastolic Blood Pressure (mmHg)
                      //    10 : Systolic Blood Pressure (mmHg)
                      //    11 : Heart Pulse (bpm)
-                     
+
                      if ([[ms objectForKey:@"type"]integerValue] == 1) {
-                         newEntry.value = [NSString stringWithFormat:@"%ld",[[ms objectForKey:@"value"] integerValue]  / 100 ];
+                         
+                         float unit =[[ms objectForKey:@"unit"] floatValue]; //unit: value must be multiplied with 10 power the unit to get correct value
+                         newEntry.value = [NSString stringWithFormat:@"%.1f",[[ms objectForKey:@"value"] floatValue] * pow(10,unit)];
+
                          newEntry.unit = @"kg";
+                         newEntry.unitLabel = @"Gewicht";
                      }
                      if ([[ms objectForKey:@"type"] integerValue] == 9) {
                          newEntry.value = [ms objectForKey:@"value"];
                          newEntry.unit = @"mmHg";
+                         newEntry.unitLabel = @"Dia";
                      }
                      if ([[ms objectForKey:@"type"] integerValue] == 10) {
                          newEntry.value = [ms objectForKey:@"value"];
                          newEntry.unit = @"mmHg";
+                         newEntry.unitLabel = @"Sys";
                      }
                      if ([[ms objectForKey:@"type"] integerValue] == 11) {
                          newEntry.value = [ms objectForKey:@"value"];
                          newEntry.unit = @"bpm";
+                         newEntry.unitLabel = @"Puls";
                      }
                      
-                     if (![self.diaryData containsObject:newEntry]) {
+                     newEntry.isBeforeMeal = @"";
+                     
+                     if (!([self.diaryData containsObject:newEntry] || newEntry.value == nil || newEntry.value ==(id)[NSNull null])) {
                          [self.diaryData addObject:newEntry];
                      }
                      
@@ -194,7 +228,7 @@
          self.diaryData = sortedArray.mutableCopy;
         
          
-             [self reloadData];
+         [self reloadData];
      }];
 
 
@@ -214,6 +248,8 @@
     [cell.dateLabel setText: [NSString stringWithFormat:@"%@", currentEntry.date]]; //@"18-12-2014 23:00";//currentEntry.date;
     [cell.valueLabel setText: [NSString stringWithFormat:@"%@", currentEntry.value]]; // @"180/180";//currentEntry.value;
     [cell.unitLabel setText: [NSString stringWithFormat:@"%@", currentEntry.unit]]; //@"mmol/L"; //currentEntry.unit;
+    [cell.titleLabel setText: [NSString stringWithFormat:@"%@", currentEntry.unitLabel]]; //@"mmol/L"; //currentEntry.unit;
+    [cell.beforeMealLabel setText: [NSString stringWithFormat:@"%@", currentEntry.isBeforeMeal]]; //@"mmol/L"; //currentEntry.unit;
     
     return cell;
 }
@@ -251,41 +287,59 @@
     return _oauth1Controller;
 }
 
+/**
+ *  Action to execute when navigating from enter a new entry
+ *
+ *  @param segue action reference
+ */
 - (IBAction)unwindToDiaryView:(UIStoryboardSegue *)segue
 {
     TagebucheintraegePageViewController *source = [segue sourceViewController];
     
+    //Load all the inputs into an array
     NSArray *diaryEntries = @[source.GewichtLabel.text,
                              source.BlutzuckerField.text,
                              source.GlucoseField.text,
                              source.HbA1cField.text,
                               source.PulsLabel.text];
     NSArray *units = @[@"kg",@"mmHg",@"mmol/l",@"mmol/l", @"bpm"];
+    NSArray *unitLabels = @[@"Gewicht",@"Blutdruck",@"Blutzucker",@"HbA1c", @"Puls"];
     
-    NSString *prePost = source.glucoseIsBeforeMealBool ? @" (N)":@" (P)";
+    //set short tag if it was before or ater a meal
     DBManager *manager = [DBManager getSharedInstance];
     for (int i = 0; i<5; i++) {
         
         NSString * text = [NSString stringWithFormat:@"%@", [diaryEntries objectAtIndex:i] ];
 
         if (!(text.length == 0 || [text isEqual:@"-"])) {
+            //create new entry for tableview
             DiaryEntry *newEntry = [[DiaryEntry alloc] init];
             newEntry.date = source.DatumDateLabel.text;
-            newEntry.value = i == 2 ? [text stringByAppendingString:prePost] : text;
+            newEntry.value = text;
+            newEntry.unitLabel = [unitLabels objectAtIndex:i];
+            if ([newEntry.unitLabel isEqual:@"Blutzucker"] || [newEntry.unitLabel isEqual:@"HbA1c"]) {
+                newEntry.isBeforeMeal = source.glucoseIsBeforeMealBool ? @"nüchtern" : @"postprandial";
+            } else {
+                newEntry.isBeforeMeal = @"";
+            }
+            
             newEntry.unit = [units objectAtIndex:i];
             [self.diaryData addObject:newEntry];
             
+            //insert values in database
             [manager
              saveMeasurement:newEntry.value
              measurementUnit:newEntry.unit
              upperLimit:newEntry.value.floatValue
              lowerLimit:newEntry.value.floatValue
              isBeforeMeal:source.glucoseIsBeforeMealBool
-             aDate:newEntry.date]; //TODO save real Limit Data
+             aDate:newEntry.date
+             aUnitLabel:newEntry.unitLabel]; //TODO save real Limit Data
         }
         
     }
     
+    //Sort all the entries for newest entry is first
     NSArray *sortedArray = [self.diaryData sortedArrayUsingComparator:^NSComparisonResult(DiaryEntry *e1, DiaryEntry *e2){
         
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

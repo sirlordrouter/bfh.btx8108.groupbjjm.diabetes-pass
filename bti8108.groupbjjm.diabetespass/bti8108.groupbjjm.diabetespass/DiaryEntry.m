@@ -31,6 +31,10 @@
         return NO;
     if (![[self value] isEqual:[anEntry value]])
         return NO;
+    if (![[self unitLabel] isEqual:[anEntry unitLabel]])
+        return NO;
+    if (![[self isBeforeMeal] isEqual:[anEntry isBeforeMeal]])
+        return NO;
     return YES;
 }
 

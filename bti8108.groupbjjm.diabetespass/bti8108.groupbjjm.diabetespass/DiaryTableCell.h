@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DiaryTableCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *beforeMealLabel;
 
 @end

@@ -10,9 +10,11 @@
 
 @implementation DiaryTableCell
 
+@synthesize titleLabel = _titleLabel;
 @synthesize dateLabel = _dateLabel;
 @synthesize valueLabel = _valueLabel;
 @synthesize unitLabel = _unitLabel;
+@synthesize beforeMealLabel = _beforeMealLabel;
 
 - (void)awakeFromNib {
     // Initialization code

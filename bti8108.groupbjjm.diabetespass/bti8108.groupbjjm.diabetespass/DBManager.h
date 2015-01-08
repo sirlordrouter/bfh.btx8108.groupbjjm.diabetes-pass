@@ -15,8 +15,8 @@
 }
 +(DBManager*) getSharedInstance;
 -(BOOL)createDB;
--(BOOL) writeMeasurementInDB:(NSString*)measurementValue measurementUnit:(NSString*)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date;
--(void) saveMeasurement:(NSString*)measurementValue measurementUnit:(NSString*)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date;
+-(BOOL) writeMeasurementInDB:(NSString*)measurementValue measurementUnit:(NSString*)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date aUnitLabel:(NSString*)unitLabel;
+-(void) saveMeasurement:(NSString*)measurementValue measurementUnit:(NSString*)measurementUnit upperLimit:(double)upperLimit lowerLimit:(double)lowerLimit isBeforeMeal:(Boolean)isBeforeMeal aDate:(NSString*)date aUnitLabel:(NSString*)unitLabel;
 -(BOOL) saveCurrentSchema:(NSString*)currentSchema;
 -(int) GetMeasurementsCount;
 

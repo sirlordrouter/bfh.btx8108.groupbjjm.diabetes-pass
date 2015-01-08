@@ -17,7 +17,11 @@
 @property NSString *unit;
 /* Datum */
 @property NSString *date;
-/* der wert*/
+/* value of*/
 @property NSString *value;
+/* Glucose, Pressure etc.*/
+@property NSString *unitLabel;
+/* pre or postprandial*/
+@property NSString *isBeforeMeal;
 
 @end

@@ -140,7 +140,7 @@ mmHg</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4b-Ya-GHg">
                                 <rect key="frame" x="28" y="113" width="76" height="30"/>
-                                <accessibility key="accessibilityConfiguration" hint="Wert 6.0 ist zu tief, Zielwert ist 6.4" label="Letzter Blutzuckerwert vor dem Essen">
+                                <accessibility key="accessibilityConfiguration" hint="Wert 6.0 ist zu tief, Zielwert ist 6.4" label="Letzter Blutzuckerwert vor dem Essen war 6.0">
                                     <accessibilityTraits key="traits" none="YES" button="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
