@@ -88,6 +88,7 @@
 		8FC857B71A0CFA9D005DD780 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B11A0CFA9D005DD780 /* male.png */; };
 		8FC857B81A0CFA9D005DD780 /* puls.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857B21A0CFA9D005DD780 /* puls.png */; };
 		8FC857BB1A0CFD35005DD780 /* glucose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC857BA1A0CFD35005DD780 /* glucose.png */; };
+		8FDA15C31A5FCD5A00697CAB /* App_Startscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDA15C21A5FCD5A00697CAB /* App_Startscreen.png */; };
 		8FE9968D1A5C088F00709428 /* TagebucheintraegePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9968C1A5C088F00709428 /* TagebucheintraegePageViewController.m */; };
 		DE9319151A1F6DEA00A694C0 /* NotfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9319141A1F6DEA00A694C0 /* NotfallViewController.m */; };
 /* End PBXBuildFile section */
@@ -224,6 +225,7 @@
 		8FC857B11A0CFA9D005DD780 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		8FC857B21A0CFA9D005DD780 /* puls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puls.png; sourceTree = "<group>"; };
 		8FC857BA1A0CFD35005DD780 /* glucose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glucose.png; sourceTree = "<group>"; };
+		8FDA15C21A5FCD5A00697CAB /* App_Startscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Startscreen.png; sourceTree = "<group>"; };
 		8FE9968B1A5C088F00709428 /* TagebucheintraegePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagebucheintraegePageViewController.h; sourceTree = "<group>"; };
 		8FE9968C1A5C088F00709428 /* TagebucheintraegePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagebucheintraegePageViewController.m; sourceTree = "<group>"; };
 		8FFE74521A2F3BAF00CE204A /* JBLineChartViewControllerBlutdruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewControllerBlutdruck.h; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 		8FC857B91A0CFAA6005DD780 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8FDA15C21A5FCD5A00697CAB /* App_Startscreen.png */,
 				8F41739E1A4AE8E5000300F3 /* Homeansicht.png */,
 				8F41739F1A4AE8E5000300F3 /* Schema.png */,
 				8F19E1C91A4325250028555F /* iOS_7_icon_shape.png */,
@@ -721,6 +724,7 @@
 				8FC857B41A0CFA9D005DD780 /* apfel_ganz.png in Resources */,
 				8F8B12291A14FF5700ABC711 /* Launch Screen.xib in Resources */,
 				8F19E1C51A4215630028555F /* DiaryTableCell.xib in Resources */,
+				8FDA15C31A5FCD5A00697CAB /* App_Startscreen.png in Resources */,
 				8F2EC22F1A276E280064DD95 /* table.png in Resources */,
 				8F945F821A3609820036EA4C /* off@2x.png in Resources */,
 				8F945F921A3834A50036EA4C /* SchemaBackground@2x.png in Resources */,
