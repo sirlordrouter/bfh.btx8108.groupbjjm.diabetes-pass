@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.01.15.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
+//  List of all entered Target values
 
 #import "TargetValueTableController.h"
 #import "TargetViewCell.h"
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //init fake data, two sections (each enty gets a section)
     _targetValueSectionNames = @[@"09-01-2015", @"24-12-2014"].mutableCopy;
 }
 

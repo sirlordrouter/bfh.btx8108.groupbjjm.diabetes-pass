@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//  View holder for the caroussell view, page blood-pressure
 
 #import "BlutdruckPageViewController.h"
 
@@ -24,14 +25,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

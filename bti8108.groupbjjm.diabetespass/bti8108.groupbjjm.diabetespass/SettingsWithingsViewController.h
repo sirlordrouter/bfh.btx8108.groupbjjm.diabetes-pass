@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) NSString *oauthToken;
 @property (nonatomic, strong) NSString *oauthTokenSecret;
+@property (readonly, getter=getUserId) NSString *withingsUserId;
 
 @end

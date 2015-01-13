@@ -62,6 +62,10 @@
     }];
 }
 
+-(NSString*) getUserId {
+    return userId;
+}
+
 - (OAuth1Controller *)oauth1Controller
 {
     if (_oauth1Controller == nil) {

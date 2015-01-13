@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 11.12.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+// Controller for displaying the current selected schema
 
 #import "SchemaViewController.h"
 #import "SchemaViewDaySelection.h"
@@ -24,7 +25,7 @@
 
 @synthesize OverlayButton;
 
-
+//references for layouting the items on the screen
 CGFloat const SchemaWeekDayLabelSize = 50.0;
 CGFloat const SchemaCheckButtonWith = 50.0;
 CGFloat const SchemaMatrixSpacing = 5.0;
@@ -102,15 +103,6 @@ CGFloat const SundayRowX = 319;
  *  Adds Fake data - Remove when having a DB
  */
 -(void)initFakeData {
-    
-//    NSMutableArray *matrix = [NSMutableArray array];
-//    for (int rows = 0; rows < 10 ; rows++) {
-//        NSMutableArray *columns = [NSMutableArray array];
-//        for (int col = 0; col < 7; col++) {
-//            [columns addObject:[NSNumber numberWithInt:1]];
-//        }
-//        [matrix addObject:columns];
-//    }
     
     self.matrixData = @[
                         @[@1,@1,@0,@0,@0,@0,@0],

@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 17.12.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//  Defines fields and interface for a single diary entry
 
 #import "DiaryTableCell.h"
 

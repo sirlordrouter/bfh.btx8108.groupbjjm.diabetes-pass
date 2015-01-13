@@ -3,8 +3,10 @@
 //  bti8108.groupbjjm.diabetespass
 //
 //  Created by Meryam M on 27.11.14.
+//  Edited by Johannes Gnägi on 05-01-2015
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+// view to create new diary entries
 
 #import <Foundation/Foundation.h>
 #import "TagebucheintraegePageViewController.h"
@@ -77,6 +79,10 @@
 
 #pragma mark - Helper methods
 
+/**
+ *  Setup the date for the datepicker
+ *  sets the date and time to current date/time
+ */
 - (void)setupDatumLabel {
     
     self.DatumDateFormatter = [[NSDateFormatter alloc] init];
@@ -85,8 +91,7 @@
     [self.DatumDateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
     
     NSDate *defaultDate = [NSDate date];
-    
-    //    self.DatumDateLabel.text = [self.dateFormatter stringFromDate:defaultDate];
+
     self.DatumDateLabel.textColor = [self.tableView tintColor];
     
     self.selectedDatumDate = defaultDate;
@@ -110,7 +115,13 @@
     return height;
 }
 
-
+/**
+ *  Delegate for handling events when clicked on a row
+ *  handles date and weight picker appearance
+ *
+ *  @param tableView selected table view
+ *  @param indexPath path to selected row
+ */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell == DatumCell){
@@ -192,6 +203,7 @@
 }
 
 
+
 -(void)dismissKeyboard
 {
     UITextField *activeTextField = nil;
@@ -201,6 +213,10 @@
     if (activeTextField) [activeTextField resignFirstResponder];
 }
 
+/**
+ *  preparation to navifate back to the diary entries listing
+ *  if not save do nothing, else save state of before/aftermeal control
+ */
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     

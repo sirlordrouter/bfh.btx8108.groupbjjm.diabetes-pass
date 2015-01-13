@@ -5,6 +5,7 @@
 //  Created by Terry Worona on 11/8/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
+//  Source: https://github.com/Jawbone/JBChartView/tree/master/JBChartViewDemo
 
 #import "JBLineChartFooterView.h"
 

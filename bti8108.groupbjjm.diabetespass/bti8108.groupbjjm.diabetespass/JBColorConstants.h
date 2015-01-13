@@ -5,6 +5,7 @@
 //  Created by Terry Worona on 11/7/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
+//  Source: https://github.com/Jawbone/JBChartView/tree/master/JBChartViewDemo
 
 #define UIColorFromHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
 

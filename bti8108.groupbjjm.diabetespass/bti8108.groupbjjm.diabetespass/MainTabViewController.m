@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//  Main Frame for the app, provides the 4 tabs on the bottom of the app with home, diary, schema and settings
 
 #import "MainTabViewController.h"
 #import "ch_bfh_bti8108_groupbjjmAppDelegate.h"
@@ -18,13 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Give a reference to the application contex, used for navigation purposes from the home screem
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     delegate.tabbarViewController = self;
-    
-    // Do any additional setup after loading the view.
-    //
-    //self.view.autoresizesSubviews = YES;
-    //self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
 }
 
@@ -35,30 +32,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Assign tab bar item with titles
-//    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-//    UITabBar *tabBar = tabBarController.tabBar;
-//    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-//    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
-//    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
-//    UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
-//    
-//    tabBarItem1.title = @"Home";
-//    tabBarItem2.title = @"Maps";
-//    tabBarItem3.title = @"My Plan";
-//    tabBarItem4.title = @"Settings";
     
     return YES;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

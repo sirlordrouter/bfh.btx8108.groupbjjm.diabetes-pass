@@ -5,6 +5,7 @@
 //  Created by Jan Wiebe van der Sluis on 11/12/14.
 //  Copyright (c) 2014 Jan Wiebe van der Sluis. All rights reserved.
 //
+//  Edited by Johannes Gnägi on 08-01-2015
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

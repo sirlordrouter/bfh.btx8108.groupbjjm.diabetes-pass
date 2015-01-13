@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+// Chart view for glucose
 
 #import "JBLineChartViewControllerBlutdruck.h"
 
@@ -238,7 +239,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     
     [self setTooltipVisible:YES animated:YES];
     //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
-    NSString *value = [NSString stringWithFormat:@"%ld", [valueNumber intValue]];
+    NSString *value = [NSString stringWithFormat:@"%d", [valueNumber intValue]];
     [self.tooltipView setText:value];
 }
 
@@ -303,7 +304,7 @@ NSInteger const BlutdruckGraphMaxNumChartPoints = 20;
     [self.informationView setTitleText:titelText];
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-    //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+
     NSString *value = [NSString stringWithFormat:@"%d", [valueNumber intValue]];
     [self.tooltipView setText:value];
 }

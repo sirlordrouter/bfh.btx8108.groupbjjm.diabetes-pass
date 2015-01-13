@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 11.12.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+// ViewController for selecting a scheme
 
 #import "SetSchemaViewController.h"
 #import "SettingsSchemaView.h"
@@ -222,7 +223,7 @@ CGFloat const FirstDataRowPosition = 90.0;
             break;
     }
 
-    //wenn geändert: speichern
+    //if changed, save
     [self.changeSchema setTitle:itemName forState:UIControlStateNormal];
 }
 

@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//chart view for pulse
 
 #import "JBLineChartViewControllerPuls.h"
 
@@ -205,24 +206,6 @@ NSInteger PulsMaxNumChartPoints = 20;
     [self.informationView setTextShadowColor:nil];
     [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
     [self.view addSubview:self.informationView];
-    
-    //Add a grid behind
-//    UIView *gridView = [[UIView alloc] initWithFrame:self.lineChartView.bounds];
-//    gridView.backgroundColor = [UIColor clearColor];
-//    [self.lineChartView insertSubview:gridView atIndex:0];
-    
-    
-//    NSNumber *valueNumber = [NSNumber numberWithInt:20];
-//    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
-//    [self.informationView setTitleText:0 == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
-//    [self.informationView setHidden:NO animated:YES];
-//    //[self setTooltipVisible:YES animated:YES atTouchPoint:];
-//    [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:4] uppercaseString]];
-    
-//    for (int i=0; i<PulsMaxNumChartPoints; i++) {
-//        
-//        [self setLabel:(i)];
-//    }
     
     [self setLabel:(PulsMaxNumChartPoints-2)];
     [self.lineChartView reloadData];

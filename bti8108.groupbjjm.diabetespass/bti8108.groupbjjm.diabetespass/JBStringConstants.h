@@ -5,6 +5,8 @@
 //  Created by Terry Worona on 11/6/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
+//  Source: https://github.com/Jawbone/JBChartView/tree/master/JBChartViewDemo
+//  Edited by Johannes Gnägi on 08-12-2014
 
 #define localize(key, default) NSLocalizedStringWithDefaultValue(key, nil, [NSBundle mainBundle], default, nil)
 

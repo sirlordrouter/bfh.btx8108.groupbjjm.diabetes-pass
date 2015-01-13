@@ -23,12 +23,6 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //Setzt das Textfield neu
-    //myTextField.text = standardNotFallTekst;
-    //self.view.autoresizesSubviews = YES;
-    //self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
@@ -67,17 +61,6 @@ NSString *standardNotFallTekst = @"Falls ich bewusstlos bin, geben Sie mir nicht
 }
 
 - (IBAction)openNotfallApp:(id)sender{
-//    UIApplication *ourApplication = [UIApplication sharedApplication];
-//    NSString *URLEncodedText = [<span class="skimlinks-unlinked"> self.myTextField.text</span> stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    NSString *ourPath = [@"readtext://" stringByAppendingString:URLEncodedText];
-//    NSURL *ourURL = [NSURL URLWithString:ourPath];
-//    if ([ourApplication canOpenURL:ourURL]) {
-//        [ourApplication openURL:ourURL];
-//    }
-//    else {
-//        //Display error
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Receiver Not Found" message:@"The Receiver App is not installed. It must be installed to send text." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [alertView show];
-//        
+  
     }
 @end

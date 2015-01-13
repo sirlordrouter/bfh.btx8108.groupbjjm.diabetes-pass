@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//  Chart view for glucose
 
 #import "JBLineChartViewControllerBlutzucker.h"
 
@@ -209,24 +210,6 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
     [self.view addSubview:self.informationView];
     
-    //Add a grid behind
-//    UIView *gridView = [[UIView alloc] initWithFrame:self.lineChartView.bounds];
-//    gridView.backgroundColor = [UIColor clearColor];
-//    [self.lineChartView insertSubview:gridView atIndex:0];
-    
-    
-//    NSNumber *valueNumber = [NSNumber numberWithInt:20];
-//    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
-//    [self.informationView setTitleText:0 == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
-//    [self.informationView setHidden:NO animated:YES];
-//    //[self setTooltipVisible:YES animated:YES atTouchPoint:];
-//    [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:4] uppercaseString]];
-    
-//    for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++) {
-//        
-//        [self setLabel:(i)];
-//    }
-    
     [self setLabel:(kJBLineChartViewControllerMaxNumChartPoints-2)];
     [self.lineChartView reloadData];
 }
@@ -241,7 +224,6 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     NSNumber *valueNumber = [[self.chartData objectAtIndex:0] objectAtIndex:index];
     
     [self setTooltipVisible:YES animated:YES];
-    //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
     NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
     [self.tooltipView setText:value];
 }
@@ -297,7 +279,7 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? s : kJBStringLabelNationalAverage];
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-    //[self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+
     NSString *value = [NSString stringWithFormat:@"%.2f", [valueNumber floatValue]];
     [self.tooltipView setText:value];
 }
@@ -311,11 +293,11 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
 {
     return (lineIndex == 0) ? [UIColor clearColor] : kJBColorLineChartDefaultDashedLineColor;
-    //[UIColor clearColor]
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
+    //color points out of bounds with a special color when selected
     if (lineIndex == 0) {
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
@@ -328,9 +310,10 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
     }
 }
 
+
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-
+ //color points out of bounds with a special color
     if (lineIndex == 0) {
         if ([[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] > 7.0 ||
             [[[self.chartData objectAtIndex:0] objectAtIndex:horizontalIndex] floatValue] < 4.0) {
@@ -347,6 +330,7 @@ NSInteger kJBLineChartViewControllerMaxNumChartPoints = 20;
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
+    //color values as points and bounds as lines
     return (lineIndex == JBLineChartLineSolid) ? kJBLineChartViewControllerChartSolidLineWidth: kJBLineChartViewControllerChartDashedLineWidth;
 }
 

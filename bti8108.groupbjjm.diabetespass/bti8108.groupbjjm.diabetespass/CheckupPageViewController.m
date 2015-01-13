@@ -5,6 +5,7 @@
 //  Created by Johannes Gnägi on 06.11.14.
 //  Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
 //
+//  Controller for main view on the start screen with overview of the different, latest values
 
 #import "CheckupPageViewController.h"
 #import "CheckupViewController.h"

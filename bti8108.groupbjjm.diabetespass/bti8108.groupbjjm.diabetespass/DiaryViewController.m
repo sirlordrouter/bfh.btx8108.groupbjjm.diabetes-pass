@@ -7,6 +7,8 @@
 //
 // Credits: http://www.appcoda.com/pull-to-refresh-uitableview-empty/
 // Implementing Pull-to-Refresh Tutorial to get Data when sliding down
+//
+//  Lists all the diary entries
 
 #import "DiaryViewController.h"
 #import "OAuth1Controller.h"
@@ -48,6 +50,7 @@
     ch_bfh_bti8108_groupbjjmAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
     delegate.diaryViewController = self;
     
+    //get all data from the database if any
     DBManager *manager = [DBManager getSharedInstance];
     int count = [manager GetMeasurementsCount];
     for (int i = 1; i <= count; i++) {
@@ -93,7 +96,7 @@
     if (![self.withingsController.oauthToken length]==0) {
         self.oauthToken = self.withingsController .oauthToken;
         self.oauthTokenSecret = self.withingsController.oauthTokenSecret;
-        userId = @"4899465"; ///HARDCODED
+        userId = self.withingsController.withingsUserId;
         
         syncWithingsLabel.text = @"Herunterziehen um mit Withings zu synchronisieren";
         
@@ -153,6 +156,11 @@
                                   oauthToken:self.oauthToken
                                  oauthSecret:self.oauthTokenSecret];
 
+    /**
+     *  Asynchrounes RESTful Withings Webservice call with all necessary url parameters 
+     *  from the dictonary given above
+     *
+     */
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
